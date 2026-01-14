@@ -19,7 +19,11 @@ let border = drawing.append("rect")
 
 /* Write your code for Project 1 beneath this comment */
 
-/* The order of the coordinates of the polygons are ALWAYS from top to the bottom*/
+/* The order of drawing is from left to right and from top to bottom*/
+
+/* The order of the coordinates of the polygons are ALWAYS from top to bottom,
+    and if two points coincide on the y axis, the first point coded will be the 
+    one on the left*/
 
 //Code for the tail
 
@@ -29,6 +33,22 @@ let fishTale = drawing.append("polygon")
                                   15, 175
                                 ))
     .attr("fill", "#F5B427");
+
+//Code for the fish's fins
+
+let fishTopFin = drawing.append("polygon")
+     .attr("points", closedPolygon(85, 30,
+                                   120, 75,
+                                   175, 75
+                                 ))    
+     .attr("fill", "#F5B427");  
+     
+ let fishBottomFin = drawing.append("polygon")
+     .attr("points", closedPolygon(120, 175,
+                                   175, 175,
+                                   115, 200
+                                 ))    
+     .attr("fill", "#F5B427");  
 
 //Code for the fish's body base
 
@@ -74,22 +94,6 @@ let fishBodyBottomDetail = drawing.append("polygon")
                                    175, 175
                                  ))
      .attr("fill", "yellow");
-
-//Code for the fish's fins
-
-let fishTopFin = drawing.append("polygon")
-     .attr("points", closedPolygon(85, 30,
-                                   120, 75,
-                                   175, 75
-                                 ))    
-     .attr("fill", "#F5B427");  
-     
- let fishBottomFin = drawing.append("polygon")
-     .attr("points", closedPolygon(120, 175,
-                                   175, 175,
-                                   115, 200
-                                 ))    
-     .attr("fill", "#F5B427");  
 
 //Code for the fish's head base
 
