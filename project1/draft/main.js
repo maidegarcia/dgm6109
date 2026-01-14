@@ -18,3 +18,7 @@ let border = drawing.append("rect")
     .attr("stroke", "red");
 
 /* Write your code for Project 1 beneath this comment */
+
+let fishTale = drawing.append("polygon")
+    .attr("points", closedPolygon(15,75,75,125,15,175))
+    .attr("fill", "#F5B427");
