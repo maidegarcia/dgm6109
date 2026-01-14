@@ -19,13 +19,18 @@ let border = drawing.append("rect")
 
 /* Write your code for Project 1 beneath this comment */
 
+/* The order of the coordinates of the polygons are ALWAYS from top to the bottom*/
+
 //Code for the tail
 
 let fishTale = drawing.append("polygon")
-    .attr("points", closedPolygon(15, 75, 75, 125, 15, 175))
+    .attr("points", closedPolygon(15, 75, 
+                                  75, 125, 
+                                  15, 175
+                                ))
     .attr("fill", "#F5B427");
 
-//Code for the fish base
+//Code for the fish's body base
 
 let fishBodyBase1 = drawing.append("circle")
     .attr("cx", 125)
@@ -40,6 +45,40 @@ let fishBodyBase2 = drawing.append("rect")
     .attr("height", 100)
     .attr("fill", "#577AEB");
 
+//Code for the fish's body detail
+
+let fishBodyTopDetail = drawing.append("polygon")
+    .attr("points", closedPolygon(175, 75,
+                                  125, 100,
+                                  175, 125
+                                ))
+    .attr("fill", "yellow");
+
+let fishBodyMidDetailLeft = drawing.append("polygon")
+    .attr("points", closedPolygon(125, 100, 
+                                  75, 125, 
+                                  125, 150
+                                ))
+    .attr("fill", "#1D44D1");
+
+let fishBodyMidDetailRight = drawing.append("polygon")
+    .attr("points", closedPolygon(125, 100,
+                                  175, 125,
+                                  125, 150
+                                 ))
+     .attr("fill", "#1D44D1");
+
+let fishBodyBottomDetail = drawing.append("polygon")
+     .attr("points", closedPolygon(175, 125,
+                                   125, 150,
+                                   175, 175
+                                 ))
+     .attr("fill", "yellow");
+
+//Code fo the fish's head base
+
 let fishHeadBase = drawing.append("polygon")
-    .attr("points", closedPolygon(175, 75, 275, 125, 175, 175))
+    .attr("points", closedPolygon(175, 75, 
+                                  275, 125, 
+                                  175, 175))
     .attr("fill", "#577AEB");
