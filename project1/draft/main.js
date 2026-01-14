@@ -98,3 +98,18 @@ let fishHeadBase = drawing.append("polygon")
                                   275, 125, 
                                   175, 175))
     .attr("fill", "#577AEB");
+
+//Code for the fish's head details
+
+let fishHeadDetail = drawing.append("polygon")
+    .attr("points", closedPolygon(225, 100,
+                                  175, 125,
+                                  225, 150
+                                 ))
+     .attr("fill", "#1D44D1");    
+     
+let fishEye = drawing.append("circle")
+    .attr("cx", 240)
+    .attr("cy", 120)
+    .attr("r", 5)
+    .attr("fill", "black");
