@@ -75,7 +75,23 @@ let fishBodyBottomDetail = drawing.append("polygon")
                                  ))
      .attr("fill", "yellow");
 
-//Code fo the fish's head base
+//Code for the fish's fins
+
+let fishTopFin = drawing.append("polygon")
+     .attr("points", closedPolygon(85, 30,
+                                   120, 75,
+                                   175, 75
+                                 ))    
+     .attr("fill", "#F5B427");  
+     
+ let fishBottomFin = drawing.append("polygon")
+     .attr("points", closedPolygon(120, 175,
+                                   175, 175,
+                                   115, 200
+                                 ))    
+     .attr("fill", "#F5B427");  
+
+//Code for the fish's head base
 
 let fishHeadBase = drawing.append("polygon")
     .attr("points", closedPolygon(175, 75, 
