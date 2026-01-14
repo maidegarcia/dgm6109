@@ -22,10 +22,10 @@ let border = drawing.append("rect")
 //Code for the tail
 
 let fishTale = drawing.append("polygon")
-    .attr("points", closedPolygon(15,75,75,125,15,175))
+    .attr("points", closedPolygon(15, 75, 75, 125, 15, 175))
     .attr("fill", "#F5B427");
 
-//Code for the body
+//Code for the fish base
 
 let fishBodyBase1 = drawing.append("circle")
     .attr("cx", 125)
@@ -38,4 +38,8 @@ let fishBodyBase2 = drawing.append("rect")
     .attr("y", 75)
     .attr("width", 50)
     .attr("height", 100)
+    .attr("fill", "#577AEB");
+
+let fishHeadBase = drawing.append("polygon")
+    .attr("points", closedPolygon(175, 75, 275, 125, 175, 175))
     .attr("fill", "#577AEB");
