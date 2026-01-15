@@ -1,5 +1,8 @@
 "use strict"
 
+// let drawingWidth = 500;
+// let drawingHeight = 500;
+
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
     .append("svg")
@@ -19,9 +22,9 @@ let border = drawing.append("rect")
 
 /* Write your code for Project 1 beneath this comment */
 
-/* The order of drawing is from left to right and from top to bottom*/
+/* The order of drawing is from the left to the right and from the top to the bottom*/
 
-/* The order of the coordinates of the polygons are ALWAYS from top to bottom,
+/* The order of the coordinates of the polygons are ALWAYS from the top to the bottom,
     and if two points coincide on the y axis, the first point coded will be the 
     one on the left*/
 
@@ -38,7 +41,7 @@ let fishTale = drawing.append("polygon")
 
 //BODY
 
-//Code for the fish's fins (the yellow triangles that are at the top and at the bottom of the fish's body)
+//Code for the fish's fins (the orange triangles that are at the top and at the bottom of the fish's body)
 
 let fishTopFin = drawing.append("polygon")
      .attr("points", closedPolygon(85, 30,
@@ -54,7 +57,7 @@ let fishTopFin = drawing.append("polygon")
                                  ))    
      .attr("fill", "#F5B427");  
 
-//Code for the fish's body base (the blue part)
+//Code for the fish's body base (the light blue part)
 
 let fishBodyBase1 = drawing.append("circle")
     .attr("cx", 125)
