@@ -3,6 +3,11 @@
 let drawingWidth = 500;
 let drawingHeight = 500;
 
+/*I'm taking the fishBodyBase1 coordinates as the point of reference*/
+
+let fishX = drawingWidth/4; //Original 125
+let fishY = drawingHeight/4; //Original 125
+
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
     .append("svg")
@@ -60,14 +65,14 @@ let fishTopFin = drawing.append("polygon")
 //Code for the fish's body base (the light blue part)
 
 let fishBodyBase1 = drawing.append("circle")
-    .attr("cx", 125)
-    .attr("cy", 125)
+    .attr("cx", fishX)//125
+    .attr("cy", fishY)//125
     .attr("r", 50)
     .attr("fill", "#577AEB");
 
 let fishBodyBase2 = drawing.append("rect")
-    .attr("x", 125)
-    .attr("y", 75)
+    .attr("x", fishX)//125
+    .attr("y", fishY - 50)//75
     .attr("width", 50)
     .attr("height", 100)
     .attr("fill", "#577AEB");
@@ -75,23 +80,23 @@ let fishBodyBase2 = drawing.append("rect")
 //Code for the fish's body details (the triangles of various colors)
 
 let fishBodyTopDetail = drawing.append("polygon")
-    .attr("points", closedPolygon(175, 75,
-                                  125, 100,
-                                  175, 125
+    .attr("points", closedPolygon(fishX + 50, 75,//175, 75
+                                  fishX, fishY - 25,//125, 100
+                                  fishX + 50, fishY//175, 125
                                 ))
     .attr("fill", "yellow");
 
 let fishBodyMidDetailLeft = drawing.append("polygon")
-    .attr("points", closedPolygon(125, 100, 
-                                  75, 125, 
-                                  125, 150
+    .attr("points", closedPolygon(fishX, fishY - 25,//125, 100
+                                  fishX - 50, fishY, //75, 125
+                                  fishX, fishY + 25 //125, 150
                                 ))
     .attr("fill", "#1D44D1");
 
 let fishBodyMidDetailRight = drawing.append("polygon")
-    .attr("points", closedPolygon(125, 100,
-                                  175, 125,
-                                  125, 150
+    .attr("points", closedPolygon(fishX, fishY - 25,//125, 100
+                                  fishX + 50, fishY,//175, 125
+                                  fishX, fishY + 25 //125, 150
                                  ))
      .attr("fill", "#1D44D1");
 
@@ -107,22 +112,23 @@ let fishBodyBottomDetail = drawing.append("polygon")
 //Code for the fish's head base (light blue part)
 
 let fishHeadBase = drawing.append("polygon")
-    .attr("points", closedPolygon(175, 75, 
-                                  275, 125, 
-                                  175, 175))
+    .attr("points", closedPolygon(fishX + 50, fishY - 50, //175, 75
+                                  fishX + 150, fishY, //275, 125
+                                  fishX + 50, fishY + 50 //175, 175
+                                ))
     .attr("fill", "#577AEB");
 
 //Code for the fish's head details
 
 let fishHeadDetail = drawing.append("polygon")
-    .attr("points", closedPolygon(225, 100,
-                                  175, 125,
-                                  225, 150
+    .attr("points", closedPolygon(fishX + 100, fishY - 25, //225, 100
+                                  fishX + 50, fishY, //175, 125
+                                  fishX + 100, fishY + 25  //225, 150
                                  ))
      .attr("fill", "#1D44D1");    
      
 let fishEye = drawing.append("circle")
-    .attr("cx", 240)
-    .attr("cy", 120)
+    .attr("cx", fishX + 115) //240
+    .attr("cy", fishY - 5)//120
     .attr("r", 5)
     .attr("fill", "black");
