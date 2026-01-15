@@ -1,13 +1,13 @@
 "use strict"
 
-// let drawingWidth = 500;
-// let drawingHeight = 500;
+let drawingWidth = 500;
+let drawingHeight = 500;
 
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
     .append("svg")
-    .attr("width", 500)
-    .attr("height", 500);
+    .attr("width", drawingWidth)
+    .attr("height", drawingHeight);
 
 /* Draw a border that matches the maximum drawing area for this assignment.
     Assign the border to a variable so that:
@@ -15,8 +15,8 @@ let drawing = d3.select("#canvas")
         (2) We will have the ability to change it later (in a future assignment)
 */
 let border = drawing.append("rect")
-    .attr("width", 500)
-    .attr("height", 500)
+    .attr("width", drawingWidth)
+    .attr("height", drawingHeight)
     .attr("fill", "none")
     .attr("stroke", "red");
 
@@ -104,7 +104,7 @@ let fishBodyBottomDetail = drawing.append("polygon")
 
 //HEAD
 
-//Code for the fish's head base (the blue part)
+//Code for the fish's head base (light blue part)
 
 let fishHeadBase = drawing.append("polygon")
     .attr("points", closedPolygon(175, 75, 
