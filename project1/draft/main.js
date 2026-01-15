@@ -25,6 +25,8 @@ let border = drawing.append("rect")
     and if two points coincide on the y axis, the first point coded will be the 
     one on the left*/
 
+//TAIL
+
 //Code for the tail
 
 let fishTale = drawing.append("polygon")
@@ -34,7 +36,9 @@ let fishTale = drawing.append("polygon")
                                 ))
     .attr("fill", "#F5B427");
 
-//Code for the fish's fins
+//BODY
+
+//Code for the fish's fins (the yellow triangles that are at the top and at the bottom of the fish's body)
 
 let fishTopFin = drawing.append("polygon")
      .attr("points", closedPolygon(85, 30,
@@ -50,7 +54,7 @@ let fishTopFin = drawing.append("polygon")
                                  ))    
      .attr("fill", "#F5B427");  
 
-//Code for the fish's body base
+//Code for the fish's body base (the blue part)
 
 let fishBodyBase1 = drawing.append("circle")
     .attr("cx", 125)
@@ -65,7 +69,7 @@ let fishBodyBase2 = drawing.append("rect")
     .attr("height", 100)
     .attr("fill", "#577AEB");
 
-//Code for the fish's body detail
+//Code for the fish's body details (the triangles of various colors)
 
 let fishBodyTopDetail = drawing.append("polygon")
     .attr("points", closedPolygon(175, 75,
@@ -95,7 +99,9 @@ let fishBodyBottomDetail = drawing.append("polygon")
                                  ))
      .attr("fill", "yellow");
 
-//Code for the fish's head base
+//HEAD
+
+//Code for the fish's head base (the blue part)
 
 let fishHeadBase = drawing.append("polygon")
     .attr("points", closedPolygon(175, 75, 
