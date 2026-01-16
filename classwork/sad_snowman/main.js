@@ -23,24 +23,24 @@ let snowmanBody = drawing.append("circle")
 .attr("r", 75)
 .attr("fill", "white");
 
-let snowmanHead = drawing.append("circle")
-.attr("cx", snowmanX)
-.attr("cy", snowmanY-50)
-.attr("r", 50)
-.attr("fill", "white");
-
 let headX = snowmanX;
 let headY = snowmanY - 100;
 
+let snowmanHead = drawing.append("circle")
+.attr("cx", snowmanX)
+.attr("cy", snowmanY-100)
+.attr("r", 50)
+.attr("fill", "white");
+
 let snowmanEyeLeft = drawing.append("circle")
 .attr("cx", headX-15)
-.attr("cy", snowmanY-15)
+.attr("cy", headY-15)
 .attr("r", 5)
 .attr("fill", "black");
 
 let snowmanEyeRight = drawing.append("circle")
 .attr("cx", headX+15)
-.attr("cy", headY+15)
+.attr("cy", headY-15)
 .attr("r", 5)
 .attr("fill", "black");
 
