@@ -38,8 +38,8 @@ let snowmanBody = drawing.append("circle")
 .attr("fill", "white");
 
 let snowmanHead = drawing.append("circle")
-.attr("cx", headCenterX)//250
-.attr("cy", headCenterY)//150
+.attr("cx", snowmanX)//250
+.attr("cy", snowmanY-100)//150
 .attr("r", 50)
 .attr("fill", "white");
 
