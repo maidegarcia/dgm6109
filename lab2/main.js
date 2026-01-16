@@ -71,8 +71,8 @@ let fishBodyBase1 = drawing.append("circle")
     .attr("fill", "#577AEB");
 
 let fishBodyBase2 = drawing.append("rect")
-    .attr("x", fishX)//125
-    .attr("y", fishY - 50)//75
+    .attr("x", fishX)//Original 125
+    .attr("y", fishY - 50)//Original 75
     .attr("width", 50)
     .attr("height", 100)
     .attr("fill", "#577AEB");
@@ -80,30 +80,30 @@ let fishBodyBase2 = drawing.append("rect")
 //Code for the fish's body details (the triangles of various colors)
 
 let fishBodyTopDetail = drawing.append("polygon")
-    .attr("points", closedPolygon(fishX + 50, fishY - 50,//175, 75
-                                  fishX, fishY - 25,//125, 100
-                                  fishX + 50, fishY//175, 125
+    .attr("points", closedPolygon(fishX + 50, fishY - 50,//Original 175, 75
+                                  fishX, fishY - 25,//Original 125, 100
+                                  fishX + 50, fishY//Original 175, 125
                                 ))
     .attr("fill", "yellow");
 
 let fishBodyMidDetailLeft = drawing.append("polygon")
-    .attr("points", closedPolygon(fishX, fishY - 25,//125, 100
-                                  fishX - 50, fishY, //75, 125
-                                  fishX, fishY + 25 //125, 150
+    .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
+                                  fishX - 50, fishY, //Original 75, 125
+                                  fishX, fishY + 25 //Original 125, 150
                                 ))
     .attr("fill", "#1D44D1");
 
 let fishBodyMidDetailRight = drawing.append("polygon")
-    .attr("points", closedPolygon(fishX, fishY - 25,//125, 100
-                                  fishX + 50, fishY,//175, 125
-                                  fishX, fishY + 25 //125, 150
+    .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
+                                  fishX + 50, fishY,//Original 175, 125
+                                  fishX, fishY + 25 //Original 125, 150
                                  ))
      .attr("fill", "#1D44D1");
 
 let fishBodyBottomDetail = drawing.append("polygon")
-     .attr("points", closedPolygon(fishX + 50, fishY,//175, 125
-                                   fishX, fishY + 25,//125, 150
-                                   fishX + 50, fishY + 50//175, 175
+     .attr("points", closedPolygon(fishX + 50, fishY,//Original 175, 125
+                                   fishX, fishY + 25,//Original 125, 150
+                                   fishX + 50, fishY + 50//Original 175, 175
                                  ))
      .attr("fill", "yellow");
 
@@ -112,23 +112,23 @@ let fishBodyBottomDetail = drawing.append("polygon")
 //Code for the fish's head base (light blue part)
 
 let fishHeadBase = drawing.append("polygon")
-    .attr("points", closedPolygon(fishX + 50, fishY - 50, //175, 75
-                                  fishX + 150, fishY, //275, 125
-                                  fishX + 50, fishY + 50 //175, 175
+    .attr("points", closedPolygon(fishX + 50, fishY - 50, //Original 175, 75
+                                  fishX + 150, fishY, //Original 275, 125
+                                  fishX + 50, fishY + 50 //Original 175, 175
                                 ))
     .attr("fill", "#577AEB");
 
 //Code for the fish's head details
 
 let fishHeadDetail = drawing.append("polygon")
-    .attr("points", closedPolygon(fishX + 100, fishY - 25, //225, 100
-                                  fishX + 50, fishY, //175, 125
-                                  fishX + 100, fishY + 25  //225, 150
+    .attr("points", closedPolygon(fishX + 100, fishY - 25, //Original 225, 100
+                                  fishX + 50, fishY, //Original 175, 125
+                                  fishX + 100, fishY + 25  //Original 225, 150
                                  ))
      .attr("fill", "#1D44D1");    
      
 let fishEye = drawing.append("circle")
-    .attr("cx", fishX + 115) //240
-    .attr("cy", fishY - 5)//120
+    .attr("cx", fishX + 115) //Original 240
+    .attr("cy", fishY - 5)//Original 120
     .attr("r", 5)
     .attr("fill", "black");
