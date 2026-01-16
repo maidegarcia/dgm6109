@@ -5,8 +5,8 @@ let drawingHeight = 500;
 
 /*I'm taking the fishBodyBase1 coordinates as the point of reference*/
 
-let fishX = drawingWidth/4; //Original 125
-let fishY = drawingHeight/4; //Original 125
+let fishX = 125; //Original 125
+let fishY = 125; //Original 125
 
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
@@ -38,9 +38,9 @@ let border = drawing.append("rect")
 //Code for the tail
 
 let fishTale = drawing.append("polygon")
-    .attr("points", closedPolygon(15, 75, 
-                                  75, 125, 
-                                  15, 175
+    .attr("points", closedPolygon(fishX - 100, fishY -50, // Original 15, 75
+                                  fishX - 50, fishY, //Original 75, 125
+                                  fishX - 100, fishY + 50 //Original 15, 175
                                 ))
     .attr("fill", "#F5B427");
 
@@ -49,16 +49,16 @@ let fishTale = drawing.append("polygon")
 //Code for the fish's fins (the orange triangles that are at the top and at the bottom of the fish's body)
 
 let fishTopFin = drawing.append("polygon")
-     .attr("points", closedPolygon(85, 30,
-                                   120, 75,
-                                   175, 75
+     .attr("points", closedPolygon(fishX - 40, fishY - 95,//Orignal 85, 30
+                                   fishX - 5, fishY - 50, //Original 120, 75
+                                   fishX + 50, fishY - 50 //Original 175, 75
                                  ))    
      .attr("fill", "#F5B427");  
      
  let fishBottomFin = drawing.append("polygon")
-     .attr("points", closedPolygon(120, 175,
-                                   175, 175,
-                                   115, 200
+     .attr("points", closedPolygon(fishX - 5, fishY + 50, //Original 120, 175
+                                   fishX + 50, fishY + 50, //Original 175, 175
+                                   fishX -10, fishY + 75 //Original 115, 200
                                  ))    
      .attr("fill", "#F5B427");  
 
