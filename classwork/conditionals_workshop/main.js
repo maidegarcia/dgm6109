@@ -39,9 +39,9 @@ drawing3.append("rect")
 
 /**** Conditional Practice #1: ****/
 
-let rects = 1;
+let rects = "8";
 
-if(rects==1){
+if(rects>=1){
     drawing1.append("rect")
     .attr("width", 100)
     .attr("height", 50)
@@ -49,7 +49,7 @@ if(rects==1){
     .attr("y", 50)
     .attr("fill", "red");
 } 
-if (rects==2){
+if (rects>=2){
     drawing1.append("rect")
     .attr("width", 100)
     .attr("height", 50)
@@ -63,25 +63,32 @@ if (rects==2){
 
 /**** Conditional Practice #2: ****/
 
-let ellipses = 0;
+let ellipses = 3;
 
-drawing2.append("ellipse")
+if(ellipses==1){
+    drawing2.append("ellipse")
     .attr("rx", 50)
     .attr("ry", 25)
     .attr("cx", 50)
     .attr("cy", 50)
     .attr("fill", "red");
+} 
 
-drawing2.append("ellipse")
+else {
+    drawing2.append("ellipse")
     .attr("rx", 50)
     .attr("ry", 25)
     .attr("cx", 75)
     .attr("cy", 75)
     .attr("fill", "blue");
+}
 
-drawing2.append("ellipse")
+if(ellipses==3){
+    drawing2.append("ellipse")
     .attr("rx", 50)
     .attr("ry", 25)
     .attr("cx", 100)
     .attr("cy", 100)
     .attr("fill", "lightgreen");
+}
+    
