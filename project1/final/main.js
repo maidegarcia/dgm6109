@@ -8,7 +8,7 @@ function processForm() {
     /* Get data from the form */
     xInput = Number(document.getElementById("xInput").value);
     yInput = Number(document.getElementById("yInput").value);
-    /* STEP 9: CHECK SELECT MENU OPTION HERE USING VARIABLE CHOICE */
+    choice = document.getElementById("modify");
     drawing.selectAll('svg>*').remove(); // This line selects everything that has been drawn in the SVG and deletes it all
     drawImage();
 }
@@ -31,8 +31,8 @@ The function below is called when the user presses the "Draw!" button and is whe
 
 function drawImage() {
 
-    let fishX = xInput;
-    let fishY = yInput;
+    let fishX = xInput; //Original point 125
+    let fishY = yInput; //Original point 125
 
     //TAIL
 
@@ -134,7 +134,6 @@ function drawImage() {
         .attr("r", 5)
         .attr("fill", "black");
 
-    // Step 6: Replace this code with your drawing code.
 
     // Step 10: Modify your drawing code to CONDITIONALLY draw part of your drawing based on
     // the choice the user made in your selection menu (stored in variable "choice" above)
