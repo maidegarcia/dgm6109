@@ -34,7 +34,13 @@ function drawImage() {
     let fishX = xInput; //Original point 125
     let fishY = yInput; //Original point 125
 
-    if (choice == "0") {
+    /*I'm taking the fishBodyBase1 coordinates as the point of reference*/
+
+    /* The order of the coordinates of the polygons are ALWAYS from the top to the bottom,
+    and if two points coincide on the y axis, the first point coded will be the 
+    one on the left*/
+
+    if (choice == "0") { //The fish is going to be in the original design, which I called "calm" state
 
         //Code for the fish's body base (the light blue part)
 
@@ -67,10 +73,6 @@ function drawImage() {
             ))
             .attr("fill", "#1D44D1");
 
-
-
-        //HEAD
-
         //Code for the fish's head base (light blue part)
 
         let fishHeadBase = drawing.append("polygon")
@@ -80,7 +82,7 @@ function drawImage() {
             ))
             .attr("fill", "#577AEB");
 
-        //Code for the fish's head details
+        //Code for the fish's head detail
 
         let fishHeadDetail = drawing.append("polygon")
             .attr("points", closedPolygon(fishX + 100, fishY - 25, //Original 225, 100
@@ -89,15 +91,11 @@ function drawImage() {
             ))
             .attr("fill", "#1D44D1");
 
-
     }
 
-    else {
+    else { //The fish is going to be on an "angry" state, it will change colors, an eyebrow to make it look angry face and a bat to hit its enemies
 
-        //BODY
-
-        //Code for the fish's fins (the orange triangles that are at the top and at the bottom of the fish's body
-
+        //Code for the fish's body base (the light blue part)
 
         let fishBodyBase1 = drawing.append("circle")
             .attr("cx", fishX)//125
@@ -111,6 +109,8 @@ function drawImage() {
             .attr("width", 50)
             .attr("height", 100)
             .attr("fill", "#C90A0A");
+
+        //Code for the fish's body details (the triangles of various colors)   
 
         let fishBodyMidDetailLeft = drawing.append("polygon")
             .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
@@ -126,7 +126,7 @@ function drawImage() {
             ))
             .attr("fill", "#C94D0A");
 
-        //HEAD
+        //Code for the fish's head base (light blue part)
 
         let fishHeadBase = drawing.append("polygon")
             .attr("points", closedPolygon(fishX + 50, fishY - 50, //Original 175, 75
@@ -135,6 +135,8 @@ function drawImage() {
             ))
             .attr("fill", "#C90A0A");
 
+        //Code for the fish's head detail
+
         let fishHeadDetail = drawing.append("polygon")
             .attr("points", closedPolygon(fishX + 100, fishY - 25, //Original 225, 100
                 fishX + 50, fishY, //Original 175, 125
@@ -142,27 +144,33 @@ function drawImage() {
             ))
             .attr("fill", "#C94D0A");
 
+        //Code for the fish's eyebrow
+
         let fishEyeBrow = drawing.append("polygon")
-            .attr("points", closedPolygon(230, 104, //Original 230, 106
-                242, 112, //Original 242, 112
-                230, 107  //Original 230, 110
+            .attr("points", closedPolygon(fishX + 105, fishY - 19, //Original 230, 106
+                fishX + 117, fishY - 13, //Original 242, 112
+                fishX + 105, fishY - 16  //Original 230, 109
             ))
             .attr("fill", "black");
 
+        //Code for the fish's bat
+
         let fishBat1 = drawing.append("polygon")
-            .attr("points", closedPolygon(175, 175, //Original 230, 106
-                225, 200, //Original 242, 112
-                200, 225  //Original 230, 110
+            .attr("points", closedPolygon(fishX + 50, fishY + 50, //Original 175, 175
+                fishX + 100, fishY + 75, //Original 225, 200
+                fishX + 75, fishY + 100  //Original 200, 225
             ))
             .attr("fill", "#CFA865");
 
-            let fishBat2 = drawing.append("circle")
-            .attr("cx", 212,5)//125
-            .attr("cy", 212,5)//125
-            .attr("r", 17,5)
+        let fishBat2 = drawing.append("circle")
+            .attr("cx", fishX + 87.5)// Original 212.5
+            .attr("cy", fishY + 87.5)//Original 212.5
+            .attr("r", 17.5)
             .attr("fill", "#CFA865");
 
     }
+
+    //Shapes that remain unchanged
 
     //Code for the tail
 
@@ -189,13 +197,14 @@ function drawImage() {
         ))
         .attr("fill", "#F5B427");
 
+    //Code for the fish's body details (the yellow triangles that don't change)
+
     let fishBodyTopDetail = drawing.append("polygon")
         .attr("points", closedPolygon(fishX + 50, fishY - 50,//Original 175, 75
             fishX, fishY - 25,//Original 125, 100
             fishX + 50, fishY//Original 175, 125
         ))
         .attr("fill", "yellow");
-
 
     let fishBodyBottomDetail = drawing.append("polygon")
         .attr("points", closedPolygon(fishX + 50, fishY,//Original 175, 125
@@ -204,14 +213,13 @@ function drawImage() {
         ))
         .attr("fill", "yellow");
 
+    //Code for the fish's eye
+
     let fishEye = drawing.append("circle")
         .attr("cx", fishX + 115) //Original 240
         .attr("cy", fishY - 5)//Original 120
         .attr("r", 5)
         .attr("fill", "black");
-
-    // Step 10: Modify your drawing code to CONDITIONALLY draw part of your drawing based on
-    // the choice the user made in your selection menu (stored in variable "choice" above)
 
     /***** DO NOT ADD OR EDIT ANYTHING BELOW THIS LINE ******/
 }
