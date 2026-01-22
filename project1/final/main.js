@@ -93,7 +93,7 @@ function drawImage() {
 
     }
 
-    else { //The fish is going to be on an "angry" state, it will change colors, an eyebrow to make it look angry face and a bat to hit its enemies
+    else { //The fish is going to be on an "angry" state, it will change colors, have an eyebrow to make it look angry face and a bat to hit its enemies
 
         //Code for the fish's body base (the light blue part)
 
