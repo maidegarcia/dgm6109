@@ -1,27 +1,27 @@
 body {
-    font-family: Helvetica, Verdana, sans-serif;
-    background-color: rgb(192, 223, 252);
-    margin: 1rem;
+    font-family: Helvetica, Verdana, sans-serif; /*Used it to change the overall font and listed different options in case thw main one isn't in the device system*/
+    background-color: rgb(192, 223, 252);/*Used it to change the background color of the web page*/
+    margin: 1rem; /*Used it to change the margin between the content of the page and the sides*/
 }
 
 h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 4rem; /*Used it to change the size of the font*/
+    margin-bottom: 1rem;/*Used it to change the margin on the bottom to have more space between th h1 and what's below it*/
 }
 
-.nav-main-item {
+.nav-main-item { /*To be able to use this item, I had to create a class in the HTML*/
     font-size: 1rem;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(53, 105, 228);
-    padding: 0.5rem  2rem;
-    margin-top: 2rem;
+    text-decoration: none;/*Used it to delete the underline on the text*/
+    color: rgb(0, 0, 0);/*Used it to assign a color to the text*/
+    background-color: rgb(53, 105, 228);/*Used it to assign a color to the "box" that contains the text*/
+    padding: 0.5rem  2rem; /*Used it to determine the margins of the text inside the "box" and the "box's" sides*/
+    margin-top: 2rem;/*Used it to change the margin on the top to have more space between the nav items and what's above them*/
 }
 
-.nav-main-item:hover,.nav-main-item:focus {
+.nav-main-item:hover,.nav-main-item:focus {/*This is to determine the change of appearence of the nav items when the user hovers and focuses on them*/
     color: rgb(249, 249, 249);
     background-color: rgb(24, 61, 225);
-    transition-property: background-color;
+    transition-property: background-color; /*The transitions establish how is going to occur the transition*/
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
@@ -32,14 +32,14 @@ h2 {
 }
 
 p {
-    max-width: 55rem;
+    max-width: 55rem; /*I used it to make sure the paragraph is responsive when the viewport shrinks*/
 }
 
 h3{
     margin-bottom:2rem;
 }
 
-.section-link{
+.section-link{ /*Here I created another class to hace more control over the in-text links in the section*/
     font-size: 1rem;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -57,9 +57,9 @@ h3{
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-color: black;
+    max-width: 100%;/*This for the image to be able to adapt to any type of screen*/
+    height: auto; /*This along max-width helps to mantain the aspect ratio of the image*/
+    border-color: black;/*The borders are to determine the properties of the image's border*/
     border-width: 5px;
     border-style: solid;
     margin-top: 1rem;
@@ -80,7 +80,7 @@ a:hover, a:focus{
 }
 
 figcaption{
-    font-style:italic; 
+    font-style:italic; /*This is to change the style of the text beneath the image*/
     margin-bottom:2rem;
  }
 
