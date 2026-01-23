@@ -73,7 +73,7 @@ a{
 a:hover, a:focus{
     text-decoration:none;
     color: rgb(255, 255, 255);
-    background-color: rgb(41, 96, 235);
+    background-color: rgb(109, 41, 235);
     transition-property: background-color;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
