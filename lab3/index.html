@@ -6,10 +6,19 @@
 
     <body>
         <h1>Maide Garcia Estrada Lab #3</h1>
-        <p>This program converts temperature in Farenheit to Celsius and Kelvin.</p>
-        <p>Temperature in Farenheit:<input type="number" id="inputF"></p>
-        <button id="submit">Submit</button>
+        <p>This program converts temperature in Fahrenheit to Celsius and Kelvin.</p>
+        <p>Enter a temperature in Fahrenheit:<input type="number" id="inputF"></p>
+        <p>Choose a conversion:
+            <select id="conversionChoice">
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+        </select>
+
+        </p>
+        <button id="submit">Convert</button>
+        <div id="output"></div>
     </body>
 
+    <script src="output.js"></script>
     <script src="main.js"></script>
     </html>

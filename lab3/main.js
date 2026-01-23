@@ -2,14 +2,33 @@
 
 document.getElementById("submit").addEventListener("click", function () {
 
-    let fahrenheit = document.getElementById("inputF").value; 
+    let fahrenheit = document.getElementById("inputF").value;
+    let conversionType = document.getElementById("conversionChoice").value;
     let celsius = (fahrenheit - 32) * 5 / 9
-    let kelvin = (Number(fahrenheit )+ 459.67) * 5 / 9 //the document.getElementId("inputF").value,changes 
-                                                       // the number to a String value and that is why you have to convert it.
-                                                       //You can see it in the DOM inspector, the value appers quotation marks. 
-                                                       //It doesn't seem to affect subtractions
-    console.log("Temperature (fahrenheit):" + fahrenheit)
-    console.log("Temperature (celsius):" + celsius)
-    console.log("Temperature (kelvin):" + kelvin)
+    let kelvin = (Number(fahrenheit) + 459.67) * 5 / 9 
+
+    output("Temperature (fahrenheit):" + fahrenheit)
+
+    /* if (conversionType == "c") {
+         output("Temperature (celsius):" + celsius)
+     }
+ 
+     if (conversionType == "k") {
+         output("Temperature (kelvin):" + kelvin)
+     } */
+
+    /*Although both conditional logics work, I prefer to use the if/else version because visually 
+    it makes more sense to me and it actually helps my thinking process, I can see the action as 
+    a whole and not in separate pieces*/
+
+    if (conversionType == "c") {
+        output("Temperature (celsius):" + celsius)
+    }
+
+    else (output("Temperature (kelvin):" + kelvin))
+
+    
+
+
 
 });
