@@ -1,0 +1,90 @@
+body {
+    font-family: Helvetica, Verdana, sans-serif;
+    background-color: rgb(192, 223, 252);
+    margin: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.nav-main-item {
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(53, 105, 228);
+    padding: 0.5rem  2rem;
+    margin-top: 2rem;
+}
+
+.nav-main-item:hover,.nav-main-item:focus {
+    color: rgb(249, 249, 249);
+    background-color: rgb(24, 61, 225);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+}
+
+p {
+    max-width: 55rem;
+}
+
+h3{
+    margin-bottom:2rem;
+}
+
+.section-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(53, 105, 228);
+    padding: 0.5rem  2rem;
+    margin-top: 2rem; 
+}
+
+.section-link:hover, .section-link:focus{
+    color: rgb(249, 249, 249);
+    background-color: rgb(24, 61, 225);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+a{
+    color: rgb(41, 96, 235);
+}
+
+a:hover, a:focus{
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 96, 235);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+figcaption{
+    font-style:italic; 
+    margin-bottom:2rem;
+ }
+
+
+h4 {
+    color: rgb(219, 16, 16);
+}
