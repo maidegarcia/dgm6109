@@ -77,27 +77,17 @@ function evaluateAnswers() {
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
     }
-   if(transactionType=="2"){
-        
-         if(routingNumber !="000000204"){
+
+    else if(transactionType=="2" && routingNumber !="000000204" && routingNumber != "000001193" && routingNumber != "000008002"){
          output( "The routing number is incorrect for this type of transaction")
          valid = false;
-         } 
-         else if(routingNumber != "000001193"){
-         output( "The routing number is incorrect for this type of transaction")
-         valid = false;
-          } 
-         else if(routingNumber != "000008002"){
-        output( "The routing number is incorrect for this type of transaction")
-        valid = false;
-         }
     }
 
-   /* if(transactionType=="3" && routingNumber !="000090007"){
+    else if(transactionType=="3" && routingNumber !="000090007"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
     } 
-    if(transactionType=="4" && transactionLocation == "1" && routingNumber.slice(0,4) != "0410" && routingNumber.slice(0,4) !="0412"){
+    else if(transactionType=="4" && transactionLocation == "1" && routingNumber.slice(0,4) != "0410" && routingNumber.slice(0,4) !="0412"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
         }
@@ -107,14 +97,14 @@ function evaluateAnswers() {
         valid = false;  
         }
 
-    else if(transactionType=="4" && transactionLocation == "3" && routingNumber.slice(0,4) != "0710"&&"0712"&&"0719"){
+    else if(transactionType=="4" && transactionLocation == "3" && routingNumber.slice(0,4) != "0710" && routingNumber.slice(0,4) !="0712" && routingNumber.slice(0,4) !="0719"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;      
 
-    }*/
-   /* if(valid==true){
+    }
+    if(valid==true){
         output("All form data is valid")
-    }*/
+    }
     return valid;
 
    
