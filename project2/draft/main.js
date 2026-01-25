@@ -48,7 +48,7 @@ function processForm() {
 function validateData() {
     let valid = true;
 
-    if (routingNumber.length <9 || routingNumber.length > 9) {
+    if (routingNumber.length != 9) {
         output("Please enter a 9 digits bank routing number!")
         valid = false;
     }
@@ -62,10 +62,6 @@ function validateData() {
         output("Please select a transaction location!")
         valid = false;
     }
-
-    /*if(valid==true){
-        output("All form data is valid")
-    }*/
     
     return valid;
 
@@ -77,38 +73,51 @@ function evaluateAnswers() {
 
     let valid = true;
 
-    if (transactionType=="1" && routingNumber != "000000518") {
+    if (transactionType=="1" && routingNumber !="000000518") {
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
     }
-    else if(transactionType=="2" && routingNumber != "000000204" || "0000001193" || "000008002"){
+   if(transactionType=="2"){
+        
+         if(routingNumber !="000000204"){
+         output( "The routing number is incorrect for this type of transaction")
+         valid = false;
+         } 
+         else if(routingNumber != "000001193"){
+         output( "The routing number is incorrect for this type of transaction")
+         valid = false;
+          } 
+         else if(routingNumber != "000008002"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
+         }
     }
-    else if(transactionType=="3" && routingNumber != "000090007"){
+
+   /* if(transactionType=="3" && routingNumber !="000090007"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
     } 
-    else if(transactionType=="4"){
-
-        if(transactionLocation == "1" && routingNumber.slice(0,4) != "0410" || "0412"){
+    if(transactionType=="4" && transactionLocation == "1" && routingNumber.slice(0,4) != "0410" && routingNumber.slice(0,4) !="0412"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;
         }
-        else if(transactionLocation == "2" && routingNumber.slice(0,4) != "0711"){
+
+    else if(transactionType=="4" && transactionLocation == "2" && routingNumber.slice(0,4) != "0711"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;  
         }
-        else if(transactionLocation == "2" && routingNumber.slice(0,4) != "0710"||"0712"||"0719"){
+
+    else if(transactionType=="4" && transactionLocation == "3" && routingNumber.slice(0,4) != "0710"&&"0712"&&"0719"){
         output( "The routing number is incorrect for this type of transaction")
         valid = false;      
 
-    }
-
-    }
-
+    }*/
+   /* if(valid==true){
+        output("All form data is valid")
+    }*/
     return valid;
-    output ("Sure, you can have ")
+
+   
 }
 
 /* TIP: The above two functions are written using different techniques for communicating success or failure. In your project, we will be looking for consistency -- i.e., choose ONE of these methods (early returns, or tracking the success in a variable) and use it throughout your project! */
