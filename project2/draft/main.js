@@ -177,3 +177,12 @@ number and then append them to "XXXX-X" to get a partial view of the routing num
 function partialView() {
 
 }
+
+/*In this function I will generate the message to let know the user if the processing step was succesful, 
+in other words, if evaluateAnswers = true. To generate the message, I would have to call the input values
+of the user, the resulting string of the partialView function and the resulting number of the confirmationCode
+function  */
+
+function outputResults (){
+
+}
