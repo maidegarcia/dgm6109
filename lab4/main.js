@@ -55,6 +55,13 @@ function validateData() {
 
     let valid = true;
 
+    /*This is still a work in progress but is meant to analyze if the user entered a number */
+
+    /*if (Number(routingNumber) == NaN){
+        output("Please enter a number!")
+        valid = false;
+    }*/
+
     /*Since the rounting number has to be of exactly 9 digits, I used the string processing .length
     to evaluate the number of digits that the user entered, if the number's length is not equal to 9,
     the system will output a message. Eventually I'm planning to make another conditional evaluating 
