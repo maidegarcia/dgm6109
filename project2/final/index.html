@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Project 2-8 DRAFT</title>
+</head>
+
+<body>
+    <p>Bank routing number:<input id="number" type="text" /></p>
+
+    <p>Type of transaction:
+        <select id="type">
+            <option value="0"></option>
+            <option value="1">Treasury check</option>
+            <option value="2">Money order</option>
+            <option value="3">Savings bond</option>
+            <option value="4">Local deposit</option>
+        </select>
+    </p>
+
+    <p>Transaction location:
+        <select id="location">
+            <option value="0"></option>
+            <option value="1">Cleveland,OH</option>
+            <option value="2">Peoria, IL</option>
+            <option value="3">Chigago, IL</option>
+        </select>
+    </p>
+    
+    <button id="submit">Submit Form</button>
+    <div id="output"></div>
+    <button id="reset" hidden>Start Over</button>
+    <hr />
+    <a href="./flowchart.pdf">View my flowchart</a>
+</body>
+
+<script src="output.js"></script>
+<script src="main.js"></script>
+
+</html>
