@@ -9,6 +9,7 @@
 
         <title>Prime & Tide</title>
 
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/grid.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -23,10 +24,10 @@
                     <a href="#home" class="nav-main-item">Home</a>
                     <a href="#butcher" class="nav-main-item">Butcher Shop</a>
                     <a href="#seafood" class="nav-main-item">Seafood Market</a>
-                    <a href="#locations" class="nav-main-items">Locations</a>
-                    <p>Search:<input id="search" type="text" /></p>
-                    <p>Language:
-                        <select id="language">
+                    <a href="#locations" class="nav-main-item">Locations</a>
+                    <p class="p-select">Search:<input id="search" type="text" /></p>
+                    <p class="p-nav">Language:
+                        <select id="language" >
                             <option value="0">English</option>
                             <option value="1">French</option>
                         </select>
@@ -40,14 +41,14 @@
 
             <h2>The best meat and seafood in Vancouver!</h2>
 
-            <p>We aren't just a shop; we are your partner in the kitchen, providing the cuts and catches that turn a recipe into an 
-                experiecnce. We partner with farmers and fisheries that respect the environment and the animal, so you can have, 
+            <p class="p-text">We aren't just a shop; we are your partner in the kitchen, providing the cuts and catches that turn a recipe into an 
+                experience. We partner with farmers and fisheries that respect the environment and the animal, so you can have, 
                 fresh and optimum quality products!</p>
 
         </section>
 
         <div class="grid two-column">
-            <section id="meat">
+            <section id="meatlink">
                 <h3>Meat</h3>
 
                 <figure>
@@ -63,7 +64,7 @@
                 </ul>
 
             </section>
-            <section id="seafood">
+            <section id="seafoodlink">
                 <h3>Seafood</h3>
 
                 <figure>
@@ -82,7 +83,7 @@
 
             <section id="sale">
                 <h4>On Sale!</h4>
-                <p>Checkout our discounts <a href="">here</a></p>
+                <p>Checkout our discounts <a href="" class="a-sale-link">here</a>.</p>
             </section>
 
         </div>
