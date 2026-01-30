@@ -26,7 +26,7 @@ function processForm() {
 
     routingNumber = document.getElementById("number").value;
     transactionTypeValue = document.getElementById("type").value;
-    //transactionTypeText = document.getElementById("type").text;
+    //transactionTypeText = transactionTypeValue.options[transactionTypeValue.selectedIndex].text;
     transactionLocationValue = document.getElementById("location").value
     //transactionLocationText = document.getElementById("location").text
 
@@ -46,6 +46,8 @@ function processForm() {
     }
 }
 
+
+
 /* IC: In this function, do any validation with validate the data was correctly entered in general, not for specific cases. Return false if you have told the user that they need to correct something. Return true if all data is valid. We have provided you with the basic constraints for the data, but you may improve the validation as a bonus (as long as you don't mess up our ability to test every option in your evaluateAnswers function!) */
 
 /*For this function I decided to use the if conditional logic because of my thinking process, in this step
@@ -59,10 +61,10 @@ function validateData() {
 
     /*This is still a work in progress but is meant to analyze if the user entered a number */
 
-    /*if (Number(routingNumber) == NaN){
-        output("Please enter a number!")
+    if (Number.isNaN(Number(routingNumber))) {
+        output("Please enter a number!");
         valid = false;
-    }*/
+    }
 
     /*Since the rounting number has to be of exactly 9 digits, I used the string processing .length
     to evaluate the number of digits that the user entered, if the number's length is not equal to 9,
@@ -172,16 +174,16 @@ function evaluateAnswers() {
 
         b = Number(routingNumber[1]) + Number(routingNumber[4]) + Number(routingNumber[7])
         if (b < 10) {
-           b = "0" + b
+            b = "0" + b
         }
 
         c = Number(routingNumber[2]) + Number(routingNumber[5]) + Number(routingNumber[8])
         if (c < 10) {
-           c = "0" + c
+            c = "0" + c
         }
 
         partialView = "XXXX-X" + routingNumber.slice(5, 8) + "-" + routingNumber.slice(8, 9);
-        output("Your " + transactionTypeValue + " has been iniated at our branch in " + transactionLocationValue + " using routing number " + partialView + " (only the last 4 digits are shown, for security purposes). Your confirmation code is " + a+b+c + ".")
+        output("Your " + transactionTypeValue + " has been iniated at our branch in " + transactionLocationValue + " using routing number " + partialView + " (only the last 4 digits are shown, for security purposes). Your confirmation code is " + a + b + c + ".")
 
 
 
