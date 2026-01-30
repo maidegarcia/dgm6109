@@ -27,8 +27,8 @@ function processForm() {
     routingNumber = document.getElementById("number").value;
     transactionTypeValue = document.getElementById("type").value;
     //transactionTypeText = transactionTypeValue.options[transactionTypeValue.selectedIndex].text;
-    transactionLocationValue = document.getElementById("location").value
-    //transactionLocationText = document.getElementById("location").text
+    transactionLocationValue = document.getElementById("location").value;
+    //transactionLocationText = transactionLocationValue.options[transactionLocationValue.selectedIndex].text;
 
     /* IC: This code looks for a true or false for whether the data is valid. It only continues to evaluate the answers if the data is valid. You DO NOT need to modify any code between here and the end of the function, nor should you, unless you have a good reason. All versions of this project can be completed WITHOUT modifying the code from this comment to the end of the function, so you should attempt to work with that restriction! */
 
@@ -112,7 +112,7 @@ function evaluateAnswers() {
     /*In this part I'm saying that if the user chose the first option and their routing number is not equal to
      "000000518", the system has to output an error message*/
 
-    if (transactionTypeValue == "1" && routingNumber != "000000518") {
+    if (transactionTypeValue == "Treasury check" && routingNumber != "000000518") {
         output("The routing number is incorrect for this type of transaction")
         valid = false;
     }
