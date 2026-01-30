@@ -23,8 +23,8 @@ nav{
     text-decoration: none;
     color: rgb(255, 255, 255);
     background-color: rgb(223, 175, 34);
-    padding: 0.5rem  4.5rem; 
-    margin-top: 0rem;
+    padding: 0.75rem  5.5rem; 
+    margin-top: 0rem; 
     border-color: black;
 }
 
@@ -38,6 +38,7 @@ nav{
 
 .p-select, .p-nav{
     color: rgb(255, 255, 255);
+    margin:0.5rem;
 }
 
 h2{
@@ -53,6 +54,10 @@ p {
     font-size: 1.3rem;
 }
 
+h3{
+    margin:1.2rem;
+}
+
 
 img {
     max-width: 100%;
@@ -62,20 +67,16 @@ img {
     border-style: solid;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    
 }
 
-a{
-    color: blue;
-}
-
-
-
-a:hover, a:focus{
-    color: rgb(223, 175, 34);
+img:hover, img:focus{
+    border-width: 10px;
+    border-color: rgb(223, 175, 34);
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-out;
-} 
+}
 
 figure {
 	margin: 1rem;
@@ -83,9 +84,12 @@ figure {
 
 figcaption{
     font-style:italic; 
-    margin-bottom:1.25rem;
+    margin-bottom:1.2rem;
  }
 
+.figcaption-seafood{
+    margin-top: 2.65rem;
+}
 .a-sale-link{
     color:blue;
     text-decoration: none;
