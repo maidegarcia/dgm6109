@@ -140,18 +140,18 @@ function evaluateAnswers() {
     https://javascript.info/string  .*/
 
     else if (transactionType == "Local Deposit" && transactionLocation == "Cleveland,OH" && routingNumber.slice(0, 4) != "0410" && routingNumber.slice(0, 4) != "0412") {
-        output("The routing number is incorrect for this type of transaction!")
+        output("The routing number is incorrect for this type of transaction location!")
         valid = false
     }
 
     else if (transactionType == "Local Deposit" && transactionLocation == "Peoria, IL" && routingNumber.slice(0, 4) != "0711") {
-        output("The routing number is incorrect for this type of transaction!")
+        output("The routing number is incorrect for this type of transaction location!")
 
         valid = false;
     }
 
     else if (transactionType == "Local Deposit" && transactionLocation == "Chigago, IL" && routingNumber.slice(0, 4) != "0710" && routingNumber.slice(0, 4) != "0712" && routingNumber.slice(0, 4) != "0719") {
-        output("The routing number is incorrect for this type of transaction!")
+        output("The routing number is incorrect for this type of transaction location!")
         valid = false;
 
     }
