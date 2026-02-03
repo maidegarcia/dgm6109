@@ -20,7 +20,7 @@ function processFormValues() { //This function is to get the values from the use
     processData();
 }
 
-function processData() { //This function passes information on to the functions validateData() and evaluateAnswers
+function processData() { //This function passes information on to the functions validateData() and evaluateAnswers()
 
     let evaluationCompleted = false;
 
@@ -40,7 +40,7 @@ function processData() { //This function passes information on to the functions 
 
 
 /* validateData() is to check if the data was correctly entered in general, not for specific cases. Each condition 
-returns false if there is somethimg incorrect with the data, if the data is ok, they will return true 
+returns false if there is somethimg incorrect with the data, if the data is ok, they will return true. 
 
 For this function I decided to use the if conditional logic because of my thinking process, in this step I prefer to 
 evaluate each type of data and condition separately.*/
@@ -59,9 +59,7 @@ function validateData() {
 
     /*Since the rounting number has to be of exactly 9 digits, I used the string processing .length
     to evaluate the number of digits that the user entered, if the number's length is not equal to 9,
-    the system will output a message. Eventually I'm planning to make another conditional evaluating 
-    if the user put other characters besides of numbers, in that case, the system would have to output 
-    a message saying what's wrong. I read about the string processing in the web page https://javascript.info/string */
+    the system will output a message. I read about the string processing in the web page https://javascript.info/string */
 
     if (routingNumber.length != 9) {
         output("Please enter a 9 digits bank routing number!")
@@ -136,8 +134,7 @@ function evaluateAnswers() {
     digits of the number. What this does is that it slices the string from the indicated character, in
     this case digit, that you choose (xn) to the end that you decide, that would be yn, but yn is not included 
     in the new string that will result out of this. It is important to say that in this processes, the first character 
-    is "0" and not "1". I read about the string processing in the web page
-    https://javascript.info/string  .*/
+    is "0" and not "1". I read about the string processing in the web page https://javascript.info/string  .*/
 
     else if (transactionType == "Local Deposit" && transactionLocation == "Cleveland,OH" && routingNumber.slice(0, 4) != "0410" && routingNumber.slice(0, 4) != "0412") {
         output("The routing number is incorrect for this type of transaction location!")
@@ -150,7 +147,7 @@ function evaluateAnswers() {
         valid = false;
     }
 
-    else if (transactionType == "Local Deposit" && transactionLocation == "Chigago, IL" && routingNumber.slice(0, 4) != "0710" && routingNumber.slice(0, 4) != "0712" && routingNumber.slice(0, 4) != "0719") {
+    else if (transactionType == "Local Deposit" && transactionLocation == "Chicago, IL" && routingNumber.slice(0, 4) != "0710" && routingNumber.slice(0, 4) != "0712" && routingNumber.slice(0, 4) != "0719") {
         output("The routing number is incorrect for this type of transaction location!")
         valid = false;
 
