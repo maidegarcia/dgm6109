@@ -8,7 +8,7 @@ function processForm() {
     /* Get data from the form */
     xInput = Number(document.getElementById("xInput").value);
     yInput = Number(document.getElementById("yInput").value);
-    origin = document.getElementById("origin").value;
+    origin = document.getElementById("origin").value=="yes";
     drawing.selectAll('svg>*').remove(); // This line selects everything that has been drawn in the SVG and deletes it all
     drawFish(drawing, xInput, yInput, origin);
 }

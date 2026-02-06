@@ -2,8 +2,8 @@
 
 /* ************ function drawFish () *****
 PURPOSE:
-Gets the data from the form and draws a fish depending on the input of the user. The fish can be either blue and calm
-or red and angry with a bat depending of what the user selects. It can also show the origin point of the drawing if the user wants it to.
+Gets the data from the form and draws a fish in a sepecific position depending on the input of the user.
+It can also show the origin point of the drawing if the user wants it to.
 
 
 PARAMETERS:
@@ -68,7 +68,7 @@ function drawFish(svgArea, fishX, fishY, originVisible) {
 
     //Code for the fish's body details (the triangles of various colors)
 
-     let fishBodyTopDetail = drawing.append("polygon")
+     let fishBodyTopDetail = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX + 50, fishY - 50,//Original 175, 75
             fishX, fishY - 25,//Original 125, 100
             fishX + 50, fishY//Original 175, 125
@@ -120,7 +120,7 @@ function drawFish(svgArea, fishX, fishY, originVisible) {
         .attr("r", 5)
         .attr("fill", "black");
 
-    if (originVisible == "true") {
+    if (originVisible == true) {
 
         let originPoint = svgArea.append("circle")
             .attr("cx", fishX)//125
