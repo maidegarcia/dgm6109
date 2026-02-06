@@ -18,16 +18,7 @@ svgArea
 ************************************** */
 
 
-function drawDuck(svgArea, duckX, duckY, duckOriginpoint) {
-
-
-    if (point == 1) {
-        let duckOriginpoint = svgArea.append("circle")
-            .attr("cx", duckX) 
-            .attr("cy", duckY) 
-            .attr("r", 3)
-            .attr("fill", "deeppink");
-    }
+function drawDuck(svgArea, duckX, duckY, booleanValue) {
 
 
     /* Elements of the duck that are consctructed with the line function. 
@@ -87,23 +78,23 @@ function drawDuck(svgArea, duckX, duckY, duckOriginpoint) {
         .attr("fill", "#FF914D");
 
     /* Duck's eye */
-    if (choice == 1) {
-        svgArea.append("circle")
+    
+    let duckEye = svgArea.append("circle")
         .attr("cx", duckX + 130) /// x1 = 230
         .attr("cy", duckY + 17.5) /// y1 = 67.5
         .attr("r", 5)
         .attr("fill", "black");
-    }
 
-    if (choice == 2) {
-        svgArea.append("line")
-            .attr("x1", duckX + 125) /// 225
-            .attr("y1", duckY + 17.5) /// 67.5
-            .attr("x2", duckX + 135) /// 235
-            .attr("y2", duckY + 17.5) /// 67.5
-            .attr("stroke", "black")
-            .attr("stroke-width", 2);
+    
+    
+    if ( booleanValue === true ) {
+        let booleanValue = svgArea.append("circle")
+            .attr("cx", duckX) 
+            .attr("cy", duckY) 
+            .attr("r", 3)
+            .attr("fill", "deeppink");
     }
+   
 
     return svgArea;
 
