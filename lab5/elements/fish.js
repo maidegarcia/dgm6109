@@ -2,8 +2,8 @@
 
 /* ************ function drawFish () *****
 PURPOSE:
-Gets the data from the form and draws a fish depending on the input of the user. The fish can be either blue and calm
-or red and angry with a bat depending of what the user selects. It can also show the origin point of the drawing if the user wants it to.
+Gets the data from the form and draws a fish in a sepecific position depending on the input of the user.
+It can also show the origin point of the drawing if the user wants it to.
 
 
 PARAMETERS:
