@@ -33,6 +33,7 @@ function processForm() {
     drawing.selectAll('svg>*').remove();
     
     makeDrawing(drawing, choice1, x1, y1, choice2, x2, y2, showOrigin)
+    
 }
 
 let drawing = d3.select("#canvas")
@@ -71,21 +72,29 @@ Nothing
 function makeDrawing (canvas, choice1, x1, y1, choice2, x2, y2, showOrigin) {
 
     let item1 = canvas.append("g");
-    if (choice1 == "square") {
-        square(item1, x1, y1, showOrigin);
-    } else if (choice1 == "circle") {
-        circle(item1, x1, y1, showOrigin);
+    if (choice1 == "fish") {
+        drawFish(item1, x1, y1, showOrigin);
+    }else if (choice1 == "lion") {
+        lion(item1, x1, y1, showOrigin);
     }
-
+    else if (choice1 == "trumpeter") {
+        drawTrumpeter(item1, x1, y1, showOrigin);
+    }else if (choice1 == "duck") {
+        drawDuck(item1, x1, y1, showOrigin);
+    }
     let item2 = canvas.append("g");
-    if (choice2 == "square") {
-        square(item2, x2, y2, showOrigin);
-    } else if (choice2 == "circle") {
-        circle(item2, x2, y2, showOrigin);
-    }
-
+    if (choice2 == "fish") {
+        drawFish(item2, x2, y2, showOrigin);
+    }else if (choice2 == "lion") {
+        lion(item2, x2, y2, showOrigin);
+    }if (choice2 == "trumpeter") {
+        drawTrumpeter(item2, x2, y2, showOrigin);
+    } else if (choice2 == "duck") {
+        drawDuck(item2, x2, y2, showOrigin);
+    } 
     switcheroo(item1, x1, y1, item2, x2, y2);
 }
+
 
 /* ************ function switcheroo (i1, x1, y1, i2, x2, y2) *****
 PURPOSE:
