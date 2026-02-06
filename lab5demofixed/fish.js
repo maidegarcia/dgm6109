@@ -1,38 +1,24 @@
 "use strict"
 
-document.getElementById("action").addEventListener("click", processForm);
+/* ************ function drawFish () *****
+PURPOSE:
+Gets the data from the form and draws a fish in a sepecific position depending on the input of the user.
+It can also show the origin point of the svgArea if the user wants it to.
 
-let xInput, yInput, choice;
 
-function processForm() {
-    /* Get data from the form */
-    xInput = Number(document.getElementById("xInput").value);
-    yInput = Number(document.getElementById("yInput").value);
-    choice = document.getElementById("mood").value;
-    drawing.selectAll('svg>*').remove(); // This line selects everything that has been drawn in the SVG and deletes it all
-    drawImage();
-}
+PARAMETERS:
+svgArea: the SVG svgArea area
+fishX: the horizontal position of the svgArea
+fishY: the vertical position of the svgArea
+originVisible: a value that determines if the origin point of the svgArea will be visible
 
-/* set up the drawing canvas - Be sure not to copy this code from your draft project! */
-let drawing = d3.select("#canvas")
-    .append("svg")
-    .attr("width", 500)
-    .attr("height", 500);
+RETURNS:
+The SVG svgArea area
+****************************************************************** */
 
-let border = drawing.append("rect")
-    .attr("width", 500)
-    .attr("height", 500)
-    .attr("fill", "none")
-    .attr("stroke", "red");
 
-/*
-The function below is called when the user presses the "Draw!" button and is where you will put most of your drawing code. Please follow the instructions in the homework PDF for this step.
-*/
+function drawFish(svgArea, fishX, fishY, originVisible, choice) {
 
-function drawImage() {
-
-    let fishX = xInput; //Original point 125
-    let fishY = yInput; //Original point 125
 
     /*I'm taking the fishBodyBase1 coordinates as the point of reference*/
 
@@ -44,13 +30,13 @@ function drawImage() {
 
         //Code for the fish's body base (the light blue part)
 
-        let fishBodyBase1 = drawing.append("circle")
+        let fishBodyBase1 = svgArea.append("circle")
             .attr("cx", fishX)//125
             .attr("cy", fishY)//125
             .attr("r", 50)
             .attr("fill", "#577AEB");
 
-        let fishBodyBase2 = drawing.append("rect")
+        let fishBodyBase2 = svgArea.append("rect")
             .attr("x", fishX)//Original 125
             .attr("y", fishY - 50)//Original 75
             .attr("width", 50)
@@ -59,14 +45,14 @@ function drawImage() {
 
         //Code for the fish's body details (the triangles of various colors)
 
-        let fishBodyMidDetailLeft = drawing.append("polygon")
+        let fishBodyMidDetailLeft = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
                 fishX - 50, fishY, //Original 75, 125
                 fishX, fishY + 25 //Original 125, 150
             ))
             .attr("fill", "#1D44D1");
 
-        let fishBodyMidDetailRight = drawing.append("polygon")
+        let fishBodyMidDetailRight = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
                 fishX + 50, fishY,//Original 175, 125
                 fishX, fishY + 25 //Original 125, 150
@@ -75,7 +61,7 @@ function drawImage() {
 
         //Code for the fish's head base (light blue part)
 
-        let fishHeadBase = drawing.append("polygon")
+        let fishHeadBase = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 50, fishY - 50, //Original 175, 75
                 fishX + 150, fishY, //Original 275, 125
                 fishX + 50, fishY + 50 //Original 175, 175
@@ -84,7 +70,7 @@ function drawImage() {
 
         //Code for the fish's head detail
 
-        let fishHeadDetail = drawing.append("polygon")
+        let fishHeadDetail = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 100, fishY - 25, //Original 225, 100
                 fishX + 50, fishY, //Original 175, 125
                 fishX + 100, fishY + 25  //Original 225, 150
@@ -97,13 +83,13 @@ function drawImage() {
 
         //Code for the fish's body base (the light blue part)
 
-        let fishBodyBase1 = drawing.append("circle")
+        let fishBodyBase1 = svgArea.append("circle")
             .attr("cx", fishX)//125
             .attr("cy", fishY)//125
             .attr("r", 50)
             .attr("fill", "#C90A0A");
 
-        let fishBodyBase2 = drawing.append("rect")
+        let fishBodyBase2 = svgArea.append("rect")
             .attr("x", fishX)//Original 125
             .attr("y", fishY - 50)//Original 75
             .attr("width", 50)
@@ -112,14 +98,14 @@ function drawImage() {
 
         //Code for the fish's body details (the triangles of various colors)   
 
-        let fishBodyMidDetailLeft = drawing.append("polygon")
+        let fishBodyMidDetailLeft = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
                 fishX - 50, fishY, //Original 75, 125
                 fishX, fishY + 25 //Original 125, 150
             ))
             .attr("fill", "#C94D0A");
 
-        let fishBodyMidDetailRight = drawing.append("polygon")
+        let fishBodyMidDetailRight = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX, fishY - 25,//Original 125, 100
                 fishX + 50, fishY,//Original 175, 125
                 fishX, fishY + 25 //Original 125, 150
@@ -128,7 +114,7 @@ function drawImage() {
 
         //Code for the fish's head base (light blue part)
 
-        let fishHeadBase = drawing.append("polygon")
+        let fishHeadBase = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 50, fishY - 50, //Original 175, 75
                 fishX + 150, fishY, //Original 275, 125
                 fishX + 50, fishY + 50 //Original 175, 175
@@ -137,7 +123,7 @@ function drawImage() {
 
         //Code for the fish's head detail
 
-        let fishHeadDetail = drawing.append("polygon")
+        let fishHeadDetail = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 100, fishY - 25, //Original 225, 100
                 fishX + 50, fishY, //Original 175, 125
                 fishX + 100, fishY + 25  //Original 225, 150
@@ -146,7 +132,7 @@ function drawImage() {
 
         //Code for the fish's eyebrow
 
-        let fishEyeBrow = drawing.append("polygon")
+        let fishEyeBrow = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 105, fishY - 19, //Original 230, 106
                 fishX + 117, fishY - 13, //Original 242, 112
                 fishX + 105, fishY - 16  //Original 230, 109
@@ -155,14 +141,14 @@ function drawImage() {
 
         //Code for the fish's bat
 
-        let fishBat1 = drawing.append("polygon")
+        let fishBat1 = svgArea.append("polygon")
             .attr("points", closedPolygon(fishX + 50, fishY + 50, //Original 175, 175
                 fishX + 100, fishY + 75, //Original 225, 200
                 fishX + 75, fishY + 100  //Original 200, 225
             ))
             .attr("fill", "#CFA865");
 
-        let fishBat2 = drawing.append("circle")
+        let fishBat2 = svgArea.append("circle")
             .attr("cx", fishX + 87.5)// Original 212.5
             .attr("cy", fishY + 87.5)//Original 212.5
             .attr("r", 17.5)
@@ -174,7 +160,7 @@ function drawImage() {
 
     //Code for the tail
 
-    let fishTail = drawing.append("polygon")
+    let fishTail = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX - 100, fishY - 50, // Original 15, 75
             fishX - 50, fishY, //Original 75, 125
             fishX - 100, fishY + 50 //Original 15, 175
@@ -183,14 +169,14 @@ function drawImage() {
 
     //Code for the fish's fins (the orange triangles that are at the top and at the bottom of the fish's body)
 
-    let fishTopFin = drawing.append("polygon")
+    let fishTopFin = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX - 40, fishY - 95,//Orignal 85, 30
             fishX - 5, fishY - 50, //Original 120, 75
             fishX + 50, fishY - 50 //Original 175, 75
         ))
         .attr("fill", "#F5B427");
 
-    let fishBottomFin = drawing.append("polygon")
+    let fishBottomFin = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX - 5, fishY + 50, //Original 120, 175
             fishX + 50, fishY + 50, //Original 175, 175
             fishX - 10, fishY + 75 //Original 115, 200
@@ -199,14 +185,14 @@ function drawImage() {
 
     //Code for the fish's body details (the yellow triangles that don't change)
 
-    let fishBodyTopDetail = drawing.append("polygon")
+    let fishBodyTopDetail = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX + 50, fishY - 50,//Original 175, 75
             fishX, fishY - 25,//Original 125, 100
             fishX + 50, fishY//Original 175, 125
         ))
         .attr("fill", "yellow");
 
-    let fishBodyBottomDetail = drawing.append("polygon")
+    let fishBodyBottomDetail = svgArea.append("polygon")
         .attr("points", closedPolygon(fishX + 50, fishY,//Original 175, 125
             fishX, fishY + 25,//Original 125, 150
             fishX + 50, fishY + 50//Original 175, 175
@@ -215,11 +201,21 @@ function drawImage() {
 
     //Code for the fish's eye
 
-    let fishEye = drawing.append("circle")
+    let fishEye = svgArea.append("circle")
         .attr("cx", fishX + 115) //Original 240
         .attr("cy", fishY - 5)//Original 120
         .attr("r", 5)
         .attr("fill", "black");
 
-    /***** DO NOT ADD OR EDIT ANYTHING BELOW THIS LINE ******/
+    if (originVisible == true) {
+
+        let originPoint = svgArea.append("circle")
+            .attr("cx", fishX)//125
+            .attr("cy", fishY)//125
+            .attr("r", 3)
+            .attr("fill", "deeppink");
+    }
+
+    return svgArea;
+
 }
