@@ -13,17 +13,33 @@
 }
 
 /*To make the grid to adapt*/
-@media(min-width:50rem){/*820px*/
+@media(min-width:20rem){/*320px*/
 
-    .grid.two-column{
-        grid-template-columns: 1fr 1fr;
+    .grid.one-column{
+        grid-template-columns: 1fr;
     }
 }
 
-@media(min-width:70rem){/*1120px*/
+@media(min-width:64rem){/*1024px*/
+
+    .grid.four-column{
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+
+    .grid.two-column{
+        grid-template-columns: 1fr 1fr ;
+    }
+
+
+}
+@media(min-width:120rem){/*1920px*/
 
     .grid.six-column{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+     .grid.two-column{
+        grid-template-columns: 1fr 1fr;
     }
 
 }
