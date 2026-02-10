@@ -1,0 +1,119 @@
+/*To determine general characteristics of the web page*/
+body{
+    font-family: Helvetica, Verdana, sans-serif;
+    margin: 1rem;
+    background-color:rgb(234, 233, 233);
+}
+
+/*h1*/
+h1{
+    color:rgb(255, 255, 255);
+    background-color: black;
+    padding: 2rem  2rem;
+    margin-bottom: 0rem;
+    margin:0rem;
+    
+}
+
+/*<nav>*/
+nav{
+    background-color:rgb(0, 0, 0);
+    padding: 0.2rem;
+}
+
+/*For the elemets of the <nav>*/
+.nav-main-item { 
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(223, 175, 34);
+    padding: 0.75rem  5.5rem; 
+    margin-top: 0rem; 
+    border-color: black;
+}
+
+.nav-main-item:hover,.nav-main-item:focus {
+    color: rgb(223, 175, 34);
+    background-color: rgb(137, 138, 143);
+    transition-property: background-color; 
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+/*For the color of the text of the input and select elements*/
+.p-select, .p-input{
+    color: rgb(255, 255, 255);
+    margin:0.5rem;
+}
+
+/*h2*/
+h2{
+    margin-top: 2rem;
+}
+
+/*Paragraph*/
+p {
+    max-width: 80rem; 
+    margin:2rem;
+}
+
+/*For the main paragraph*/
+.p-text{
+    font-size: 1.3rem;
+}
+
+/*h3*/
+h3{
+    margin:1.2rem;
+}
+
+/*Images*/
+img {
+    max-width: 100%;
+    height: auto; 
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; 
+    /* width: 100%;
+    height:562px;
+    object-fit:cover; */
+}
+
+img:hover, img:focus{
+    border-width: 10px;
+    border-color: rgb(223, 175, 34);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+/*To fix the margines of the figure element*/
+figure {
+	margin: 1rem;
+}
+
+/*The caption of the images*/
+figcaption{
+    font-style:italic; 
+    margin-bottom:1.2rem;
+ }
+
+.figcaption-seafood{
+    margin-top: 2.65rem;
+}
+
+/*For the link that takes to the discounts*/
+.a-sale-link{
+    color:blue;
+    text-decoration: none;
+}
+
+.a-sale-link:hover, .a-sale-link:focus{
+    text-decoration:none;
+    color: rgb(223, 175, 34);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}

@@ -1,0 +1,29 @@
+*{
+    box-sizing:border-box;
+}
+
+.grid{
+    display:grid;
+}
+
+.grid.add-gutters{
+    grid-column-gap:0.2rem;
+    grid-row-gap: 0.2rem;
+    grid-auto-flow:row;
+}
+
+/*To make the grid to adapt*/
+@media(min-width:50rem){/*820px*/
+
+    .grid.two-column{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width:70rem){/*1120px*/
+
+    .grid.six-column{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+}
