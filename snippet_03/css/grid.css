@@ -1,45 +1,40 @@
 *{
-    box-sizing:border-box;
+    box-sizing:border-box;/*this is to tell the elements to be sized according to their border instead of their content*/
 }
 
 .grid{
-    display:grid;
+    display:grid;/*establishes how I'm going to divide the layout of the screen*/
 }
 
 .grid.add-gutters{
-    grid-column-gap:0.2rem;
-    grid-row-gap: 0.2rem;
-    grid-auto-flow:row;
+    grid-column-gap:0.2rem; /*determines the gap between the columns*/
+    grid-row-gap: 0.2rem; /*determines the gap between the rows*/
+    grid-auto-flow:row; /*to control how the elements will adapt automatically inside the grids*/
 }
 
-/*To make the grid to adapt*/
-@media(min-width:20rem){/*320px*/
+/*To make the grid and elements inside the grid to adapt depending on the screen size*/
 
-    .grid.one-column{
-        grid-template-columns: 1fr;
+/*Layout for mobile*/
+@media(min-width:20rem){/*320px*/ /*This is to say "if the width of the screen is minimum 20rem, do this"*/
+
+    .grid.one-column{/*calls the class grid one-column*/
+        grid-template-columns: 1fr; /*Divides the layouts in one columns*/
     }
 }
+ /*Layout for desktop*/
+@media(min-width:64rem){/*1024px*//*This is to say "if the width of the screen is minimum 64rem, do this"*/
 
-@media(min-width:64rem){/*1024px*/
-
-    .grid.four-column{
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    .grid.four-column{ /*calls the class grid four-column*/
+        grid-template-columns: 1fr 1fr 1fr 1fr ; /*Divides the layouts in four columns*/
     }
-
-    .grid.two-column{
-        grid-template-columns: 1fr 1fr ;
-    }
-
 
 }
-@media(min-width:120rem){/*1920px*/
 
-    .grid.six-column{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+/*Layout for large screen*/
+@media(min-width:120rem){/*1920px*//*This is to say "if the width of the screen is minimum 120rem, do this"*/
 
-     .grid.two-column{
-        grid-template-columns: 1fr 1fr;
+    .grid.six-column{/*calls the class grid six-column*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*Divides the layouts in six columns*/
     }
 
 }
