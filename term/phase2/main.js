@@ -198,5 +198,5 @@ let days = [{
     energy: [{ time: "7am", level: 2 }, { time: "7pm", level: 2 }]
 }];
 
-// console.log(JSON.stringify(yourVariableHere));
+console.log(JSON.stringify(days));
 // showData(yourVariableHere);
