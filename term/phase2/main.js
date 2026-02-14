@@ -1,20 +1,5 @@
 "use strict"
 
-// let yourVariableHere = [{
-//     studentName: "Susie",
-//     numberOfFriends: 3,
-//     namesOfEnemies: ["Terry", "Allison"]
-// }, {
-//     studentName: "Terry",
-//     numberOfFriends: 4,
-//     namesOfEnemies: ["Susie", "Jamie", "Horace"]
-// }, {
-//     studentName: "Horace",
-//     numberOfFriends: 2,
-//     namesOfEnemies: ["Susie"]
-// }];
-
-
 let days = [{
     date: "Monday 26 Jan 2026",
     sessions: {
@@ -59,7 +44,7 @@ let days = [{
 }, {
     date: "Friday 30 Jan 2026",
     sessions: {
-        study: [{ time: "11:30am", duration: 137 }, { time: "4pm", duration: 120 }, { time: "7pm", duration: 60 }],
+        study: [{time:"8:30am", duration: 60}, { time: "11:30am", duration: 137 }, { time: "4pm", duration: 120 }, { time: "7pm", duration: 60 }],
         music: [{ time: "3:30pm", duration: 30 }],
         french: [],
         read: [],
@@ -69,10 +54,10 @@ let days = [{
 }, {
     date: "Saturday 31 Jan 2026",
     sessions: {
-        study: [{ time: "10:20am", duration: 83 }, { time: "2:10pm", duration: 25 }],
-        music: [],
-        french: [{ time: "8pm", duration: 30 }],
-        read: [],
+        study: [],
+        music: [{ time: "10:20am", duration: 83 }],
+        french: [{ time: "2:10pm", duration: 25 }],
+        read: [{ time: "8pm", duration: 30 }],
         sleep: [{ time: "12:26pm", duration: 290 }]
     },
     energy: [{ time: "7am", level: 2 }, { time: "7pm", level: 4 }]
@@ -81,8 +66,8 @@ let days = [{
     sessions: {
         study: [{ time: "3pm", duration: 210 }],
         music: [{ time: "2:30pm", duration: 30 }],
-        french: [{ time: "11am", duration: 32 }],
-        read: [{ time: "12:30pm", duration: 35 }],
+        french: [{ time: "11am", duration: 32 }, { time: "12:30pm", duration: 35 }],
+        read: [],
         sleep: [{ time: "11pm", duration: 450 }]
     },
     energy: [{ time: "7am", level: 4 }, { time: "7pm", level: 5 }]
@@ -110,9 +95,9 @@ let days = [{
     date: "Wednesday 4 Feb 2026",
     sessions: {
         study: [{ time: "3:30pm", duration: 270 }, { time: "8:47pm", duration: 283 }],
-        music: [{ time: "12:18pm", duration: 22 }],
-        french: [{ time: "2:00pm", duration: 35 }],
-        read: [],
+        music: [],
+        french: [{ time: "12:18pm", duration: 22 }],
+        read: [{ time: "2:00pm", duration: 35 }],
         sleep: [{ time: "11:43pm", duration: 345 }]
     },
     energy: [{ time: "7am", level: 5 }, { time: "7pm", level: 3 }]
@@ -120,8 +105,8 @@ let days = [{
     date: "Thursday 5 Feb 2026",
     sessions: {
         study: [{ time: "6:10pm", duration: 165 }],
-        music: [{ time: "9:23pm", duration: 27 }],
-        french: [],
+        music: [],
+        french: [{ time: "9:23pm", duration: 27 }],
         read: [],
         sleep: [{ time: "12:48am", duration: 225 }]
     },
@@ -170,8 +155,8 @@ let days = [{
     date: "Tuesday 10 Feb 2026",
     sessions: {
         study: [{ time: "11:25am", duration: 35 }],
-        music: [{ time: "10:30am", duration: 37 }],
-        french: [],
+        music: [],
+        french: [{ time: "10:39am", duration: 37 }],
         read: [],
         sleep: [{ time: "10:10pm", duration: 445 }]
     },
@@ -198,5 +183,5 @@ let days = [{
     energy: [{ time: "7am", level: 2 }, { time: "7pm", level: 2 }]
 }];
 
-console.log(JSON.stringify(days));
-// showData(yourVariableHere);
+// console.log(JSON.stringify(days));
+showData(days);
