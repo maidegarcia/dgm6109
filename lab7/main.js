@@ -7,8 +7,8 @@ let margin = 25;
 
 //Variables for data scaling
 
-let maxstudyDuration = 600; // 600 minutes
-let maxhabitsDuration = 600; // 600 minutes
+let maxStudyDuration = 600; // 600 minutes
+let maxHabitsDuration = 600; // 600 minutes
 
 /* Resize  div to match width of visualization. */
 d3.select("#container")
@@ -46,11 +46,11 @@ let dataset = [{dailyStudyDuration: 210, dailyHabitsDuration: 555},
 ];
 
 let xScale = d3.scaleLinear()
-    .domain([0, 0])
+    .domain([0, maxStudyDuration])
     .range([margin, svgWidth - margin]);
 
 let yScale = d3.scaleLinear()
-    .domain([0, 0])
+    .domain([0, maxHabitsDuration])
     .range([svgHeight - margin, margin]);
 
 let circles = svg.selectAll("circle")
