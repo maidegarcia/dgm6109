@@ -3,7 +3,7 @@
 /* Configuration variables: drawing */
 let svgWidth = 600;
 let svgHeight = 400;
-let margin = 25;
+let margin = 30;
 
 //Variables for data scaling
 
@@ -37,12 +37,12 @@ svg.append("rect")
     .attr("width", svgWidth - margin * 2)
     .attr("height", svgHeight - margin * 2);
 
-let dataset = [{dailyStudyDuration: 210, dailyHabitsDuration: 555},
-               {dailyStudyDuration: 150, dailyHabitsDuration: 495},
-               {dailyStudyDuration: 510, dailyHabitsDuration: 435},
-               {dailyStudyDuration: 195, dailyHabitsDuration: 341},
-               {dailyStudyDuration: 317, dailyHabitsDuration: 355},
-               {dailyStudyDuration: 0, dailyHabitsDuration: 428}
+let dataset = [{studyDuration: 210, habitsDuration: 555},
+               {studyDuration: 150, habitsDuration: 495},
+               {studyDuration: 510, habitsDuration: 435},
+               {studyDuration: 195, habitsDuration: 341},
+               {studyDuration: 317, habitsDuration: 355},
+               {studyDuration: 0, habitsDuration: 428}
 ];
 
 let xScale = d3.scaleLinear()
@@ -59,10 +59,10 @@ let circles = svg.selectAll("circle")
 
 circles.attr("r", 10)
     .attr("cx", function (value) {
-        return value.dailyStudyDuration;
+        return xScale(value.studyDuration);
     })
     .attr("cy", function (value) {
-        return value.dailyHabitsDuration;
+        return yScale(value.habitsDuration);
     })
 
 /**** label the axes ****/
@@ -70,14 +70,14 @@ let xAxisLabel = svg.append("text")
     .attr("x", svgWidth / 2)
     .attr("y", svgHeight - (margin / 2))
     .attr("text-anchor", "middle")
-    .text("X axis label");
+    .text("Daily study duration (minutes)");
 
 let yAxisLabel = svg.append("text")
     .attr("x", -svgHeight / 2)
     .attr("y", margin / 2)
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "middle")
-    .text("Y axis label")
+    .text("Daily habits duration (minutes)")
     .attr("transform", "rotate(-90)");
 
 /**** label key graph coordinates ****/
@@ -86,3 +86,15 @@ let originLabel = svg.append("text")
     .attr("y", svgHeight - (margin / 2))
     .attr("text-anchor", "middle")
     .text("0,0");
+
+let xMaxLabel = svg.append("text")
+    .attr("x", xScale(maxStudyDuration))
+    .attr("y", svgHeight - (margin / 2))
+    .attr("text-anchor", "middle")
+    .text(String(maxStudyDuration));
+
+let yMaxLabel = svg.append("text")
+    .attr("x", margin)
+    .attr("y", yScale(maxHabitsDuration))
+    .attr("text-anchor", "end")
+    .text(String(maxHabitsDuration));
