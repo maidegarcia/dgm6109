@@ -37,18 +37,15 @@ svg.append("rect")
     .attr("height", svgHeight - margin * 2);
 
 /*Data collection values*/
-let dataset = [{studyDuration: 103, habitsDuration: 305, energyLevel: 3},
-               {studyDuration: 317, habitsDuration: 355, energyLevel: 3},
+let dataset = [ {studyDuration: 510, habitsDuration: 435, energyLevel: 1},
+               {studyDuration: 195, habitsDuration: 341, energyLevel: 1},
+               {studyDuration: 0, habitsDuration: 428, energyLevel: 1},
                {studyDuration: 210, habitsDuration: 517, energyLevel: 2},
                {studyDuration: 210, habitsDuration: 555, energyLevel: 2},
                {studyDuration: 150, habitsDuration: 495, energyLevel: 2},
                {studyDuration: 183, habitsDuration: 525, energyLevel: 2},
-               {studyDuration: 510, habitsDuration: 435, energyLevel: 1},
-               {studyDuration: 195, habitsDuration: 341, energyLevel: 1},
-               {studyDuration: 0, habitsDuration: 428, energyLevel: 1},
-               
-               
-               
+               {studyDuration: 103, habitsDuration: 305, energyLevel: 3},
+               {studyDuration: 317, habitsDuration: 355, energyLevel: 3},           
 ];
 
 /*Defining the domain and the range foe the x and y axes so that the values fit in the canvas*/
