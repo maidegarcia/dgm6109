@@ -111,7 +111,7 @@ let yMaxLabel = svg.append("text")
     .attr("text-anchor", "end")
     .text(String(maxHabitsDuration));
 
-/*Drawing the key for of the visualization*/
+/*Drawing the key of the visualization*/
 
 for (let i = 1; i <= 3; i++) {
     svg.append("circle")
@@ -120,8 +120,11 @@ for (let i = 1; i <= 3; i++) {
         .attr("cy", margin + i * 26)
 
     svg.append("text")
-    .text("Energy Lvl"+(i))
+    .text("Energy Lvl "+(i))
     .attr("alignment-baseline", "middle")
     .attr("x", margin + 35)
     .attr("y", margin + i * 26)
 }
+
+
+
