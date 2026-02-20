@@ -37,15 +37,15 @@ svg.append("rect")
     .attr("height", svgHeight - margin * 2);
 
 /*Data collection values*/
-let dataset = [ {studyDuration: 510, habitsDuration: 435, energyLevel: 1},
-               {studyDuration: 195, habitsDuration: 341, energyLevel: 1},
-               {studyDuration: 0, habitsDuration: 428, energyLevel: 1},
-               {studyDuration: 210, habitsDuration: 517, energyLevel: 2},
-               {studyDuration: 210, habitsDuration: 555, energyLevel: 2},
-               {studyDuration: 150, habitsDuration: 495, energyLevel: 2},
-               {studyDuration: 183, habitsDuration: 525, energyLevel: 2},
-               {studyDuration: 103, habitsDuration: 305, energyLevel: 3},
-               {studyDuration: 317, habitsDuration: 355, energyLevel: 3},           
+let dataset = [{ studyDuration: 510, habitsDuration: 435, energyLevel: 1 },
+{ studyDuration: 195, habitsDuration: 341, energyLevel: 1 },
+{ studyDuration: 0, habitsDuration: 428, energyLevel: 1 },
+{ studyDuration: 210, habitsDuration: 517, energyLevel: 2 },
+{ studyDuration: 210, habitsDuration: 555, energyLevel: 2 },
+{ studyDuration: 150, habitsDuration: 495, energyLevel: 2 },
+{ studyDuration: 183, habitsDuration: 525, energyLevel: 2 },
+{ studyDuration: 103, habitsDuration: 305, energyLevel: 3 },
+{ studyDuration: 317, habitsDuration: 355, energyLevel: 3 },
 ];
 
 /*Defining the domain and the range foe the x and y axes so that the values fit in the canvas*/
@@ -58,15 +58,15 @@ let yScale = d3.scaleLinear()
     .range([svgHeight - margin, margin]);
 
 let rScale = d3.scaleLinear()
-    .domain([1,3])
-    .range([5, 15]); 
+    .domain([1, 3])
+    .range([5, 15]);
 
 /*Creating the circles that will represent the data*/
 let circles = svg.selectAll("circle")
     .data(dataset)
     .join("circle");
 
-circles.attr("r", function(value){
+circles.attr("r", function (value) {
     return rScale(value.energyLevel);
 })
     .attr("cx", function (value) {
@@ -110,3 +110,18 @@ let yMaxLabel = svg.append("text")
     .attr("y", yScale(maxHabitsDuration))
     .attr("text-anchor", "end")
     .text(String(maxHabitsDuration));
+
+/*Drawing the key for of the visualization*/
+
+for (let i = 1; i <= 3; i++) {
+    svg.append("circle")
+        .attr("r", rScale(i))
+        .attr("cx", margin + 20)
+        .attr("cy", margin + i * 26)
+
+    svg.append("text")
+    .text("Energy Lvl"+(i))
+    .attr("alignment-baseline", "middle")
+    .attr("x", margin + 35)
+    .attr("y", margin + i * 26)
+}
