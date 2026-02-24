@@ -48,7 +48,7 @@ let dataset = [{ studyDuration: 510, habitsDuration: 435, energyLevel: 1 },
 { studyDuration: 317, habitsDuration: 355, energyLevel: 3 },
 ];
 
-/*Defining the domain and the range foe the x and y axes so that the values fit in the canvas*/
+/*Defining the domain and the range for the x and y axes so that the values fit in the canvas*/
 let xScale = d3.scaleLinear()
     .domain([0, maxStudyDuration])
     .range([margin, svgWidth - margin]);
@@ -57,6 +57,7 @@ let yScale = d3.scaleLinear()
     .domain([0, maxHabitsDuration])
     .range([svgHeight - margin, margin]);
 
+/*Defining the domain and the range to scale the circles' radius*/
 let rScale = d3.scaleLinear()
     .domain([1, 3])
     .range([5, 15]);
@@ -113,17 +114,17 @@ let yMaxLabel = svg.append("text")
 
 /*Drawing the key of the visualization*/
 
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 3; i++) { //This is a loop to help me create the key, in each repetition it creates a circle and a label, with each repetition the circle changes its size
     svg.append("circle")
         .attr("r", rScale(i))
         .attr("cx", margin + 20)
         .attr("cy", margin + i * 26)
 
     svg.append("text")
-    .text("Energy Lvl "+(i))
-    .attr("alignment-baseline", "middle")
-    .attr("x", margin + 35)
-    .attr("y", margin + i * 26)
+        .text("Energy Lvl " + (i))
+        .attr("alignment-baseline", "middle")
+        .attr("x", margin + 35)
+        .attr("y", margin + i * 26)
 }
 
 
