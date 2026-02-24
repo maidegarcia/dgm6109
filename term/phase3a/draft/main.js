@@ -118,13 +118,13 @@ for (let i = 1; i <= 3; i++) { //This is a loop to help me create the key, in ea
     svg.append("circle")
         .attr("r", rScale(i))
         .attr("cx", margin + 20)
-        .attr("cy", margin + i * 26)
+        .attr("cy", 250 + i * 26)
 
     svg.append("text")
-        .text("Energy Lvl " + (i))
+        .text("Energy Level " + (i))
         .attr("alignment-baseline", "middle")
         .attr("x", margin + 35)
-        .attr("y", margin + i * 26)
+        .attr("y", 250 + i * 26)
 }
 
 
