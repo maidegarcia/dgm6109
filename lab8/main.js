@@ -12,7 +12,7 @@ let bottomMargin = 60
 
 //Variables for data scaling
 let maxStudyDuration = 600; // 600 minutes
-let maxSleepDuration = 600; // 600 minutes
+let maxSleepDuration = 530; // 600 minutes
 
 /*To make the div with the id "container" to match the size of the canvas*/
 d3.select("#container")
@@ -135,7 +135,7 @@ svg.append("line")
     .attr("x1", xScale(0))
     .attr("y1", yScale(200))
     .attr("x2", xScale(0))
-    .attr("y2", yScale(600))
+    .attr("y2", yScale(530))
     .attr("stroke", "black")
 
 /* x axis numbering values */
@@ -149,9 +149,9 @@ for (let i = 0; i <= 600; i = i + 20) {
 }
 
 /* y axis numbering values */
-for (let i = 200; i <= 600; i = i + 15) {
+for (let i = 200; i <= 530; i = i + 15) {
     svg.append("text")
-        .attr("x", leftMargin - 5)
+        .attr("x", leftMargin - 10)
         .attr("y", yScale(i))
         .attr("text-anchor", "end")
         .attr("alignment-baseline", "middle")
@@ -179,7 +179,7 @@ let yAxisLabel = svg.append("text")
 svg.append("text")
     .text("Energy Level")
     .attr("text-anchor", "middle")
-    .attr("x", 170)
+    .attr("x", 180)
     .attr("y", topMargin - 75)
 
 for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in each repetition it creates a circle and a label, with each repetition the circle changes its size
@@ -200,12 +200,12 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
 svg.append("text")
     .text("Did I have classes?")
     .attr("text-anchor", "middle")
-    .attr("x", 375)
+    .attr("x", 385)
     .attr("y", topMargin - 75)
 
 svg.append("circle")
     .attr("r", rScale(3))
-    .attr("cx", 350)
+    .attr("cx", 360)
     .attr("cy", topMargin - 50)
     .attr("fill", "orange")
     .attr("stroke", "black")
@@ -213,7 +213,7 @@ svg.append("circle")
 svg.append("text")
     .text("Yes")
     .attr("text-anchor", "middle")
-    .attr("x", 350)
+    .attr("x", 360)
     .attr("y", topMargin - 10)
 
 svg.append("circle")
@@ -234,8 +234,8 @@ svg.append("text")
 svg.append("rect")
     .attr("fill", "none")
     .attr("stroke", "black")
-    .attr("width", 398)
+    .attr("width", 380)
     .attr("height", 86)
-    .attr("x", leftMargin)
+    .attr("x", leftMargin + 15)
     .attr("y", topMargin - 93)
 
