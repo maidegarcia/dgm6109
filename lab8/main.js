@@ -4,15 +4,15 @@
 let svgWidth = 900;
 let svgHeight = 675;
 
-/* Configuration variables: margins */
+/* Margins' values */
 let leftMargin = 80
 let rightMargin = 25
 let topMargin = 100
 let bottomMargin = 60
 
-//Variables for data scaling
-let maxStudyDuration = 600; // 600 minutes
-let maxSleepDuration = 530; // 600 minutes
+/*Max values for the scaling */
+let maxStudyDuration = 600
+let maxSleepDuration = 530
 
 /*To make the div with the id "container" to match the size of the canvas*/
 d3.select("#container")
@@ -31,7 +31,7 @@ svg.append("rect")
     .attr("width", svgWidth)
     .attr("height", svgHeight);
 
-/* Draw margin border. */
+/* To make the margin visible */
 // svg.append("rect")
 //     .attr("fill", "none")
 //     .attr("stroke", "black")
@@ -75,7 +75,18 @@ let dataset = [
     { studyDuration: 197, sleepDuration: 445, energyLevel: 3, classDay: false },
     { studyDuration: 0, sleepDuration: 455, energyLevel: 4, classDay: true }
 ];
-/*array.sort() to present the data with largest circles in the back and smallest in front*/
+
+/*Attempt of using d3.min() and d3.max() to change the domain values*/
+// let minStudyDuration = d3.min(dataset, function(value){return value.studyDuration})
+// let maxStudyDuration = d3.max(dataset, function(value){return value.studyDuration})
+
+// let minSleepDuration = d3.min(dataset, function(value){return value.sleepDuration})
+// let maxSleepDuration = d3.max(dataset, function(value){return value.sleepDuration})
+
+// let minEnergyLevel = d3.min(dataset, function(value){return value.energyLevel})
+// let maxEnergyLevel = d3.max(dataset, function(value){return value.energyLevel})
+
+/*Array.sort() to present the data with largest circles in the back and smallest in front*/
 dataset.sort(function (a, b) {
     if (a.energyLevel <= b.energyLevel) {
         return 1
@@ -122,7 +133,7 @@ circles.attr("r", function (value) {
     })
     .attr("stroke", "black");
 
-/* x and y axis lines */
+/* Drawing the x and y axis lines */
 
 svg.append("line")
     .attr("x1", xScale(0))
@@ -138,17 +149,17 @@ svg.append("line")
     .attr("y2", yScale(530))
     .attr("stroke", "black")
 
-/* x axis numbering values */
+/*Drawing the x axis numbering values */
 for (let i = 0; i <= 600; i = i + 20) {
     svg.append("text")
         .attr("x", xScale(i))
         .attr("y", svgHeight - bottomMargin)
-        .attr("text-anchor", "middle") 
-        .attr("alignment-baseline", "before-edge") 
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "before-edge")
         .text(i)
 }
 
-/* y axis numbering values */
+/* Drawing the y axis numbering values */
 for (let i = 200; i <= 530; i = i + 15) {
     svg.append("text")
         .attr("x", leftMargin - 10)
@@ -177,7 +188,7 @@ let yAxisLabel = svg.append("text")
 /*Drawing the key of the visualization of the energy levels*/
 
 svg.append("text")
-    .text("Energy Level")
+    .text("Energy Level (1-5)")
     .attr("text-anchor", "middle")
     .attr("x", 180)
     .attr("y", topMargin - 75)
@@ -187,6 +198,7 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
         .attr("r", rScale(i))
         .attr("cx", leftMargin + i * 30)
         .attr("cy", topMargin - 50)
+        .attr("fill", "gray")
 
     svg.append("text")
         .text(i)
@@ -200,12 +212,12 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
 svg.append("text")
     .text("Did I have classes?")
     .attr("text-anchor", "middle")
-    .attr("x", 385)
+    .attr("x", leftMargin + 300)
     .attr("y", topMargin - 75)
 
 svg.append("circle")
     .attr("r", rScale(3))
-    .attr("cx", 360)
+    .attr("cx", leftMargin + 280)
     .attr("cy", topMargin - 50)
     .attr("fill", "orange")
     .attr("stroke", "black")
@@ -213,12 +225,12 @@ svg.append("circle")
 svg.append("text")
     .text("Yes")
     .attr("text-anchor", "middle")
-    .attr("x", 360)
+    .attr("x", leftMargin + 280)
     .attr("y", topMargin - 10)
 
 svg.append("circle")
     .attr("r", rScale(3))
-    .attr("cx", 400)
+    .attr("cx", leftMargin + 330)
     .attr("cy", topMargin - 50)
     .attr("fill", "lightblue")
     .attr("stroke", "black")
@@ -226,9 +238,8 @@ svg.append("circle")
 svg.append("text")
     .text("No")
     .attr("text-anchor", "middle")
-    .attr("x", 400)
+    .attr("x", leftMargin + 330)
     .attr("y", topMargin - 10)
-
 
 /*Drawing a box for the keys*/
 svg.append("rect")
