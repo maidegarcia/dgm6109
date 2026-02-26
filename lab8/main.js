@@ -162,7 +162,7 @@ for (let i = 0; i <= 600; i = i + 20) {
 /* Drawing the y axis numbering values */
 for (let i = 200; i <= 530; i = i + 15) {
     svg.append("text")
-        .attr("x", leftMargin - 10)
+        .attr("x", leftMargin - 20)
         .attr("y", yScale(i))
         .attr("text-anchor", "end")
         .attr("alignment-baseline", "middle")
