@@ -154,8 +154,8 @@ for (let i = 0; i <= 600; i = i + 20) {
     svg.append("text")
         .attr("x", xScale(i))
         .attr("y", svgHeight - bottomMargin)
-        .attr("text-anchor", "middle")
-        .attr("alignment-baseline", "before-edge")
+        .style("text-anchor", "middle")
+        .style("alignment-baseline", "before-edge")
         .text(i)
 }
 
@@ -164,8 +164,8 @@ for (let i = 200; i <= 530; i = i + 15) {
     svg.append("text")
         .attr("x", leftMargin - 20)
         .attr("y", yScale(i))
-        .attr("text-anchor", "end")
-        .attr("alignment-baseline", "middle")
+        .style("text-anchor", "end")
+        .style("alignment-baseline", "middle")
         .text(i)
 }
 
@@ -173,14 +173,14 @@ for (let i = 200; i <= 530; i = i + 15) {
 let xAxisLabel = svg.append("text")
     .attr("x", svgWidth / 2)
     .attr("y", svgHeight - bottomMargin / 4)
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .text("Daily study duration (minutes)");
 
 let yAxisLabel = svg.append("text")
     .attr("x", -svgHeight / 2)
     .attr("y", leftMargin / 4)
-    .attr("text-anchor", "middle")
-    .attr("alignment-baseline", "middle")
+    .style("text-anchor", "middle")
+    .style("alignment-baseline", "middle")
     .text("Sleep duration (minutes)")
     .attr("transform", "rotate(-90)")
 
@@ -189,7 +189,7 @@ let yAxisLabel = svg.append("text")
 
 svg.append("text")
     .text("Energy Level (1-5)")
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .attr("x", 180)
     .attr("y", topMargin - 75)
 
@@ -202,7 +202,7 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
 
     svg.append("text")
         .text(i)
-        .attr("text-anchor", "middle")
+        .style("text-anchor", "middle")
         .attr("x", leftMargin + i * 30)
         .attr("y", topMargin - 10)
 }
@@ -211,7 +211,7 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
 
 svg.append("text")
     .text("Did I have classes?")
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .attr("x", leftMargin + 300)
     .attr("y", topMargin - 75)
 
@@ -224,7 +224,7 @@ svg.append("circle")
 
 svg.append("text")
     .text("Yes")
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .attr("x", leftMargin + 280)
     .attr("y", topMargin - 10)
 
@@ -233,7 +233,7 @@ svg.append("circle")
     .attr("cx", leftMargin + 330)
     .attr("cy", topMargin - 50)
     .attr("fill", "lightblue")
-    .attr("stroke", "black")
+    .style("stroke", "black")
 
 svg.append("text")
     .text("No")
