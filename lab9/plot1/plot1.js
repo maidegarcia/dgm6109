@@ -9,6 +9,7 @@ let leftMargin = 80
 let rightMargin = 25
 let topMargin = 100
 let bottomMargin = 60
+
 //Variables for data scaling
 let maxStudyDuration = 600;
 let maxHabitsDuration = 300;
@@ -180,7 +181,6 @@ let yAxisLabel = svg.append("text")
     .attr("x", -svgHeight / 2)
     .attr("y", leftMargin / 4-7)
     .style("text-anchor", "middle")
-    .style("alignment-baseline", "middle")
     .text("Habits duration (minutes)")
     .attr("transform", "rotate(-90)")
 
@@ -237,18 +237,18 @@ svg.append("text")
     .attr("x", svgWidth / 2+150)
     .attr("y", topMargin - 25);
 
-svg.append("text")
-    .text("600")
-    .style("text-anchor", "middle")
-    .attr("x", svgWidth / 2 +250)
-    .attr("y", topMargin - 25);
-
 svg.append("circle")
     .attr("r", rScale(minSleepDuration))
     .attr("cx", leftMargin + 500)
     .attr("cy", topMargin - 25)
     .attr("stroke", "black")
     .attr("fill", "gray");
+
+svg.append("text")
+    .text("600")
+    .style("text-anchor", "middle")
+    .attr("x", svgWidth / 2 +250)
+    .attr("y", topMargin - 25);
 
 svg.append("circle")
     .attr("r", rScale(maxSleepDuration))

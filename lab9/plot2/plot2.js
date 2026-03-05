@@ -104,10 +104,10 @@ circles.attr("r", function (value) {
     return rScale(value.energyLevel);
 })
     .attr("cx", function (value) {
-        return xScale(value.sleepDuration); //By putting the value inside the parenthesis, the data will be scaled to fit in the canvas
+        return xScale(value.sleepDuration);  
     })
     .attr("cy", function (value) {
-        return yScale(value.frenchDuration);//By putting the value inside the parenthesis, the data will be scaled to fit in the canvas
+        return yScale(value.frenchDuration);
     })
     .attr("fill", "lightblue")
     .attr("stroke", "black");
@@ -172,7 +172,7 @@ svg.append("text")
     .attr("x", 180)
     .attr("y", topMargin - 75);
 
-for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in each repetition it creates a circle and a label, with each repetition the circle changes its size
+for (let i = 1; i <= 5; i++) { 
     svg.append("circle")
         .attr("r", rScale(i))
         .attr("cx", leftMargin + i * 30)
