@@ -12,7 +12,7 @@ let bottomMargin = 60
 
 /*Max values for the scaling */
 let maxFrenchDuration = 100
-let maxSleepingDuration = 530
+let maxSleepDuration = 530
 
 /*To make the div with the id "container" to match the size of the canvas*/
 d3.select("#container")
@@ -33,43 +33,43 @@ svg.append("rect")
 
 /*Data collection values*/
 let dataset = [
-    { frenchDuration: 70, sleepDuration: 455, energyLevel: 4},
-    { frenchDuration: 70, sleepDuration: 365, energyLevel: 4},
-    { frenchDuration: 0, sleepDuration: 405, energyLevel: 3},
-    { frenchDuration: 31, sleepDuration: 310, energyLevel: 2},
-    { frenchDuration: 0, sleepDuration: 325, energyLevel: 5},
-    { frenchDuration: 25, sleepDuration: 290, energyLevel: 2},
-    { frenchDuration: 67, sleepDuration: 450, energyLevel: 4},
-    { frenchDuration: 0, sleepDuration: 305, energyLevel: 5},
-    { frenchDuration: 0, sleepDuration: 488, energyLevel: 4},
-    { frenchDuration: 22, sleepDuration: 345, energyLevel: 5},
-    { frenchDuration: 27, sleepDuration: 225, energyLevel: 2},
-    { frenchDuration: 38, sleepDuration: 290, energyLevel: 3},
-    { frenchDuration: 20, sleepDuration: 395, energyLevel: 5},
-    { frenchDuration: 73, sleepDuration: 430, energyLevel: 3},
-    { frenchDuration: 22, sleepDuration: 440, energyLevel: 4},
-    { frenchDuration: 37, sleepDuration: 445, energyLevel: 5},
-    { frenchDuration: 0, sleepDuration: 270, energyLevel: 2},
-    { frenchDuration: 0, sleepDuration: 345, energyLevel: 2},
-    { frenchDuration: 36, sleepDuration: 380, energyLevel: 3},
-    { frenchDuration: 41, sleepDuration: 315, energyLevel: 3},
-    { frenchDuration: 40, sleepDuration: 465, energyLevel: 4},
-    { frenchDuration: 63, sleepDuration: 455, energyLevel: 3},
-    { frenchDuration: 32, sleepDuration: 515, energyLevel: 5},
-    { frenchDuration: 33, sleepDuration: 385, energyLevel: 4},
-    { frenchDuration: 34, sleepDuration: 445, energyLevel: 3},
-    { frenchDuration: 80, sleepDuration: 395, energyLevel: 4},
-    { frenchDuration: 0, sleepDuration: 405, energyLevel: 4},
-    { frenchDuration: 0, sleepDuration: 386, energyLevel: 1},
-    { frenchDuration: 30, sleepDuration: 445, energyLevel: 3},
-    { frenchDuration: 40, sleepDuration: 455, energyLevel: 4},
-    { frenchDuration: 18, sleepDuration: 490, energyLevel: 4},
-    { frenchDuration: 32, sleepDuration: 290, energyLevel: 2},
-    { frenchDuration: 62, sleepDuration: 395, energyLevel: 4},
-    { frenchDuration: 32, sleepDuration: 455, energyLevel: 4},
-    { frenchDuration: 95, sleepDuration: 500, energyLevel: 5},
-    { frenchDuration: 91, sleepDuration: 485, energyLevel: 4},
-    { frenchDuration: 0, sleepDuration: 280, energyLevel: 2}
+    { frenchDuration: 70, sleepDuration: 455, energyLevel: 4 },
+    { frenchDuration: 70, sleepDuration: 365, energyLevel: 4 },
+    { frenchDuration: 0, sleepDuration: 405, energyLevel: 3 },
+    { frenchDuration: 31, sleepDuration: 310, energyLevel: 2 },
+    { frenchDuration: 0, sleepDuration: 325, energyLevel: 5 },
+    { frenchDuration: 25, sleepDuration: 290, energyLevel: 2 },
+    { frenchDuration: 67, sleepDuration: 450, energyLevel: 4 },
+    { frenchDuration: 0, sleepDuration: 305, energyLevel: 5 },
+    { frenchDuration: 0, sleepDuration: 488, energyLevel: 4 },
+    { frenchDuration: 22, sleepDuration: 345, energyLevel: 5 },
+    { frenchDuration: 27, sleepDuration: 225, energyLevel: 2 },
+    { frenchDuration: 38, sleepDuration: 290, energyLevel: 3 },
+    { frenchDuration: 20, sleepDuration: 395, energyLevel: 5 },
+    { frenchDuration: 73, sleepDuration: 430, energyLevel: 3 },
+    { frenchDuration: 22, sleepDuration: 440, energyLevel: 4 },
+    { frenchDuration: 37, sleepDuration: 445, energyLevel: 5 },
+    { frenchDuration: 0, sleepDuration: 270, energyLevel: 2 },
+    { frenchDuration: 0, sleepDuration: 345, energyLevel: 2 },
+    { frenchDuration: 36, sleepDuration: 380, energyLevel: 3 },
+    { frenchDuration: 41, sleepDuration: 315, energyLevel: 3 },
+    { frenchDuration: 40, sleepDuration: 465, energyLevel: 4 },
+    { frenchDuration: 63, sleepDuration: 455, energyLevel: 3 },
+    { frenchDuration: 32, sleepDuration: 515, energyLevel: 5 },
+    { frenchDuration: 33, sleepDuration: 385, energyLevel: 4 },
+    { frenchDuration: 34, sleepDuration: 445, energyLevel: 3 },
+    { frenchDuration: 80, sleepDuration: 395, energyLevel: 4 },
+    { frenchDuration: 0, sleepDuration: 405, energyLevel: 4 },
+    { frenchDuration: 0, sleepDuration: 386, energyLevel: 1 },
+    { frenchDuration: 30, sleepDuration: 445, energyLevel: 3 },
+    { frenchDuration: 40, sleepDuration: 455, energyLevel: 4 },
+    { frenchDuration: 18, sleepDuration: 490, energyLevel: 4 },
+    { frenchDuration: 32, sleepDuration: 290, energyLevel: 2 },
+    { frenchDuration: 62, sleepDuration: 395, energyLevel: 4 },
+    { frenchDuration: 32, sleepDuration: 455, energyLevel: 4 },
+    { frenchDuration: 95, sleepDuration: 500, energyLevel: 5 },
+    { frenchDuration: 91, sleepDuration: 485, energyLevel: 4 },
+    { frenchDuration: 0, sleepDuration: 280, energyLevel: 2 }
 ];
 
 /*Array.sort() to present the data with largest circles in the back and smallest in front*/
@@ -83,7 +83,7 @@ dataset.sort(function (a, b) {
 
 /*Defining the domain and the range for the x and y axes so that the values fit in the canvas*/
 let xScale = d3.scaleLinear()
-    .domain([200, maxSleepingDuration])
+    .domain([200, maxSleepDuration])
     .range([leftMargin, svgWidth - rightMargin]);
 
 let yScale = d3.scaleLinear()
@@ -104,7 +104,7 @@ circles.attr("r", function (value) {
     return rScale(value.energyLevel);
 })
     .attr("cx", function (value) {
-        return xScale(value.sleepDuration);  
+        return xScale(value.sleepDuration);
     })
     .attr("cy", function (value) {
         return yScale(value.frenchDuration);
@@ -132,7 +132,7 @@ svg.append("line")
 for (let i = 200; i <= 530; i = i + 15) {
     svg.append("text")
         .attr("x", xScale(i))
-        .attr("y", svgHeight - bottomMargin+20)
+        .attr("y", svgHeight - bottomMargin + 20)
         .style("text-anchor", "middle")
         .style("alignment-baseline", "before-edge")
         .text(i)
@@ -151,7 +151,7 @@ for (let i = 0; i <= 100; i = i + 10) {
 /*Labelling of the x and y axes to clarify what is the data that is shown*/
 let xAxisLabel = svg.append("text")
     .attr("x", svgWidth / 2)
-    .attr("y", svgHeight - bottomMargin / 4 +10)
+    .attr("y", svgHeight - bottomMargin / 4 + 10)
     .style("text-anchor", "middle")
     .text("Sleep duration (minutes)");
 
@@ -172,7 +172,7 @@ svg.append("text")
     .attr("x", 180)
     .attr("y", topMargin - 75);
 
-for (let i = 1; i <= 5; i++) { 
+for (let i = 1; i <= 5; i++) {
     svg.append("circle")
         .attr("r", rScale(i))
         .attr("cx", leftMargin + i * 30)

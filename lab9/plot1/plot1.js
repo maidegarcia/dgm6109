@@ -179,7 +179,7 @@ let xAxisLabel = svg.append("text")
 
 let yAxisLabel = svg.append("text")
     .attr("x", -svgHeight / 2)
-    .attr("y", leftMargin / 4-7)
+    .attr("y", leftMargin / 4 - 7)
     .style("text-anchor", "middle")
     .text("Habits duration (minutes)")
     .attr("transform", "rotate(-90)")
@@ -228,13 +228,13 @@ for (let i = 1; i <= 5; i++) {
 svg.append("text")
     .text("Sleep duration (minutes)")
     .style("text-anchor", "middle")
-    .attr("x", svgWidth / 2 +200)
+    .attr("x", svgWidth / 2 + 200)
     .attr("y", topMargin - 75);
 
 svg.append("text")
     .text("200")
     .style("text-anchor", "middle")
-    .attr("x", svgWidth / 2+150)
+    .attr("x", svgWidth / 2 + 150)
     .attr("y", topMargin - 25);
 
 svg.append("circle")
@@ -247,7 +247,7 @@ svg.append("circle")
 svg.append("text")
     .text("600")
     .style("text-anchor", "middle")
-    .attr("x", svgWidth / 2 +250)
+    .attr("x", svgWidth / 2 + 250)
     .attr("y", topMargin - 25);
 
 svg.append("circle")
