@@ -139,7 +139,7 @@ for (let i = 200; i <= 530; i = i + 15) {
 }
 
 /* Drawing the y axis numbering values */
-for (let i = 0; i <= 100; i = i + 10) {
+for (let i = 0; i <= 100; i = i + 5) {
     svg.append("text")
         .attr("x", leftMargin - 20)
         .attr("y", yScale(i))
