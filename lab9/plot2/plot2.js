@@ -33,43 +33,43 @@ svg.append("rect")
 
 /*Data collection values*/
 let dataset = [
-    { frenchDuration: 70, sleepDuration: 455, energyLevel: 4, classDay: false },
-    { frenchDuration: 70, sleepDuration: 365, energyLevel: 4, classDay: true },
-    { frenchDuration: 0, sleepDuration: 405, energyLevel: 3, classDay: false },
-    { frenchDuration: 31, sleepDuration: 310, energyLevel: 2, classDay: true },
-    { frenchDuration: 0, sleepDuration: 325, energyLevel: 5, classDay: false },
-    { frenchDuration: 25, sleepDuration: 290, energyLevel: 2, classDay: false },
-    { frenchDuration: 67, sleepDuration: 450, energyLevel: 4, classDay: false },
-    { frenchDuration: 0, sleepDuration: 305, energyLevel: 5, classDay: false },
-    { frenchDuration: 0, sleepDuration: 488, energyLevel: 4, classDay: true },
-    { frenchDuration: 22, sleepDuration: 345, energyLevel: 5, classDay: false },
-    { frenchDuration: 27, sleepDuration: 225, energyLevel: 2, classDay: true },
-    { frenchDuration: 38, sleepDuration: 290, energyLevel: 3, classDay: false },
-    { frenchDuration: 20, sleepDuration: 395, energyLevel: 5, classDay: false },
-    { frenchDuration: 73, sleepDuration: 430, energyLevel: 3, classDay: false },
-    { frenchDuration: 22, sleepDuration: 440, energyLevel: 4, classDay: false },
-    { frenchDuration: 37, sleepDuration: 445, energyLevel: 5, classDay: true },
-    { frenchDuration: 0, sleepDuration: 270, energyLevel: 2, classDay: false },
-    { frenchDuration: 0, sleepDuration: 345, energyLevel: 2, classDay: true },
-    { frenchDuration: 36, sleepDuration: 380, energyLevel: 3, classDay: false },
-    { frenchDuration: 41, sleepDuration: 315, energyLevel: 3, classDay: false },
-    { frenchDuration: 40, sleepDuration: 465, energyLevel: 4, classDay: false },
-    { frenchDuration: 63, sleepDuration: 455, energyLevel: 3, classDay: false },
-    { frenchDuration: 32, sleepDuration: 515, energyLevel: 5, classDay: true },
-    { frenchDuration: 33, sleepDuration: 385, energyLevel: 4, classDay: false },
-    { frenchDuration: 34, sleepDuration: 445, energyLevel: 3, classDay: true },
-    { frenchDuration: 80, sleepDuration: 395, energyLevel: 4, classDay: false },
-    { frenchDuration: 0, sleepDuration: 405, energyLevel: 4, classDay: false },
-    { frenchDuration: 0, sleepDuration: 386, energyLevel: 1, classDay: false },
-    { frenchDuration: 30, sleepDuration: 445, energyLevel: 3, classDay: false },
-    { frenchDuration: 40, sleepDuration: 455, energyLevel: 4, classDay: true },
-    { frenchDuration: 18, sleepDuration: 490, energyLevel: 4, classDay: false },
-    { frenchDuration: 32, sleepDuration: 290, energyLevel: 2, classDay: true },
-    { frenchDuration: 62, sleepDuration: 395, energyLevel: 4, classDay: false },
-    { frenchDuration: 32, sleepDuration: 455, energyLevel: 4, classDay: false },
-    { frenchDuration: 95, sleepDuration: 500, energyLevel: 5, classDay: false },
-    { frenchDuration: 91, sleepDuration: 485, energyLevel: 4, classDay: false },
-    { frenchDuration: 0, sleepDuration: 280, energyLevel: 2, classDay: true }
+    { frenchDuration: 70, sleepDuration: 455, energyLevel: 4},
+    { frenchDuration: 70, sleepDuration: 365, energyLevel: 4},
+    { frenchDuration: 0, sleepDuration: 405, energyLevel: 3},
+    { frenchDuration: 31, sleepDuration: 310, energyLevel: 2},
+    { frenchDuration: 0, sleepDuration: 325, energyLevel: 5},
+    { frenchDuration: 25, sleepDuration: 290, energyLevel: 2},
+    { frenchDuration: 67, sleepDuration: 450, energyLevel: 4},
+    { frenchDuration: 0, sleepDuration: 305, energyLevel: 5},
+    { frenchDuration: 0, sleepDuration: 488, energyLevel: 4},
+    { frenchDuration: 22, sleepDuration: 345, energyLevel: 5},
+    { frenchDuration: 27, sleepDuration: 225, energyLevel: 2},
+    { frenchDuration: 38, sleepDuration: 290, energyLevel: 3},
+    { frenchDuration: 20, sleepDuration: 395, energyLevel: 5},
+    { frenchDuration: 73, sleepDuration: 430, energyLevel: 3},
+    { frenchDuration: 22, sleepDuration: 440, energyLevel: 4},
+    { frenchDuration: 37, sleepDuration: 445, energyLevel: 5},
+    { frenchDuration: 0, sleepDuration: 270, energyLevel: 2},
+    { frenchDuration: 0, sleepDuration: 345, energyLevel: 2},
+    { frenchDuration: 36, sleepDuration: 380, energyLevel: 3},
+    { frenchDuration: 41, sleepDuration: 315, energyLevel: 3},
+    { frenchDuration: 40, sleepDuration: 465, energyLevel: 4},
+    { frenchDuration: 63, sleepDuration: 455, energyLevel: 3},
+    { frenchDuration: 32, sleepDuration: 515, energyLevel: 5},
+    { frenchDuration: 33, sleepDuration: 385, energyLevel: 4},
+    { frenchDuration: 34, sleepDuration: 445, energyLevel: 3},
+    { frenchDuration: 80, sleepDuration: 395, energyLevel: 4},
+    { frenchDuration: 0, sleepDuration: 405, energyLevel: 4},
+    { frenchDuration: 0, sleepDuration: 386, energyLevel: 1},
+    { frenchDuration: 30, sleepDuration: 445, energyLevel: 3},
+    { frenchDuration: 40, sleepDuration: 455, energyLevel: 4},
+    { frenchDuration: 18, sleepDuration: 490, energyLevel: 4},
+    { frenchDuration: 32, sleepDuration: 290, energyLevel: 2},
+    { frenchDuration: 62, sleepDuration: 395, energyLevel: 4},
+    { frenchDuration: 32, sleepDuration: 455, energyLevel: 4},
+    { frenchDuration: 95, sleepDuration: 500, energyLevel: 5},
+    { frenchDuration: 91, sleepDuration: 485, energyLevel: 4},
+    { frenchDuration: 0, sleepDuration: 280, energyLevel: 2}
 ];
 
 /*Array.sort() to present the data with largest circles in the back and smallest in front*/
@@ -109,14 +109,7 @@ circles.attr("r", function (value) {
     .attr("cy", function (value) {
         return yScale(value.frenchDuration);//By putting the value inside the parenthesis, the data will be scaled to fit in the canvas
     })
-    .attr("fill", function (value) {
-        if (value.classDay) {
-            return "orange"
-        }
-        else {
-            return "lightblue"
-        }
-    })
+    .attr("fill", "lightblue")
     .attr("stroke", "black");
 
 /* Drawing the x and y axis lines */
@@ -177,7 +170,7 @@ svg.append("text")
     .text("Energy Level (1-5)")
     .style("text-anchor", "middle")
     .attr("x", 180)
-    .attr("y", topMargin - 75)
+    .attr("y", topMargin - 75);
 
 for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in each repetition it creates a circle and a label, with each repetition the circle changes its size
     svg.append("circle")
@@ -185,6 +178,7 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
         .attr("cx", leftMargin + i * 30)
         .attr("cy", topMargin - 50)
         .attr("fill", "gray")
+        .attr("stroke", "black")
 
     svg.append("text")
         .text(i)
@@ -193,46 +187,11 @@ for (let i = 1; i <= 5; i++) { //This is a loop to help me create the key, in ea
         .attr("y", topMargin - 10)
 }
 
-/*Drawing the key of the visualization of the color that indicate if I had classes or not*/
-
-svg.append("text")
-    .text("Did I have classes?")
-    .style("text-anchor", "middle")
-    .attr("x", leftMargin + 300)
-    .attr("y", topMargin - 75)
-
-svg.append("circle")
-    .attr("r", rScale(3))
-    .attr("cx", leftMargin + 280)
-    .attr("cy", topMargin - 50)
-    .attr("fill", "orange")
-    .attr("stroke", "black")
-
-svg.append("text")
-    .text("Yes")
-    .style("text-anchor", "middle")
-    .attr("x", leftMargin + 280)
-    .attr("y", topMargin - 10)
-
-svg.append("circle")
-    .attr("r", rScale(3))
-    .attr("cx", leftMargin + 330)
-    .attr("cy", topMargin - 50)
-    .attr("fill", "lightblue")
-    .style("stroke", "black")
-
-svg.append("text")
-    .text("No")
-    .attr("text-anchor", "middle")
-    .attr("x", leftMargin + 330)
-    .attr("y", topMargin - 10)
-
 /*Drawing a box for the keys*/
 svg.append("rect")
     .attr("fill", "none")
     .attr("stroke", "black")
-    .attr("width", 380)
+    .attr("width", 180)
     .attr("height", 86)
     .attr("x", leftMargin + 15)
     .attr("y", topMargin - 93)
-
