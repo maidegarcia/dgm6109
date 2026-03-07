@@ -1,0 +1,19 @@
+body{
+    font-family: Helvetica, Verdana, sans-serif;
+    background-color:rgb(234, 233, 233);
+}
+
+header{
+    background-color: rgb(5, 62, 185);
+    color: rgb(255, 255, 255);
+}
+
+nav{
+   color: rgb(255, 255, 255); 
+   text-decoration: none;
+}
+footer{
+    background-color: rgb(23, 12, 134);
+    color: rgb(255, 255, 255);
+}
+
