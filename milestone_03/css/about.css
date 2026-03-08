@@ -1,0 +1,55 @@
+.about-who-am-i{
+     display: flex;         
+    flex-direction: row;    
+    gap: 2rem;              
+    align-items: center;
+}
+
+.who-am-i-text{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+    text-align: justify;
+}
+
+.about-experience{
+     display: flex;         
+    flex-direction: row;    
+    gap: 2rem;              
+    align-items: center;
+}
+
+.experience-text{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+    text-align: justify;
+}
+
+.about-tools{
+     display: flex;         
+    flex-direction: row;    
+    gap: 30rem;              
+    align-items: flex-start;
+}
+
+.tools-list{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem;
+    text-align: justify;
+}
+
+.testimonies{
+    margin-bottom: 3rem;;
+    text-align: justify;
+    max-width: 1000px;
+    align-items: center;
+}
+
+section h3{
+    text-align: center;
+}

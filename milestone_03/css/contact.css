@@ -1,0 +1,62 @@
+.contact-form{
+display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.contact-intro {
+   margin-bottom: 2rem;
+    text-align: justify;
+    padding: 0.5rem 20rem;;
+}
+
+.contact-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* to align it to the left*/
+    border: 0.20rem solid rgb(0, 0, 0); 
+    border-style: 3rem;  
+    padding: 2rem 3rem; 
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 31.25rem;
+}
+
+.contact-elements p {
+    margin-left: 0;
+    text-align: left;
+    width: 100%; 
+}
+
+.contact-elements input {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid rgb(114, 115, 119);
+}
+
+.contact-elements textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem; /* to make the corners rounded */
+    border: 0.2rem solid  rgb(114, 115, 119);
+    resize: vertical; /* This is to allow the space to scroll down when the text exceeds the established */
+    margin-bottom: 1.5rem;
+}
+
+.contact-elements a {
+    align-self: flex-end; /* to align only the button to the right */
+    padding: 0.8rem 2rem;
+    background-color:  rgb(0, 0, 0);
+    color:  rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+.contact-elements a:hover, .contact-elements a:focus{
+   background-color: rgb(79, 84, 95);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}

@@ -1,6 +1,7 @@
+/*GENERAL*/
 body{
     font-family: Helvetica, Verdana, sans-serif;
-    background-color:rgb(234, 233, 233);
+    background-color:rgb(241, 234, 234);
 }
 
 header{
@@ -8,12 +9,138 @@ header{
     color: rgb(255, 255, 255);
 }
 
+header div {
+    display: flex;          /* to organize the elements*/
+    align-items: center;    /* to center the elements */
+    justify-content: space-between; /* to put the logo to the left, the nav at the center and the socials at the right */
+    padding: 0.3rem 1rem;
+}
+
+nav a {
+    text-decoration: none;  
+    color: rgb(255, 255, 255); 
+    font-weight: 500;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
 nav{
+    /* display:flex;
+    flex-direction: row;
+    align-items: center; */
    color: rgb(255, 255, 255); 
    text-decoration: none;
+
 }
+
+nav a:hover, nav a:focus{
+    color:rgb(24, 189, 255); 
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transform: scale(1.1); /*to change the size*/
+}
+/*footer*/
 footer{
-    background-color: rgb(23, 12, 134);
+    background-color: rgb(5, 62, 185);
     color: rgb(255, 255, 255);
 }
+
+.footer-content{
+    display: flex;
+    flex-direction: column; /* To organize the elements in a column*/
+    align-items: center;    
+    gap: 0rem;              
+}
+
+.footer-socials{
+    display: flex;          
+    flex-direction: row;    /* To organize the elements in a row*/
+    gap: 0.5rem;              
+    margin-top: 0.2px;
+}
+
+.instagram:hover, .instagram:focus{ 
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.linkedin:hover, .linkedin:focus{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.gmail:hover, .gmail:focus{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+
+iframe{
+    margin: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+h2, h3, h4, h5, p{
+    margin: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2{
+    text-align: center;
+}
+
+/*HOME PAGE*/
+
+.header-image{
+  position: relative; /* this is makes it to move relative to what it is in the container and not relative to the page*/
+  display: inline-block; /*to make the container to adjust to the image*/
+}
+
+.text-ontop{
+position: absolute; /* This allows the text to move freely within the image */
+  top: 20%;           /* To position the text vertically*/
+  left: 50%;          /* To position the text horizontally */
+  transform: translate(-50%, -50%); /* To make it be perfectly in the center  */
+  color:  rgb(255, 255, 255);       
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0.2rem 0.1rem 0.1rem rgb(5, 62, 185);
+}
+
+.latest-work{
+    display: flex;          
+    flex-direction: row;    
+    gap: 5rem;             
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.dragons-home{
+    display: flex;
+    flex-direction: column; 
+    gap: 0rem;   
+}
+.sweet-home{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 0rem;   
+}
+.afloat-home{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 0rem;   
+}
+
+
 

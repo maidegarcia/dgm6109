@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/contact.css">
 </head>
 
 <body>
@@ -19,38 +20,59 @@
     <header>
         <div>
             <a href="/index.html"><img src="/img/alexlogobig.png" alt="Alex's Logo" width="96" height="96"></a>
-            <h4>Alex Roa</h4>
+            <!-- <h4>Alex Roa</h4> -->
             <nav>
-                <a href="/index.html">Home</a>
+                <!-- <a href="/index.html">Home</a> -->
                 <a href="/./about">About</a>
                 <a href="/./portfolio">Portfolio</a>
-                <a href="/.soundslibrary/">Sounds Library</a>
+                <a href="/./soundslibrary">Sounds Library</a>
                 <a href="/./process">Process</a>
                 <a href="/./services">Services</a>
                 <a href="/./contact">Contact</a>
             </nav>
+             <div class="footer-socials">
+                <a
+                    href="https://www.instagram.com/alexroa50?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                        src="/img/instagramlogo.png" alt="Instagram's Logo" width="50" height="50" class="instagram"></a>
+                <a href="https://www.linkedin.com/in/alejandro-roa-flores"><img src="/img/linkedinlogo.png"
+                        alt="Linkedin's Logo" width="50" height="50" class="linkedin"></a>
+            
+            </div>
         </div>
     </header>
 
-    <section>
+    <section class="contact-form">
         <h2>Let's Work Together</h2>
-        <p class="p-input">Name<input id="search" type="text"></p>
-        <p class="p-input">Email<input id="search" type="text"></p>
-        <p class="p-input">Company Name<input id="search" type="text"></p>
-        <p class="p-input">Message<input id="search" type="text"></p>
+        <p class="contact-intro"> <i>Whether you're building an immersive indie world, an animated short, or a fast-paced game, I’m 
+            here to help you find its unique voice.Tell me a bit about your ideas, and let’s create something that sounds incredible 
+            together.</i></p>
+        <div class="contact-elements">
+        <p>Name</p>
+        <input id="name" type="text">
+        <p>Email</p>
+        <input id="email" type="text">
+        <p>Company Name</p>
+        <input id="company" type="text">
+        <p>Message</p>
+        <textarea id="message" rows="5"></textarea>
         <a href="/./submit">Submit</a>
+        </div>
     </section>
 
-    <footer>
-        <img src="/img/alexlogosmall.png" alt="Alex's Logo" width="48" height="48"></a>
-        <p>Alex Roa</p>
-        <div>
-            <a href="https://www.instagram.com/alexroa50?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
-                    src="/img/instagramlogo.png" alt="Instagram's Logo" width="50" height="50"></a>
-            <a href="https://www.linkedin.com/in/alejandro-roa-flores"><img src="/img/linkedinlogo.png"
-                    alt="Linkedin's Logo" width="50" height="50"></a>
-            <a href="./contact"><img src="/img/gmaillogo.png" alt="Gmail's Logo" width="50" height="50"></a>
+      <footer>
+        <div class="footer-content">
+            <img src="/img/alexlogosmall.png" alt="Alex's Logo" width="48" height="48">
+            <p>Alex Roa</p>
+
+            <div class="footer-socials">
+                <a
+                    href="https://www.instagram.com/alexroa50?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                        src="/img/instagramlogo.png" alt="Instagram's Logo" width="50" height="50" class="instagram"></a>
+                <a href="https://www.linkedin.com/in/alejandro-roa-flores"><img src="/img/linkedinlogo.png"
+                        alt="Linkedin's Logo" width="50" height="50" class="linkedin"></a>
+                <a href="./contact"><img src="/img/gmaillogo.png" alt="Gmail's Logo" width="50" height="50"
+                        class="gmail"></a>
+            </div>
         </div>
     </footer>
-
-</body>
+    </body>
