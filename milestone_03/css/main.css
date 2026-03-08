@@ -20,19 +20,21 @@ nav a {
     text-decoration: none;  
     color: rgb(255, 255, 255); 
     font-weight: 500;
+    font-family: "Arial Black",
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0.5rem;
 }
 
-nav{
+nav a{
     /* display:flex;
     flex-direction: row;
     align-items: center; */
    color: rgb(255, 255, 255); 
    text-decoration: none;
+   margin: 3rem;
 
 }
 
@@ -106,13 +108,13 @@ h2{
 
 .text-ontop{
 position: absolute; /* This allows the text to move freely within the image */
-  top: 20%;           /* To position the text vertically*/
-  left: 50%;          /* To position the text horizontally */
+  top: 30%;           /* To position the text vertically*/
+  left: 77%;          /* To position the text horizontally */
   transform: translate(-50%, -50%); /* To make it be perfectly in the center  */
   color:  rgb(255, 255, 255);       
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: center;
-  text-shadow: 0.2rem 0.1rem 0.1rem rgb(5, 62, 185);
+  text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);
 }
 
 .latest-work{
