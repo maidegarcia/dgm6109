@@ -1,0 +1,17 @@
+*{
+    box-sizing:border-box;/*this is to tell the elements to be sized according to their border instead of their content*/
+}
+
+.latest-work-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+    gap: 2rem;                      /* Espacio entre los videos */
+    justify-items: center;          /* Centra los videos horizontalmente */
+}
+
+.latest-work-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+    gap: 2rem;                      /* Espacio entre los videos */
+    justify-items: center;          /* Centra los videos horizontalmente */
+}
