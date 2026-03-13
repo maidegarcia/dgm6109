@@ -1,7 +1,7 @@
 /*GENERAL*/
 body {
     font-family: Helvetica, Verdana, sans-serif;
-    background-color: rgb(241, 234, 234);
+    background-color: rgb(169, 182, 209);
 }
 
 header {
@@ -102,56 +102,22 @@ h2, h3, h4, h5, p {
 h2 {
     text-align: center;
     font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-/*HOME PAGE*/
-
-.header-image {
-    position: relative;
-    /* this is makes it to move relative to what it is in the container and not relative to the page*/
-    display: inline-block;
-    /*to make the container to adjust to the image*/
+h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.text-ontop {
-    position: absolute;
-    /* This allows the text to move freely within the image */
-    top: 30%;
-    /* To position the text vertically*/
-    left: 77%;
-    /* To position the text horizontally */
-    transform: translate(-50%, -50%);
-    /* To make it be perfectly in the center  */
-    color: rgb(255, 255, 255);
-    /* font-weight: bold; */
-    text-align: center;
-    text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);
-    /*to give the text a shadow*/
+h4{
+    font-size: 1.6rem;
 }
 
-.latest-work {
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    align-items: center;
+p, li{
+    font-size: 1.2rem;
 }
 
-.dragons-home {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-}
 
-.sweet-home {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-}
 
-.afloat-home {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-}
+

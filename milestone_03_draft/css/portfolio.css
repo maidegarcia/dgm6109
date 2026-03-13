@@ -1,0 +1,28 @@
+.demo-reel,
+.shorts-anime,
+.shorts-live,
+.game-audio {
+    border: 0.20rem solid #333;
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    background-color: rgb(241, 249, 255);
+    margin: 2rem;
+
+}
+
+.content-demo,
+.content-dragons,
+.content-auction,
+.content-sweet,
+.content-afloat {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2rem;
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 
+        0 0 0 0.5px rgba(0, 0, 0, 0.8), /* Delineado nítido negro (ajusta el grosor: 2px) */
+        0px 0px 10px rgba(0, 0, 0, 0.3);
+}

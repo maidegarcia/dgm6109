@@ -44,10 +44,10 @@
 }
 
 .testimonies{
-    margin-bottom: 3rem;;
     text-align: justify;
-    max-width: 1000px;
+    padding: 3rem;
     align-items: center;
+    background-color: rgb(241, 249, 255);
 }
 
 section h3{
