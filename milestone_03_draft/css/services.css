@@ -1,31 +1,39 @@
 .services{
-    display:flex;
-    flex-direction: row;
-    gap: 2rem;   
-    padding: 6rem;     
-    align-items: flex-start;
-    justify-content: center;      
+     border: 0.20rem solid #333;
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    background-color: rgb(241, 249, 255);
+    margin: 2rem;
+}
+.content-services{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;        
 }
 
+.services h2{
+    margin-bottom: 5rem;
+}
 .services h3 {
-    text-align: left;
-    margin: 0;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .services p{
     margin-top: 0.5rem;
     text-align: justify;
-    margin:0rem;
+    margin:3rem;
 
 }
 
 .services-post, .services-production, .services-technical{
-    display:flex;
-    flex-direction:column;
-    align-items: flex-start;
-    gap: 0.1rem;
-    max-width: 390px;
-    text-align: justify;
+   display:grid;
+    grid-template-columns: 1fr 1fr;;
+    gap: 3rem; 
+    align-items:middle;   
+
+
 }
 
 .services img{
