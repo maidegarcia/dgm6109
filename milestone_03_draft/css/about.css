@@ -1,55 +1,54 @@
-.about-who-am-i{
-     display: flex;         
-    flex-direction: row;    
-    gap: 2rem;              
-    align-items: center;
-}
-
-.who-am-i-text{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 5rem;
-    text-align: justify;
-}
-
-.about-experience{
-     display: flex;         
-    flex-direction: row;    
-    gap: 2rem;              
-    align-items: center;
-}
-
-.experience-text{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 5rem;
-    text-align: justify;
-}
-
-.about-tools{
-     display: flex;         
-    flex-direction: row;    
-    gap: 30rem;              
-    align-items: flex-start;
-}
-
-.tools-list{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 5rem;
-    text-align: justify;
-}
-
-.testimonies{
-    text-align: justify;
-    padding: 3rem;
-    align-items: center;
+.about {
+    border: 0.20rem solid #333;
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
     background-color: rgb(241, 249, 255);
+    margin: 2rem;
 }
 
-section h3{
+h2 {
+    margin-bottom: 4rem;
+}
+
+.about-who-am-i, .about-experience, .about-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.who-am-i-text, .experience-text, .tools-text   {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: justify;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+}
+
+.testimonies {
+    border: 0.20rem solid #333;
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    background-color: rgb(241, 249, 255);
+    margin: 2rem;
+    text-align: justify;
+    align-items: center;
+}
+
+section h3 {
     text-align: center;
+}
+
+.about img {
+
+    border-radius: 3rem;
+    align-items: center;
 }
