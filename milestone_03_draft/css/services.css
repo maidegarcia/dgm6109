@@ -31,9 +31,6 @@
    display:grid;
     grid-template-columns: 1fr 1fr;;
     gap: 3rem; 
-    text-align:middle;   
-
-
 }
 
 .services img{
