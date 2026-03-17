@@ -41,22 +41,36 @@
     transition-timing-function: ease-out;
 }
 
-/* @media (min-width:48rem) {
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
 
-    .latest-work-content,
-    .content-dragons,
-    .content-sweet,
-    .content-afloat {
+    .header-image {
+        position: relative; /* this is makes it to move relative to what it is in the container and not relative to the page*/
+        display: inline-block; /*to make the container to adjust to the image*/
+    }
+
+    .text-ontop {
+        text-align: center; 
+        transform: translate(-50%, -50%);
+    }
+
+    .latest-work-content {
+        display: grid;
         grid-template-columns: 1fr;
+        grid-column-gap: 2rem;
+        padding: 0rem 2.5rem;
     }
 
-    .view-more-button {
-        align-items: center;
-        margin: 0;
+    .content-dragons,
+    .content-emma,
+    .content-afloat {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-} */
 
-/*DESKTOP*/
+}
+
 @media(min-width:64rem) {/*1024px*/
 
     .header-image {
