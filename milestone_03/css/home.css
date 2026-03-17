@@ -1,0 +1,85 @@
+.header-image {
+    position: relative; /* this is makes it to move relative to what it is in the container and not relative to the page*/
+    display: inline-block; /*to make the container to adjust to the image*/
+}
+
+.text-ontop {
+    position: absolute; /* This allows the text to move freely within the image */
+    top: 30%; /* To position the text vertically*/
+    left: 77%; /* To position the text horizontally */
+    transform: translate(-50%, -50%); /* To make it be perfectly in the center  */
+    color: rgb(255, 255, 255); /* font-weight: bold; */
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0); /*to give the text a shadow*/
+}
+
+.latest-work{
+    border: 0.20rem solid #333;
+    border-radius: 3rem;
+    padding: 1.7rem 0.5rem;
+    margin-bottom: 2rem;
+    background-color: rgb(241, 249, 255);
+    margin: 2rem;
+}
+
+.latest-work-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.content-dragons,
+.content-sweet,
+.content-afloat {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    border-radius: 3rem;
+    padding: 1.7rem 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 
+        0 0 0 0.5px rgba(0, 0, 0, 0.8), 
+        0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.view-more-button{
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 2rem;
+   
+}
+
+.view-more-button:hover, .view-more-button:focus{
+    background-color: rgb(79, 84, 95);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+@media (min-width:20rem) {
+    .latest-work-content, .content-dragons,
+.content-sweet,
+.content-afloat {
+        grid-template-columns: 1fr; /* IMPORTANTE: Aquí sobreescribimos el grid */
+    }
+
+    .view-more-button {
+        align-items: center;
+        margin: 0;
+    }
+}
+
+@media(min-width:64rem){/*1024px*//*This is to say "if the width of the screen is minimum 64rem, do this"*/
+
+    .latest-work-content { /*calls the class grid four-column*/
+        grid-template-columns: 1fr 1fr ; /*Divides the layouts in four columns*/
+        grid-column-gap: 2rem;
+    padding: 0rem 2.5rem;
+    }
+
+     .view-more-button {
+         margin-left: 75rem;
+    }
+    }

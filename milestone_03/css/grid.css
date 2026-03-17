@@ -1,0 +1,9 @@
+*{
+    box-sizing:border-box;/*this is to tell the elements to be sized according to their border instead of their content*/
+}
+
+
+.grid{
+    display:grid;/*establishes how I'm going to divide the layout of the screen*/
+}
+
