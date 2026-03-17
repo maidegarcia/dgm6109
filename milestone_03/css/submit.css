@@ -31,6 +31,15 @@
     transition-timing-function: ease-out;
 }
 
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
+    .message-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
     .message-container {
@@ -40,11 +49,3 @@
     }
 }
 
-/*SMARTPHONE*/
-@media(min-width:48rem) {/*768px*/
-    .message-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
-    }
-}

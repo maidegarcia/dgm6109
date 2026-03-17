@@ -45,6 +45,27 @@ section h3 {
     align-items: center;
 }
 
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*1024px*/
+
+.about-who-am-i, .about-experience, .about-tools {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+}
+
+.who-am-i-text, .experience-text, .tools-text   {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
 

@@ -21,6 +21,20 @@
         0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
+
+    .content-ak47,
+    .content-door,
+    .content-gunshot,
+    .content-responsive {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
 

@@ -24,6 +24,20 @@
         0rem 0rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
+/*SMARTPHONE*/
+@media(min-width: 48rem) {
+
+    .content-demo,
+    .content-dragons,
+    .content-emma,
+    .content-wedding,
+    .content-afloat {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
 
@@ -37,3 +51,4 @@
         gap: 2rem;
     }
 }
+

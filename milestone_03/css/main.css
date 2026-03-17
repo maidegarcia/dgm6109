@@ -14,6 +14,12 @@ header div {
     padding: 0.3rem 1rem;
 }
 
+.biglogo:hover, .biglogo:focus{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
 /*NAVIGATON*/
 nav{
     justify-self: center;

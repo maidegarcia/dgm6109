@@ -27,6 +27,25 @@
     margin-bottom: 1.5rem;
 }
 
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
+
+    .content-services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .services-post,
+    .services-production,
+    .services-technical {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
 
@@ -41,7 +60,6 @@
     .services-technical {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        ;
         gap: 3rem;
     }
 

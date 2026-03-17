@@ -33,6 +33,20 @@ audio {
     height: 3rem;
 }
 
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
+
+    .content-sfx,
+    .content-backgrounds,
+    .content-sound-design,
+    .content-foley {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
 /*DESKTOP*/
 @media(min-width:64rem) {/*1024px*/
 
@@ -47,16 +61,3 @@ audio {
 
 }
 
-/*SMARTPHONE*/
-@media(min-width:48rem) {/*1024px*/
-
-    .content-sfx,
-    .content-backgrounds,
-    .content-sound-design,
-    .content-foley {
-        display: grid;
-        grid-template-columns: 1fr;
-
-    }
-
-}
