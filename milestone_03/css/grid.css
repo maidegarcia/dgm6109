@@ -7,3 +7,22 @@
     display:grid;/*establishes how I'm going to divide the layout of the screen*/
 }
 
+/*DESKTOP*/
+@media(min-width:64rem) { /*1024px*/
+header div {
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.footer-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0rem;
+}
+
+.footer-socials {
+ grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.2px;
+}
+}

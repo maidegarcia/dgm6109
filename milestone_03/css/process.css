@@ -1,5 +1,6 @@
-.sound-design, .technical-audio {
-    border: 0.20rem solid #333;
+.sound-design,
+.technical-audio {
+    border: 0.20rem solid rgb(45, 45, 45);
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
@@ -11,14 +12,25 @@
 .content-ak47,
 .content-door,
 .content-gunshot,
-.content-responsive{
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 2rem;
+.content-responsive {
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: 
+    box-shadow:
         0 0 0 0.5px rgba(0, 0, 0, 0.8), /* Delineado nítido negro (ajusta el grosor: 2px) */
         0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*DESKTOP*/
+@media(min-width:64rem) {/*1024px*/
+
+    .content-ak47,
+    .content-door,
+    .content-gunshot,
+    .content-responsive {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
 }

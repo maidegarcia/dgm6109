@@ -1,28 +1,20 @@
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 0.20rem solid #333;
+    place-items: center;
+    border: 0.20rem solid rgb(45, 45, 45);
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
-    margin-bottom: 2rem;
     background-color: rgb(241, 249, 255);
     margin: 2rem;
 }
 
 .contact-intro {
     margin-bottom: 2rem;
-    text-align: justify;
-    padding: 0.5rem 20rem;
+    text-align: center;
+    max-width: 50rem;
 
 }
 
 .contact-elements {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* to align it to the left*/
     border: 0.20rem solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     border-radius: 3rem;
@@ -50,16 +42,13 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 1rem;
-    /* to make the corners rounded */
     border: 0.2rem solid rgb(114, 115, 119);
-    resize: vertical;
-    /* This is to allow the space to scroll down when the text exceeds the established */
+    resize: vertical;/* This is to allow the space to scroll down when the text exceeds the established */
     margin-bottom: 1.5rem;
 }
 
 .contact-elements a {
-    align-self: flex-end;
-    /* to align only the button to the right */
+    text-align: center;
     padding: 0.8rem 2rem;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -72,4 +61,14 @@
     background-color: rgb(79, 84, 95);
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
+}
+
+/*DESKTOP*/
+@media(min-width:64rem) { /*1024px*/
+
+    .contact-elements {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }

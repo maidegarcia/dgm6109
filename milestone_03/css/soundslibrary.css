@@ -1,5 +1,5 @@
-.sounds-library{
-    border: 0.20rem solid #333;
+.sounds-library {
+    border: 0.20rem solid rgb(45, 45, 45);
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
@@ -8,29 +8,41 @@
 
 }
 
-.content-sfx, .content-backgrounds, .content-sound-design, .content-foley{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    
-}
 
-.sfx, .backgrounds, .sound-design, .foley{
- gap: 2rem;
+
+.sfx,
+.backgrounds,
+.sound-design,
+.foley {
+    gap: 2rem;
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: 
-        0 0 0 0.5px rgba(0, 0, 0, 0.8), /* Delineado nítido negro (ajusta el grosor: 2px) */
-        0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0rem 0rem 0.03125rem rgba(0, 0, 0, 0.8),
+        0rem 0rem 0.625rem rgba(0, 0, 0, 0.3);
 
 }
 
-.sounds-library-intro{
+.sounds-library-intro {
     text-align: center;
 }
 
 audio {
     width: 90%;
-    height: 3rem; /* Ajusta la altura para que sea más estilizado */
-    border: blue;
+    height: 3rem;
+}
+
+/*DESKTOP*/
+@media(min-width:64rem) {/*1024px*/
+
+    .content-sfx,
+    .content-backgrounds,
+    .content-sound-design,
+    .content-foley {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
 }

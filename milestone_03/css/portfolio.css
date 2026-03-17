@@ -2,7 +2,7 @@
 .shorts-anime,
 .shorts-live,
 .game-audio {
-    border: 0.20rem solid #333;
+    border: 0.20rem solid rgb(45, 45, 45);
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
@@ -13,16 +13,27 @@
 
 .content-demo,
 .content-dragons,
-.content-auction,
-.content-sweet,
+.content-emma,
+.content-wedding,
 .content-afloat {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 2rem;
     border-radius: 3rem;
     padding: 1.7rem 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: 
-        0 0 0 0.5px rgba(0, 0, 0, 0.8), /* Delineado nítido negro (ajusta el grosor: 2px) */
-        0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0rem 0rem 0.03125rem rgba(0, 0, 0, 0.8),
+        0rem 0rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+/*DESKTOP*/
+@media(min-width:64rem) {/*1024px*/
+
+    .content-demo,
+    .content-dragons,
+    .content-emma,
+    .content-wedding,
+    .content-afloat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
 }
