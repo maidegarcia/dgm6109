@@ -39,3 +39,12 @@
         gap: 0.5rem;
     }
 }
+
+/*SMARTPHONE*/
+@media(min-width:48rem) {/*768px*/
+    .message-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}
