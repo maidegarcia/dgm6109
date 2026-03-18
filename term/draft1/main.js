@@ -7,7 +7,7 @@
 */
 
 let svgWidth = 2000
-let svgHeight = 800
+let svgHeight = 750
 
 /* You may use 4 individual variables (such as marginTop or topMargin) if you prefer that to using an Object with 4 properties */
 
