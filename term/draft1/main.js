@@ -6,15 +6,15 @@
     Be sure to remove all code comments and unused variables and code before submitting each version of your visualization!
 */
 
-let svgWidth = 3000
-let svgHeight = 900
+let svgWidth = 2000
+let svgHeight = 800
 
 /* You may use 4 individual variables (such as marginTop or topMargin) if you prefer that to using an Object with 4 properties */
 
 
 let topMargin = 30;
 let rightMargin = 30;
-let bottomMargin = 90;
+let bottomMargin = 140;
 let leftMargin = 80;
 
 
@@ -60,7 +60,7 @@ TIP: You can do end-of-line comments across a list of variables, like this:
     xAxis,      // storage for the x axis group
 */
 
-let data, xAxis, yAxis, xScale, yScale
+let data, xAxis, yAxis, xScale, yScale, xAxisLabel, yAxisLabel
 let allDates = [];
 
 
@@ -145,42 +145,161 @@ function drawVisualization(data, drawing) {
     You may break this up into multiple well-named and well-documented functions if you prefer. You may especially want to do this if you are creating an interactive visualization. One function might draw the elements that only need to be drawn once (e.g., the axes, keys, and labels) while another might draw the elements that get changed in response to a user interaction.
     */
     /*X and Y axis elements */
-
-
     xAxis = svg.append("g")
+        .attr("class", "x-axis")
         .attr("transform", `translate(0, ${svgHeight - bottomMargin})`)
         .call(d3.axisBottom(xScale))
         .selectAll("text.allDates")
         .attr("transform", "rotate(-90)")
 
+
     yAxis = svg.append("g")
+        .attr("class", "y-axis")
         .attr("transform", `translate (${leftMargin},0)`)
         .call(d3.axisLeft().scale(yScale))
 
-    let circles = svg.selectAll("circle")
+
+    /*X and Y axis labels */
+    xAxisLabel = svg.append("text")
+        .attr("class", "axisLabel")
+        .attr("x", svgWidth / 2)
+        .attr("y", svgHeight - bottomMargin / 8)
+        .style("text-anchor", "middle")
+        .text("Dates (dd/mm/yy)");
+
+    yAxisLabel = svg.append("text")
+        .attr("class", "axisLabel")
+        .attr("x", -svgHeight / 2)
+        .attr("y", leftMargin / 4)
+        .style("text-anchor", "middle")
+        .text("Studying Duration (minutes)")
+        .attr("transform", "rotate(-90)")
+
+    /*Drawing the stems*/
+
+    svg.selectAll("line.stem")
+        .data(data)
+        .join("line")
+        .attr("class", "stem")
+        .attr("x1", function (value) {
+            return xScale(value.date);
+        })
+        .attr("y1", yScale(0))
+        .attr("x2", function (value) {
+            return xScale(value.date);
+        })
+        .attr("y2", function (value) {
+            return yScale(value.studyingSession);
+        })
+        .attr("stroke", "green")
+        .attr("stroke-width", "3")
+
+
+    /*Drawing the circles for the petals (habits)*/
+
+    svg.selectAll("circle.music")
         .data(data)
         .join("circle")
-    circles.attr("r", 8)
+        .attr("class", "music")
+        .attr("r", 10)
+        .attr("cx", function (value) {
+            return xScale(value.date) + 10;
+        })
+        .attr("cy", function (value) {
+            return yScale(value.studyingSession) + 10;
+        })
+        .attr("fill", function (value) {
+            if (value.musicSession > 0) {
+                return "orange";
+            }
+            return "none";
+        })
+
+
+    svg.selectAll("circle.french")
+        .data(data)
+        .join("circle")
+        .attr("class", "french")
+        .attr("r", 10)
+        .attr("cx", function (value) {
+            return xScale(value.date) + 10;
+        })
+        .attr("cy", function (value) {
+            return yScale(value.studyingSession) - 10;
+        })
+        .attr("fill", function (value) {
+            if (value.frenchSession > 0) {
+                return "red";
+            }
+            return "none";
+        })
+
+
+    svg.selectAll("circle.read")
+        .data(data)
+        .join("circle")
+        .attr("class", "read")
+        .attr("r", 10)
+        .attr("cx", function (value) {
+            return xScale(value.date) - 10;
+        })
+        .attr("cy", function (value) {
+            return yScale(value.studyingSession) - 10;
+        })
+        .attr("fill", function (value) {
+            if (value.readingSession > 0) {
+                return "blue";
+            }
+            return "none";
+        })
+
+
+    svg.selectAll("circle.sleep")
+        .data(data)
+        .join("circle")
+        .attr("class", "sleep")
+        .attr("r", 10)
+        .attr("cx", function (value) {
+            return xScale(value.date) - 10;
+        })
+        .attr("cy", function (value) {
+            return yScale(value.studyingSession) + 10;
+        })
+        .attr("fill", function (value) {
+            if (value.sleepingSession > 0) {
+                return "purple";
+            }
+            return "none";
+        })
+
+    /*Drawing the circles for the center of the flower (studying)*/
+
+    svg.selectAll("circle.center")
+        .data(data)
+        .join("circle")
+        .attr("class", "center")
+        .attr("r", 8)
         .attr("cx", function (value) {
             return xScale(value.date);
         })
         .attr("cy", function (value) {
             return yScale(value.studyingSession);
         })
-        .attr("fill", "black")
+        .attr("fill", "yellow")
+        .attr("stroke", "black")
 
 
     /*Drawing the keys */
     svg.append("text")
-    .text("Type of habit")
-    .style("text-anchor", "middle")
-    .attr("x", leftMargin + 128)
-    .attr("y", 60 - topMargin);
+        .text("Type of habit")
+        .style("text-anchor", "middle")
+        .attr("x", leftMargin + 928)
+        .attr("y", 60 - topMargin);
 
     for (let i = 1; i <= 4; i++) {
         svg.append("circle")
-            .attr("r", 8)
-            .attr("cx", leftMargin + 100 )
+            .attr("r", 9)
+            .attr("cx", leftMargin + 900)
             .attr("cy", 60 - topMargin + i * 30)
             .attr("stroke", "black")
             .attr("fill", function () {
@@ -194,13 +313,13 @@ function drawVisualization(data, drawing) {
                     return "blue";
                 }
                 else {
-                    return "yellow";
+                    return "purple";
                 }
 
             });
 
         svg.append("text")
-            .text(function(value){
+            .text(function (value) {
                 if (i == 1) {
                     return "Music";
                 }
@@ -215,7 +334,7 @@ function drawVisualization(data, drawing) {
                 }
             })
             .style("alignment-baseline", "middle")
-            .attr("x", leftMargin + 125 )
+            .attr("x", leftMargin + 925)
             .attr("y", 60 - topMargin + i * 30);
     }
 
