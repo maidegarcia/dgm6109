@@ -29,7 +29,7 @@ svg.append("rect")
 
 /*Global variables*/
 
-let data, xAxis, yAxis, xScale, yScale, xAxisLabel, yAxisLabel
+let data, xAxis, yAxis, xScale, yScale, rScale, xAxisLabel, yAxisLabel
 let allDates = []; //All the dates in my data
 
 
@@ -61,6 +61,10 @@ function buildScales(data) {
     yScale = d3.scaleLinear()
         .domain([0, 600])
         .range([svgHeight - bottomMargin, topMargin])
+
+    // rScale = d3.scaleSqrt()
+    // .domain([1, 5])
+    // .range([4, 15]);
 
 }
 
@@ -234,7 +238,7 @@ function drawVisualization(data, drawing) {
 
     for (let i = 1; i <= 4; i++) {
         svg.append("circle")
-            .attr("r", 9)
+            .attr("r", 8)
             .attr("cx", leftMargin + 900)
             .attr("cy", 60 - topMargin + i * 30)
             .attr("stroke", "black")
