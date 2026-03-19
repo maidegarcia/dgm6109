@@ -1,0 +1,442 @@
+[
+  {
+    "date": "26/01/2026",
+    "studyingSession": 210,
+    "frenchSession": 70,
+    "musicSession": 20,
+    "readingSession": 30,
+    "sleepingSession": 455,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "27/01/2026",
+    "studyingSession": 150,
+    "frenchSession": 70,
+    "musicSession": 0,
+    "readingSession": 60,
+    "sleepingSession": 365,
+    "energyLevel": 3,
+    "class": true
+  },
+  {
+    "date": "28/01/2026",
+    "studyingSession": 510,
+    "frenchSession": 0,
+    "musicSession": 30,
+    "readingSession": 0,
+    "sleepingSession": 405,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "29/01/2026",
+    "studyingSession": 195,
+    "frenchSession": 31,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 310,
+    "energyLevel": 2,
+    "class": true
+  },
+  {
+    "date": "30/01/2026",
+    "studyingSession": 377,
+    "frenchSession": 0,
+    "musicSession": 30,
+    "readingSession": 0,
+    "sleepingSession": 325,
+    "energyLevel": 5,
+    "class": false
+  },
+  {
+    "date": "31/01/2026",
+    "studyingSession": 0,
+    "frenchSession": 25,
+    "musicSession": 83,
+    "readingSession": 30,
+    "sleepingSession": 290,
+    "energyLevel": 2,
+    "class": false
+  },
+  {
+    "date": "01/02/2026",
+    "studyingSession": 210,
+    "frenchSession": 67,
+    "musicSession": 30,
+    "readingSession": 0,
+    "sleepingSession": 450,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "02/02/2026",
+    "studyingSession": 103,
+    "frenchSession": 0,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 305,
+    "energyLevel": 5,
+    "class": false
+  },
+  {
+    "date": "03/02/2026",
+    "studyingSession": 183,
+    "frenchSession": 37,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 488,
+    "energyLevel": 4,
+    "class": true
+  },
+  {
+    "date": "04/02/2026",
+    "studyingSession": 553,
+    "frenchSession": 22,
+    "musicSession": 0,
+    "readingSession": 35,
+    "sleepingSession": 345,
+    "energyLevel": 5,
+    "class": false
+  },
+  {
+    "date": "05/02/2026",
+    "studyingSession": 165,
+    "frenchSession": 27,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 225,
+    "energyLevel": 2,
+    "class": true
+  },
+  {
+    "date": "06/02/2026",
+    "studyingSession": 223,
+    "frenchSession": 38,
+    "musicSession": 30,
+    "readingSession": 46,
+    "sleepingSession": 290,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "07/02/2026",
+    "studyingSession": 180,
+    "frenchSession": 20,
+    "musicSession": 32,
+    "readingSession": 26,
+    "sleepingSession": 395,
+    "energyLevel": 5,
+    "class": false
+  },
+  {
+    "date": "08/02/2026",
+    "studyingSession": 50,
+    "frenchSession": 73,
+    "musicSession": 26,
+    "readingSession": 22,
+    "sleepingSession": 430,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "09/02/2026",
+    "studyingSession": 220,
+    "frenchSession": 22,
+    "musicSession": 15,
+    "readingSession": 12,
+    "sleepingSession": 440,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "10/02/2026",
+    "studyingSession": 35,
+    "frenchSession": 37,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 445,
+    "energyLevel": 5,
+    "class": true
+  },
+  {
+    "date": "11/02/2026",
+    "studyingSession": 285,
+    "frenchSession": 0,
+    "musicSession": 49,
+    "readingSession": 0,
+    "sleepingSession": 270,
+    "energyLevel": 2,
+    "class": false
+  },
+  {
+    "date": "12/02/2026",
+    "studyingSession": 30,
+    "frenchSession": 0,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 345,
+    "energyLevel": 2,
+    "class": true
+  },
+  {
+    "date": "13/02/2026",
+    "studyingSession": 270,
+    "frenchSession": 36,
+    "musicSession": 16,
+    "readingSession": 0,
+    "sleepingSession": 380,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "14/02/2026",
+    "studyingSession": 270,
+    "frenchSession": 41,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 315,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "15/02/2026",
+    "studyingSession": 167,
+    "frenchSession": 40,
+    "musicSession": 21,
+    "readingSession": 0,
+    "sleepingSession": 465,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "16/02/2026",
+    "studyingSession": 67,
+    "frenchSession": 63,
+    "musicSession": 15,
+    "readingSession": 32,
+    "sleepingSession": 455,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "17/02/2026",
+    "studyingSession": 95,
+    "frenchSession": 32,
+    "musicSession": 0,
+    "readingSession": 20,
+    "sleepingSession": 515,
+    "energyLevel": 5,
+    "class": true
+  },
+  {
+    "date": "18/02/2026",
+    "studyingSession": 59,
+    "frenchSession": 33,
+    "musicSession": 19,
+    "readingSession": 0,
+    "sleepingSession": 385,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "19/02/2026",
+    "studyingSession": 60,
+    "frenchSession": 34,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 445,
+    "energyLevel": 3,
+    "class": true
+  },
+  {
+    "date": "20/02/2026",
+    "studyingSession": 169,
+    "frenchSession": 80,
+    "musicSession": 0,
+    "readingSession": 72,
+    "sleepingSession": 395,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "21/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 0,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 405,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "22/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 0,
+    "musicSession": 60,
+    "readingSession": 0,
+    "sleepingSession": 386,
+    "energyLevel": 1,
+    "class": false
+  },
+  {
+    "date": "23/02/2026",
+    "studyingSession": 197,
+    "frenchSession": 30,
+    "musicSession": 0,
+    "readingSession": 100,
+    "sleepingSession": 445,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "24/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 40,
+    "musicSession": 0,
+    "readingSession": 30,
+    "sleepingSession": 455,
+    "energyLevel": 4,
+    "class": true
+  },
+  {
+    "date": "25/02/2026",
+    "studyingSession": 495,
+    "frenchSession": 18,
+    "musicSession": 0,
+    "readingSession": 20,
+    "sleepingSession": 490,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "26/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 32,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 290,
+    "energyLevel": 2,
+    "class": true
+  },
+  {
+    "date": "27/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 62,
+    "musicSession": 60,
+    "readingSession": 46,
+    "sleepingSession": 395,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "28/02/2026",
+    "studyingSession": 0,
+    "frenchSession": 98,
+    "musicSession": 47,
+    "readingSession": 0,
+    "sleepingSession": 455,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "01/03/2026",
+    "studyingSession": 0,
+    "frenchSession": 95,
+    "musicSession": 93,
+    "readingSession": 51,
+    "sleepingSession": 500,
+    "energyLevel": 5,
+    "class": false
+  },
+  {
+    "date": "02/03/2026",
+    "studyingSession": 399,
+    "frenchSession": 91,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 485,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "03/03/2026",
+    "studyingSession": 124,
+    "frenchSession": 0,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 280,
+    "energyLevel": 2,
+    "class": true
+  },
+  {
+    "date": "04/03/2026",
+    "studyingSession": 360,
+    "frenchSession": 60,
+    "musicSession": 35,
+    "readingSession": 0,
+    "sleepingSession": 345,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "05/03/2026",
+    "studyingSession": 33,
+    "frenchSession": 31,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 375,
+    "energyLevel": 3,
+    "class": true
+  },
+  {
+    "date": "06/03/2026",
+    "studyingSession": 0,
+    "frenchSession": 108,
+    "musicSession": 68,
+    "readingSession": 43,
+    "sleepingSession": 435,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "07/03/2026",
+    "studyingSession": 500,
+    "frenchSession": 35,
+    "musicSession": 0,
+    "readingSession": 0,
+    "sleepingSession": 435,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "08/03/2026",
+    "studyingSession": 0,
+    "frenchSession": 85,
+    "musicSession": 70,
+    "readingSession": 60,
+    "sleepingSession": 380,
+    "energyLevel": 3,
+    "class": false
+  },
+  {
+    "date": "09/03/2026",
+    "studyingSession": 0,
+    "frenchSession": 90,
+    "musicSession": 44,
+    "readingSession": 0,
+    "sleepingSession": 495,
+    "energyLevel": 4,
+    "class": false
+  },
+  {
+    "date": "10/03/2026",
+    "studyingSession": 0,
+    "frenchSession": 20,
+    "musicSession": 19,
+    "readingSession": 0,
+    "sleepingSession": 395,
+    "energyLevel": 4,
+    "class": true
+  }
+]

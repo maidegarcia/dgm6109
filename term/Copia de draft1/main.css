@@ -4,7 +4,7 @@
     font-weight: bold;
 }
 
-.axis { 
+.axis { /* used by d3.js when creating an axis */
     font-size: 16px;
 }
 
