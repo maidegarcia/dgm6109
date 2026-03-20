@@ -17,7 +17,7 @@
 .content-emma,
 .content-afloat {
     border-radius: 3rem;
-    padding: 1.7rem 1rem;
+    padding: 1.7rem 1.7rem;
     margin-bottom: 1.5rem;
     box-shadow:
         0rem 0rem 0.03125rem rgba(0, 0, 0, 0.8),
@@ -43,6 +43,13 @@
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
 }
+
+.content-dragons iframe,
+.content-emma iframe,
+.content-afloat iframe{
+   place-items: center;
+}
+
 
 /*SMARTPHONE*/
 @media(min-width:48rem) {/*768px*/

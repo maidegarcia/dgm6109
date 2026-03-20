@@ -2,27 +2,33 @@ body {
     font-family: Helvetica, Verdana, sans-serif;
     background-color: rgb(169, 182, 209);
 }
-
+/*HEADER*/
 header {
     background-color: rgb(5, 62, 185);
     color: rgb(255, 255, 255);
 }
 
 header div {
-    display: flex;
-    /* to organize the elements*/
     align-items: center;
-    /* to center the elements */
-    justify-content: space-between;
-    /* to put the logo to the left, the nav at the center and the socials at the right */
+    justify-content: space-between; /* to put the logo to the left, the nav at the center and the socials at the right */
     padding: 0.3rem 1rem;
+}
+
+.biglogo:hover, .biglogo:focus{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+/*NAVIGATON*/
+nav{
+    justify-self: center;
 }
 
 nav a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
-    /* font-family: "Arial Black"; */
     margin: 3rem;
 }
 
@@ -33,41 +39,52 @@ nav a:focus {
     color: rgb(24, 189, 255);
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
-    transform: scale(1.1);
-    /*to change the size*/
+    transform: scale(1.1); /*to change the size*/
 }
 
+/*TEXT*/
 h1 {
     font-size: 5rem;
     margin-bottom: 0.5rem;
 }
 
-iframe{
-    border: none;
+h2, h3, h4, h5, p {
+    margin: 2rem;
 }
 
-/*footer*/
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h4{
+    font-size: 1.6rem;
+}
+
+p, li{
+    font-size: 1.2rem;
+}
+
+/*VIDEO*/
+iframe{
+    border: none;
+    margin: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/*FOOTER*/
 footer {
     background-color: rgb(5, 62, 185);
     color: rgb(255, 255, 255);
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    /* To organize the elements in a column*/
-    align-items: center;
-    gap: 0rem;
-}
-
-.footer-socials {
-    display: flex;
-    flex-direction: row;
-    /* To organize the elements in a row*/
-    gap: 0.5rem;
-    margin-top: 0.2px;
-}
-
+/*SOCIALS' ICONS*/
 .instagram:hover,
 .instagram:focus {
     transform: scale(1.1);
@@ -90,36 +107,7 @@ footer {
 }
 
 
-iframe {
-    margin: 2rem;
-    margin-bottom: 0.5rem;
-}
 
-
-
-h2, h3, h4, h5, p {
-    margin: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-h3{
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-h4{
-    font-size: 1.6rem;
-}
-
-p, li{
-    font-size: 1.2rem;
-}
 
 
 

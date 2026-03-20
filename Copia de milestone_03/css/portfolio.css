@@ -1,0 +1,54 @@
+.demo-reel,
+.shorts-anime,
+.shorts-live,
+.game-audio {
+    border: 0.20rem solid rgb(45, 45, 45);
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    background-color: rgb(241, 249, 255);
+    margin: 2rem;
+
+}
+
+.content-demo,
+.content-dragons,
+.content-emma,
+.content-wedding,
+.content-afloat {
+    border-radius: 3rem;
+    padding: 1.7rem 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow:
+        0rem 0rem 0.03125rem rgba(0, 0, 0, 0.8),
+        0rem 0rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+/*SMARTPHONE*/
+@media(min-width: 48rem) {
+
+    .content-demo,
+    .content-dragons,
+    .content-emma,
+    .content-wedding,
+    .content-afloat {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/*DESKTOP*/
+@media(min-width:64rem) {/*1024px*/
+
+    .content-demo,
+    .content-dragons,
+    .content-emma,
+    .content-wedding,
+    .content-afloat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
