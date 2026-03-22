@@ -57,12 +57,6 @@
     transition-timing-function: ease-out;
 }
 
-/* .content-dragons iframe,
-.content-emma iframe,
-.content-afloat iframe{
-   place-items: center;
-} */
-
 
 /*SMARTPHONE*/
 @media(max-width:48rem) {/*768px*/
