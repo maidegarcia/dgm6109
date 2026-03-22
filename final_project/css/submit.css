@@ -39,7 +39,7 @@ background-color: rgb(5, 62, 185);
 }
 
 /*SMARTPHONE*/
-@media(min-width:48rem) {/*768px*/
+@media(max-width:48rem) {/*768px*/
     .message-container {
         display: grid;
         grid-template-columns: 1fr;

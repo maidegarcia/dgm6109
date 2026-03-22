@@ -76,9 +76,13 @@ p, li{
 /*VIDEO*/
 iframe{
     border: none;
-    margin: 2rem;
+    margin: 0rem;
     margin-bottom: 0.5rem;
     max-width: 100%;
+    width: 100%;            /* Ocupa todo el ancho disponible en móvil */
+    height: auto;           /* Suelta la altura fija */
+    aspect-ratio: 16 / 9;   /* Mantiene la forma de cine/TV automáticamente */
+    object-fit: cover;
 
 }
 
