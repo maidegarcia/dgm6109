@@ -47,7 +47,7 @@ nav a:focus, .menu-mobile:hover, .menu-mobile:focus{
 /*TEXT*/
 h1 {
     font-size: 5rem;
-    margin-bottom: 0.5rem;
+    margin:0rem;
 }
 
 h2, h3, h4, h5, p {
