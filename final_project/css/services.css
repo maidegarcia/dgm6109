@@ -30,6 +30,15 @@
 /*SMARTPHONE*/
 @media(max-width:48rem) {/*768px*/
 
+    .services{
+        margin:0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .services p{
+        margin:0.2rem;
+    }
+
     .content-services {
         display: grid;
         grid-template-columns: 1fr;

@@ -48,6 +48,11 @@ section h3 {
 /*SMARTPHONE*/
 @media(max-width:48rem) {/*1024px*/
 
+    .about{
+        margin:0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+
 .about-who-am-i, .about-experience, .about-tools {
     display: grid;
     grid-template-columns: 1fr;
@@ -63,6 +68,11 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+.testimonies{
+        margin:0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
 
 }
 
