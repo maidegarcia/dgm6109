@@ -65,13 +65,12 @@
 
 
 /*SMARTPHONE*/
-@media(max-width:20rem) {/*768px*/
+@media(max-width:48rem) {/*768px*/
 
     .text-ontop {
         position: absolute;
         text-align: center; 
-        top: 10%;
-        transform: translate(-50%, -50%);
+        padding: 5rem;
     }
 
     .latest-work{
