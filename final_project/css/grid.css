@@ -15,20 +15,41 @@
     /*768px*/
     header div {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 0.2rem
     }
 
-    nav {
+    .nav-desktop {
+        display: none; 
+    }
 
+    .menu-mobile {
+        display: grid;
+        justify-items: center;
+       
+    }
+
+    .nav-mobile {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 0.2rem
+        justify-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+    
     }
 
     .footer-content {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 0rem;
+    }
+
+    .footer-brand {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-self: center;
+        margin: 0;
+        text-align: center;
     }
 
     .footer-socials {
@@ -45,6 +66,14 @@
     header div {
         display: grid;
         grid-template-columns: auto 1fr auto;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
     }
 
     .footer-content {

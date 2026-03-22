@@ -25,7 +25,7 @@ nav{
     justify-self: center;
 }
 
-nav a {
+nav a, .menu-mobile{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -36,12 +36,13 @@ nav a {
 
 
 nav a:hover,
-nav a:focus {
+nav a:focus, .menu-mobile:hover, .menu-mobile:focus{
     color: rgb(24, 189, 255);
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     transform: scale(1.1); /*to change the size*/
 }
+
 
 /*TEXT*/
 h1 {
