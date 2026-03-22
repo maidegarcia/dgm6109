@@ -9,7 +9,7 @@
 }
 
 .header{
- background-image: url('/img/header.jpg');
+ background-image: url('../img/header.jpg');
     background-size: cover;       /* Cubre todo el espacio sin estirarse */
     min-height: 600px;            /* Altura para Desktop */
     width: 100%;
