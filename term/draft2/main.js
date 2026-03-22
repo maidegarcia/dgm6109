@@ -113,7 +113,7 @@ function drawVisualization(data, drawing) {
     xAxis = svg.append("g")
         .classed("x-axis text", true)
         .attr("transform", `translate(0, ${svgHeight - bottomMargin})`)
-        .call(d3.axisBottom().scale(xScale).tickSize(20))
+        .call(d3.axisBottom().scale(xScale).tickSize(22))
         .selectAll("text.allDates")
 
 
@@ -129,7 +129,7 @@ function drawVisualization(data, drawing) {
         .attr("x", svgWidth / 2)
         .attr("y", svgHeight - bottomMargin / 8)
         .style("text-anchor", "middle")
-        .text("Dates (dd/mm/yy)");
+        .text("Dates (mm/dd/yy)");
 
     yAxisLabel = svg.append("text")
         .classed("axisLabel", true)
@@ -156,7 +156,8 @@ function drawVisualization(data, drawing) {
             return yScale(value.studyingSession);
         })
         .attr("stroke", "green")
-        .attr("stroke-width", "3")
+        .attr("stroke-width", "4")
+
 
 
     /*Drawing the circles for the petals (habits)*/
@@ -254,8 +255,11 @@ function drawVisualization(data, drawing) {
         .attr("cy", function (value) {
             return yScale(value.studyingSession);
         })
+        
         .attr("fill", "yellow")
-        .attr("stroke", "black");
+        .attr("opacity",1)
+        .attr("stroke", "black")
+        
 
 
     svg.selectAll("rect.music")
