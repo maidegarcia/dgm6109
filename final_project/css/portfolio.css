@@ -27,12 +27,15 @@
 /*SMARTPHONE*/
 @media(max-width: 48rem) {
 
-    /* .demo-reel,
+    .demo-reel,
 .shorts-anime,
 .shorts-live,
 .game-audio {
-    
-    } */
+     display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0rem;
+        padding: 0rem 0.5rem;
+    }
     .content-demo,
     .content-dragons,
     .content-emma,
@@ -42,6 +45,16 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+.content-demo iframe,
+    .content-dragons iframe,
+    .content-emma iframe,
+    .content-wedding iframe,
+    .content-afloat iframe{
+    display: block;       /* El video deja de ser 'inline' para comportarse como una caja */
+    justify-self: center;
+    /* Para que no se salga en celulares */
+}
 }
 
 /*DESKTOP*/
