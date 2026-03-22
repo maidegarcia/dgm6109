@@ -43,7 +43,8 @@
     padding: 0.5rem;
     border-radius: 1rem;
     border: 0.2rem solid rgb(114, 115, 119);
-    resize: vertical;/* This is to allow the space to scroll down when the text exceeds the established */
+    resize: vertical;
+    /* This is to allow the space to scroll down when the text exceeds the established */
     margin-bottom: 1.5rem;
 }
 
@@ -65,7 +66,15 @@
 }
 
 /*Mobile*/
-@media(max-width:48rem) { /*768px*/
+@media(max-width:48rem) {
+    /*768px*/
+
+    .contact-form {
+
+        margin: 0.5rem;
+        padding: 0.5rem 0.5rem;
+
+    }
 
     .contact-elements {
         display: grid;
@@ -75,7 +84,8 @@
 }
 
 /*DESKTOP*/
-@media(min-width:64rem) { /*1024px*/
+@media(min-width:64rem) {
+    /*1024px*/
 
     .contact-elements {
         display: grid;
