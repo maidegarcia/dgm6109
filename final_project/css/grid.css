@@ -19,6 +19,12 @@
         gap: 0.2rem
     }
 
+    .header-socials{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-top: 0.2px;
+    }
+
     .nav-desktop {
         display: none; 
     }
@@ -26,7 +32,6 @@
     .menu-mobile {
         display: grid;
         justify-items: center;
-        font-size: 0.5rem;
        
     }
 
