@@ -57,11 +57,11 @@
     transition-timing-function: ease-out;
 }
 
-.content-dragons iframe,
+/* .content-dragons iframe,
 .content-emma iframe,
 .content-afloat iframe{
    place-items: center;
-}
+} */
 
 
 /*SMARTPHONE*/
