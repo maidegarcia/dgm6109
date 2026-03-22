@@ -30,7 +30,7 @@ body {
     border-radius: 2rem;
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 20rem;
     font-size: 1.5rem;
 }
 
@@ -55,11 +55,12 @@ body {
 
     .thank-you-message {
         padding: 1rem 0.5rem;
-        margin: 1.5rem;
+        margin: 0.5rem;
 
     }
 
     .message-container a {
+        width: 17rem;
     font-size: 1.2rem;
 }
 }
