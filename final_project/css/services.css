@@ -28,7 +28,7 @@
 }
 
 /*SMARTPHONE*/
-@media(min-width:48rem) {/*768px*/
+@media(max-width:48rem) {/*768px*/
 
     .content-services {
         display: grid;

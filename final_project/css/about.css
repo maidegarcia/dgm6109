@@ -46,7 +46,7 @@ section h3 {
 }
 
 /*SMARTPHONE*/
-@media(min-width:48rem) {/*1024px*/
+@media(max-width:48rem) {/*1024px*/
 
 .about-who-am-i, .about-experience, .about-tools {
     display: grid;
