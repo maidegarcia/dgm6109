@@ -19,6 +19,10 @@
         gap: 0.2rem
     }
 
+    .header-socials{
+        gap:0.5rem;
+    }
+
     .nav-desktop {
         display: none; 
     }
@@ -66,7 +70,7 @@
 
     .instagram, .linkedin, .gmail{
         width: 25px;
-        height:auto;
+        height:25px;
     }
 }
 
