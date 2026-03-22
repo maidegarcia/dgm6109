@@ -4,6 +4,18 @@
     text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);/*to give the text a shadow*/
 }
 
+.header-image{
+    position:relative;
+}
+
+.header{
+ background-image: url('/img/header.jpg');
+    background-size: cover;       /* Cubre todo el espacio sin estirarse */
+    min-height: 600px;            /* Altura para Desktop */
+    width: 100%;
+    position: relative;
+}
+
 .latest-work {
     border: 0.20rem solid rgb(45, 45, 45);
     border-radius: 3rem;
@@ -52,24 +64,22 @@
 
 
 /*SMARTPHONE*/
-@media(min-width:48rem) {/*768px*/
-
-    .header-image {
-        background-image:none;
-        position: relative; /* this is makes it to move relative to what it is in the container and not relative to the page*/
-        display: inline-block; /*to make the container to adjust to the image*/
-    }
+@media(max-width:20rem) {/*768px*/
 
     .text-ontop {
         text-align: center; 
         transform: translate(-50%, -50%);
     }
 
+    .latest-work{
+        margin:0.5rem;
+    }
+
     .latest-work-content {
         display: grid;
         grid-template-columns: 1fr;
-        grid-column-gap: 2rem;
-        padding: 0rem 2.5rem;
+        grid-column-gap: 0rem;
+        padding: 0rem 0.5rem;
     }
 
     .content-dragons,
@@ -78,16 +88,12 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
+        justify-items: center;
     }
 
 }
 
 @media(min-width:64rem) {/*1024px*/
-
-    .header-image {
-        position: relative; /* this is makes it to move relative to what it is in the container and not relative to the page*/
-        display: inline-block; /*to make the container to adjust to the image*/
-    }
 
     .text-ontop {
         position: absolute; /* This allows the text to move freely within the image */
@@ -100,7 +106,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 2rem;
-        padding: 0rem 2.5rem;
+        padding: 0rem 0.5rem;
     }
 
     .content-dragons,

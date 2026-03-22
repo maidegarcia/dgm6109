@@ -76,6 +76,8 @@ iframe{
     border: none;
     margin: 2rem;
     margin-bottom: 0.5rem;
+    max-width: 100%;
+
 }
 
 /*FOOTER*/
