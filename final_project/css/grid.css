@@ -1,55 +1,79 @@
-*{
-    box-sizing:border-box;/*this is to tell the elements to be sized according to their border instead of their content*/
+* {
+    box-sizing: border-box;
+    /*this is to tell the elements to be sized according to their border instead of their content*/
 }
 
 
-.grid{
-    display:grid;/*establishes how I'm going to divide the layout of the screen*/
+.grid {
+    display: grid;
+    /*establishes how I'm going to divide the layout of the screen*/
 }
 
 /*SMARTPHONE*/
-@media(min-width:20rem) { /*768px*/
-header div {
-    display:grid;
-    grid-template-columns: 1fr;
-    gap:0.2rem
-}
+@media(max-width:48rem) {
 
-nav {
-    
-    grid-template-columns: 1fr;
-    gap:0.2rem
-}
+    /*768px*/
+    header div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.2rem
+    }
 
-.footer-content {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 0rem;
-}
+    nav {
 
-.footer-socials {
- grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 0.2px;
-}
+        grid-template-columns: 1fr;
+        gap: 0.2rem
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 0rem;
+    }
+
+    .footer-socials {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-top: 0.2px;
+    }
 }
 
 /*DESKTOP*/
-@media(min-width:64rem) { /*1024px*/
-header div {
-    display:grid;
-    grid-template-columns: auto 1fr auto;
-}
+@media(min-width:64rem) {
 
-.footer-content {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 0rem;
-}
+    /*1024px*/
+    header div {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+    }
 
-.footer-socials {
- grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 0.2px;
-}
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 0rem;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .footer-brand {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-self: center;
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer-brand p{
+        font-size: 1.4rem ;
+        margin:0rem;
+    }
+
+    .footer-socials {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        justify-self: end;
+        margin: 0rem;
+        align-items: center;
+    }
 }

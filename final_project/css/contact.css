@@ -21,7 +21,7 @@
     padding: 2rem 3rem;
     margin-bottom: 2rem;
     width: 100%;
-    max-width: 31.25rem;
+    max-width: 50.25rem;
 }
 
 .contact-elements p {
@@ -54,6 +54,7 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 2rem;
+    font-size: 1.5rem;
 }
 
 .contact-elements a:hover,

@@ -1,9 +1,12 @@
+body{
+background-color: rgb(5, 62, 185);
+}
 .thank-you-message {
     place-items: center;
     justify-content: center;
     text-align: center;
     padding: 8rem 18rem;
-    background-color: rgb(5, 62, 185);
+    
 }
 
 .message-container {
@@ -24,7 +27,8 @@
     border-radius: 2rem;
     display: block;
     margin: 0 auto;
-    width: 10rem;
+    width: 20rem;
+    font-size: 1.5rem;
 }
 
 .message-container a:hover,

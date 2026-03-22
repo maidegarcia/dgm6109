@@ -46,7 +46,8 @@
     text-align: center;
     display: block;
     margin: 0 auto;
-    width: 10rem;
+    width: 12rem;
+    font-size: 1.5rem;
 }
 
 .view-more-button:hover,
@@ -88,8 +89,18 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
-        justify-items: center;
+      
     }
+
+
+        .content-dragons iframe,
+.content-emma iframe,
+.content-afloat iframe {
+    display: block;       /* El video deja de ser 'inline' para comportarse como una caja */
+    justify-self: center;
+    /* Para que no se salga en celulares */
+}
+    
 
 }
 
@@ -106,15 +117,18 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 2rem;
-        padding: 0rem 0.5rem;
+        padding: 0rem 1.5rem;
+        margin: 0 auto;
     }
 
     .content-dragons,
     .content-emma,
     .content-afloat {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        
+    
     }
 
 }
