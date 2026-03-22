@@ -42,6 +42,7 @@ audio {
         grid-template-columns: 1fr;
         grid-column-gap: 0rem;
         margin: 0.5rem;
+         padding: 0rem 0.5rem;
     }
 
     .content-sfx,
