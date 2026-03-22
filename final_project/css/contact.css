@@ -64,8 +64,8 @@
     transition-timing-function: ease-out;
 }
 
-/*DESKTOP*/
-@media(min-width:48rem) { /*768px*/
+/*Mobile*/
+@media(max-width:48rem) { /*768px*/
 
     .contact-elements {
         display: grid;
