@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(11, 98, 40);
+    background-color: rgb(244, 242, 230);
     margin: 1rem;
 
 }
@@ -22,11 +22,6 @@ section {
 
 }
 
-.canvas {
-    background-color: rgb(179, 232, 251);
-    margin-bottom: 0rem;
-}
-
 .axisLabel {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16pt;
@@ -42,7 +37,6 @@ section {
 }
 
 .y-axis text {
-    transform: translateX(-10px);
     font-size: 16px;
 }
 

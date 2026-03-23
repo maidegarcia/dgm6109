@@ -1,18 +1,25 @@
 "use strict"
 
+/*********************************************************************************************/
+/* CANVAS MEASUREMENTS */
+/***********************/
 
 let svgWidth = 2000
 let svgHeight = 750
 
-/* Margins*/
+/**********************************************************************************************/
+/* MARGINS */
+/***********/
 
 
 let topMargin = 30;
-let rightMargin = 30;
+let rightMargin = 80;
 let bottomMargin = 140;
 let leftMargin = 80;
 
-
+/*********************************************************************************************/
+/*DRAWING THE CANVAS */
+/*********************/
 
 let svg = d3.select("#canvas")
     .append("svg")
@@ -27,24 +34,55 @@ svg.append("rect")
 
 
 
-/*Global variables*/
+/********************************************************************************************/
+/*GLOBAL VARIABLES*/
+/******************/
 
-let data, xAxis, yAxis, xScale, yScale, rScale, xAxisLabel, yAxisLabel
+let data, xAxis, yAxis1, xScale, yScale, xAxisLabel, yAxisLabel, yAxis2
 let allDates = []; //All the dates in my data
-let isWeekend = [];
-let isClassDay = [];
-let isFreeDay = [];
+let isWeekend = []; //Only the weekend days
+let isClassDay = []; //Only the days that I had class
+let isFreeDay = []; // The week days that I didn't have class
 
+/* ************ async function () ********************************************************+*+/
+PURPOSE:
+Load my data and pass it to the function buildVisualization
 
+REQUIREMENTS:
+* d3.js 
+* JSON file
 
-/* To load my data and pass it to the function buildVisualization*/
+GLOBAL VARIABLES USED/MODIFIED:
+* Modifies data (Array of Objects)
+
+PARAMETERS:
+none
+
+RETURNS:
+Nothing
+***************************************************************************************+++++*/
 
 (async function () {
     data = await d3.json("data.json").then(buildVisualization)
 })();
 
+/* ************ function buildVisualization() ********************************************+*+/
+PURPOSE:
+Receives data from the JSON file and stores it in the global variable "data", triggers the data organization, builds the scales, and calls the drawing function.
 
-/*To receive data from the JSON file and store it*/
+GLOBAL VARIABLES USED/MODIFIED:
+* Uses: svg (Object - d3 selection)
+
+REQUIREMENTS:
+* d3.js 
+* The organizeData, buildScales, and drawVisualization functions
+
+PARAMETERS:
+data(Array of Objects): The dataset loaded from the JSON file
+
+RETURNS:
+data
+**********************************************************************************************/
 
 function buildVisualization(data) {
     let renderData = organizeData(data);
@@ -53,7 +91,25 @@ function buildVisualization(data) {
     return data;
 }
 
-/*Scale functions*/
+/* ************ function buildScales() ********************************************************+/
+PURPOSE:
+It contains the functions to scale the data and make it fit in the canvas
+
+GLOBAL VARIABLES USED/MODIFIED:
+* Uses: allDates, leftMargin, rightMargin, svgWidth, svgHeight, bottomMargin, topMargin
+* Modifies: xScale (Function), yScale (Function)
+
+REQUIREMENTS
+*d3.js 
+*The allDates array 
+*Canvas measurements (svgWidth, svgHeight, margins)
+
+PARAMETERS:
+data (Array of Objects): The dataset loaded from the JSON file (is not being used)
+
+RETURNS:
+Nothing
+************************************************************************************************/
 
 function buildScales(data) {
 
@@ -65,13 +121,24 @@ function buildScales(data) {
         .domain([0, 600])
         .range([svgHeight - bottomMargin, topMargin])
 
-    // rScale = d3.scaleSqrt()
-    // .domain([1, 5])
-    // .range([4, 15]);
-
 }
 
-/*To organize the data through any data manipulation*/
+/* ************ function organizeData() ********************************************************+/
+PURPOSE:
+Organizes the data by mapping dates, sorting them chronologically, and filtering the dataset into specific arrays based on the type of day (weekend, class, free).
+
+GLOBAL VARIABLES USED/MODIFIED:
+* Modifies: allDates (Array), isWeekend (Array), isClassDay (Array), isFreeDay (Array)
+
+REQUIREMENTS:
+* None
+
+PARAMETERS:
+data (Array of Objects): The dataset to be mapped, sorted and mapped
+
+RETURNS:
+data
+************************************************************************************************/
 
 function organizeData(data) {
 
@@ -79,7 +146,7 @@ function organizeData(data) {
         return value.date;
     });
 
-    allDates.sort(function (a, b) { // To make sure all the dates are in the same format and organized properly
+    allDates.sort(function (a, b) { // To make sure all the dates are in the same format and put in an ascending order
         if (new Date(a) > new Date(b)) {
             return 1;
         } else {
@@ -87,15 +154,15 @@ function organizeData(data) {
         }
     })
 
-    isWeekend = data.filter(function (value) {
+    isWeekend = data.filter(function (value) { //To filter the data and only get the weekend days
         return (value.typeOfDay == "weekend");
     })
 
-    isClassDay = data.filter(function (value) {
+    isClassDay = data.filter(function (value) { //To filter the data and only get the days I had class
         return (value.typeOfDay == "class");
     })
 
-    isFreeDay = data.filter(function (value) {
+    isFreeDay = data.filter(function (value) { //To filter the data and only get the week day I didn't have class
         return (value.typeOfDay == "free");
     })
 
@@ -105,11 +172,32 @@ function organizeData(data) {
 
 }
 
-/*To draw the data visualization*/
+/* ************ function drawVisualization() ********************************************************+/
+PURPOSE:
+Draw all the visual elements
 
-function drawVisualization(data, drawing) {
+GLOBAL VARIABLES USED/MODIFIED:
+* Uses: svg, svgHeight, svgWidth, margins (topMargin, bottomMargin, leftMargin, rightMargin), xScale, yScale, xAxis, yAxis1, yAxis2, isFreeDay, isWeekend, isClassDay
 
-    /*X and Y axis elements */
+REQUIREMENTS:
+*d3.js 
+*An svg element appended to the #canvas div in the HTML.
+*Scales (xScale, yScale) 
+*Data arrays (isFreeDay, isClassDay, isWeekend) must be populated.
+
+PARAMETERS:
+data (Array of Objects): The dataset used to draw the visualization
+
+RETURNS:
+Nothing
+************************************************************************************************/
+
+function drawVisualization(data) {
+
+    /********************************************************************/
+    /*X AND Y AXIS ELEMETS*/
+    /**********************/
+
     xAxis = svg.append("g")
         .classed("x-axis text", true)
         .attr("transform", `translate(0, ${svgHeight - bottomMargin})`)
@@ -117,13 +205,22 @@ function drawVisualization(data, drawing) {
         .selectAll("text.allDates")
 
 
-    yAxis = svg.append("g")
+    yAxis1 = svg.append("g")
         .classed("y-axis text", true)
         .attr("transform", `translate (${leftMargin},0)`)
         .call(d3.axisLeft().scale(yScale).tickSize(9))
 
 
-    /*X and Y axis labels */
+    yAxis2 = svg.append("g")
+        .classed("y-axis text", true)
+        .attr("transform", `translate (${svgWidth - rightMargin},0)`)
+        .call(d3.axisRight().scale(yScale).tickSize(9))
+
+
+    /**********************************************************************/
+    /*X AND Y AXIS LABELS */
+    /**********************/
+
     xAxisLabel = svg.append("text")
         .classed("axisLabel", true)
         .attr("x", svgWidth / 2)
@@ -139,7 +236,9 @@ function drawVisualization(data, drawing) {
         .text("Studying Duration (minutes)")
         .attr("transform", "rotate(-90)")
 
-    /*Drawing the stems*/
+    /**********************************************************************/
+    /* STEMS (MINUTES OF STUDY) */
+    /****************************/
 
     svg.selectAll("line.stem")
         .data(data)
@@ -160,13 +259,21 @@ function drawVisualization(data, drawing) {
 
 
 
-    /*Drawing the circles for the petals (habits)*/
+    /*********************************************************************/
+    /* PETALS (HABITS) */
+    /*******************/
 
-    let musicColor = "orange";
+    let musicColor = "orange"; //I'm declaring these variables to make it easier for me to assign the colors to the petals and easily change their color if I wanted to
     let frenchColor = "red";
     let readingColor = "blue";
     let sleepingColor = "purple";
 
+
+    /**********************************/
+    /* PETALS FOR FREE DAYS (CIRCLES) */
+    /**********************************/
+
+    /*Music Circle Petals */
     svg.selectAll("circle.music")
         .data(isFreeDay)
         .join("circle")
@@ -185,7 +292,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
-
+    /*French Circle Petals */
     svg.selectAll("circle.french")
         .data(isFreeDay)
         .join("circle")
@@ -204,7 +311,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
-
+    /*Reading Circle Petals */
     svg.selectAll("circle.read")
         .data(isFreeDay)
         .join("circle")
@@ -223,7 +330,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
-
+    /*Sleeping Circle Petals */
     svg.selectAll("circle.sleep")
         .data(isFreeDay)
         .join("circle")
@@ -242,8 +349,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
-    /*Drawing the circles for the center of the flower (studying)*/
-
+    /*Center Circle of the Flower */
     svg.selectAll("circle.center")
         .data(isFreeDay)
         .join("circle")
@@ -255,25 +361,28 @@ function drawVisualization(data, drawing) {
         .attr("cy", function (value) {
             return yScale(value.studyingSession);
         })
-        
+
         .attr("fill", "yellow")
-        .attr("opacity",1)
+        .attr("opacity", 1)
         .attr("stroke", "black")
-        
 
+    /*************************************/
+    /* PETALS FOR WEEKEND DAYS (SQUARES) */
+    /*************************************/
 
+    /*Music Square Petals */
     svg.selectAll("rect.music")
         .data(isWeekend)
         .join("rect")
         .classed("music", true)
         .attr("height", function () {
-            return Math.sqrt(Math.PI * 9 * 9)
+            return Math.sqrt(Math.PI * 9 * 9) //To calculate the area of the squares and make it similar to the one of the circles, instead of using 10 (radius of the circled petals) I decided to use 9 for design purposes
         })
         .attr("width", function () {
             return Math.sqrt(Math.PI * 9 * 9)
         })
         .attr("x", function (value) {
-            return (xScale(value.date) + 10) - this.width.baseVal.value / 2
+            return (xScale(value.date) + 10) - this.width.baseVal.value / 2 //To make the squares to have the same positioning as the circled petals
         })
         .attr("y", function (value) {
             return (yScale(value.studyingSession) + 10) - this.height.baseVal.value / 2
@@ -284,6 +393,8 @@ function drawVisualization(data, drawing) {
             }
             return "none";
         })
+
+    /*French Square Petals */
 
     svg.selectAll("rect.french")
         .data(isWeekend)
@@ -308,6 +419,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*Reading Square Petals */
     svg.selectAll("rect.read")
         .data(isWeekend)
         .join("rect")
@@ -331,6 +443,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*Sleeping Square Petals */
     svg.selectAll("rect.sleep")
         .data(isWeekend)
         .join("rect")
@@ -354,18 +467,19 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*Center Square of the Flower */
     svg.selectAll("rect.center")
         .data(isWeekend)
         .join("rect")
         .classed("center", true)
         .attr("height", function () {
-            return Math.sqrt(Math.PI * 8 * 8)
+            return Math.sqrt(Math.PI * 8 * 8) //To calculate the area of the squares and make it the same as the one of the circles
         })
         .attr("width", function () {
             return Math.sqrt(Math.PI * 8 * 8)
         })
         .attr("x", function (value) {
-            return xScale(value.date) - this.width.baseVal.value / 2
+            return xScale(value.date) - this.width.baseVal.value / 2 //To make the squares to have the same positioning as the circled petals
         })
         .attr("y", function (value) {
             return yScale(value.studyingSession) - this.height.baseVal.value / 2
@@ -373,31 +487,52 @@ function drawVisualization(data, drawing) {
         .attr("stroke", "black")
         .attr("fill", "yellow");
 
+    /********************************************/
+    /* PETALS FOR DAYS WITH CLASSES (TRIANGLES) */
+    /********************************************/
+
+    /* ************ function closedPolygon() ********************************************************+/
+   //PURPOSE:
+   //Take a list of values, in this case the variables values, and convert them to a String so the attribute points can process them
+   
+   //GLOBAL VARIABLES USED/MODIFIED:
+   //None
+
+   //REQUIREMENTS:
+   //* An array of numerical coordinates passed as arguments
+   
+   //PARAMETERS:
+   //...args: a rest operator that helps to storing the values sent to the function into an Array named "args"
+   
+   //RETURNS:
+   //A String with the coordinates of the values
+   //************************************************************************************************/
+
     function closedPolygon(...args) {
-        if (args.length < 2) {
-            console.log("WARNING: No points defined")
+        if (args.length < 2) { //This conditional is to make sure that there are at least two values to make a point
             return "";
         }
-        let polyString = "";
-        // grab each pair of points and add to string of points
-        for (let i = 0; i < args.length; i++) {
+        let polyString = ""; // Takes every value and converts it to a String
+
+        for (let i = 0; i < args.length; i++) { //This loop goes through all the args Array, grabs each value and adds it to the String that is being created and a space
             polyString += args[i];
             polyString += " ";
         }
 
-        polyString += args[0] + " " + args[1];
+        polyString += args[0] + " " + args[1]; //This line is to make sure the polygon is closed
 
-        return polyString; // send back our completed String
+        return polyString; // returns the resulting String
     }
 
+    /*Music Triangle Petals */
     svg.selectAll("polyline.music")
         .data(isClassDay)
         .classed("music", true)
         .join("polyline")
         .attr('points', function (value) {
-            let x = xScale(value.date); // scale our indices. Could also use an xScale function for this
-            let y = yScale(value.studyingSession); // scale our data. Could also use a yScale function for this
-            return closedPolygon((x - 10) + 10, (y + 7) + 10, x + 10, (y - 12) + 10, (x + 10) + 10, (y + 7) + 10); // define a triangle in relative terms
+            let x = xScale(value.date); // To store the x axis' values in a variable
+            let y = yScale(value.studyingSession); // To store the y axis' values in a variable
+            return closedPolygon((x - 10) + 10, (y + 7) + 10, x + 10, (y - 12) + 10, (x + 10) + 10, (y + 7) + 10); // To configure the points of the triangle
         })
         .attr("fill", function (value) {
             if (value.musicSession > 0) {
@@ -406,6 +541,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*French Triangle Petals */
     svg.selectAll("polyline.french")
         .data(isClassDay)
         .classed("french", true)
@@ -422,6 +558,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*Reading Triangle Petals */
     svg.selectAll("polyline.read")
         .data(isClassDay)
         .classed("read", true)
@@ -438,6 +575,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
+    /*Sleeping Triangle Petals */
     svg.selectAll("polyline.sleep")
         .data(isClassDay)
         .classed("sleep", true)
@@ -454,7 +592,7 @@ function drawVisualization(data, drawing) {
             return "none";
         })
 
-
+    /*Center Triangle of the flower */
     svg.selectAll("polyline.center")
         .data(isClassDay)
         .classed("center", true)
@@ -470,13 +608,15 @@ function drawVisualization(data, drawing) {
 
 
 
-    /*Drawing the keys */
+    /**************************************************************************/
+    /* KEYS*/
+    /*******/
 
-    let key = svg.append("g")
-
-    let keyLeft = leftMargin - 180;
+    let key = svg.append("g") //I created this variable so I could group all the elements of the key and make it easier to position all the elements while manteining their relative position
+    let keyLeft = leftMargin - 180; //I created these next two variables to position the key relative to the left and top margin, so that if I change their measurements, they key will mantain its relativeposition
     let keyTop = topMargin;
 
+    /*Color Key */
     key.append("rect")
         .attr("width", 290)
         .attr("height", 170)
@@ -491,14 +631,14 @@ function drawVisualization(data, drawing) {
         .attr("x", leftMargin + 928)
         .attr("y", 60 - topMargin);
 
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= 4; i++) { //A loop to draw the different options of colors and types of habit
         key.append("circle")
             .attr("r", 8)
             .attr("cx", leftMargin + 900)
             .attr("cy", 60 - topMargin + i * 30)
             .attr("stroke", "black")
             .attr("fill", function () {
-                if (i == 1) {
+                if (i == 1) { //A conditional to assign the colors
                     return musicColor;
                 }
                 else if (i == 2) {
@@ -515,7 +655,7 @@ function drawVisualization(data, drawing) {
 
         key.append("text")
             .text(function () {
-                if (i == 1) {
+                if (i == 1) { //A conditional to assign the types of habit
                     return "Music";
                 }
                 else if (i == 2) {
@@ -533,7 +673,7 @@ function drawVisualization(data, drawing) {
             .attr("y", 60 - topMargin + i * 30);
     }
 
-
+    /*Shape Key */
     key.append("text")
         .text("Type of day")
         .style("text-anchor", "middle")
@@ -560,10 +700,10 @@ function drawVisualization(data, drawing) {
         .attr('stroke', 'black')
         .attr('fill', 'none');
 
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= 3; i++) {//A loop to draw the different types of day
         key.append("text")
             .text(function () {
-                if (i == 1) {
+                if (i == 1) { //A conditional to assign the types of day
                     return "Free";
                 }
                 else if (i == 2) {
@@ -579,7 +719,7 @@ function drawVisualization(data, drawing) {
 
     }
 
-    key.attr("transform", `translate(${keyLeft},${keyTop})`)
+    key.attr("transform", `translate(${keyLeft},${keyTop})`) //To position the key
 
 
 
