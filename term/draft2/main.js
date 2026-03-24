@@ -273,7 +273,12 @@ function drawVisualization(data) {
     /* PETALS FOR FREE DAYS (CIRCLES) */
     /**********************************/
 
+    let popUpWindow = d3.select("body").append("div") // Here I'm assigning a div to contain the pop up window with the additional information
+        .attr("class", "popUpWindow")
+        .style("opacity", 0); //To put the div in an invisible state
+
     /*Music Circle Petals */
+
     svg.selectAll("circle.music")
         .data(isFreeDay)
         .join("circle")
@@ -291,6 +296,18 @@ function drawVisualization(data) {
             }
             return "none";
         })
+        .on("mouseover", function (event, value) { //To make the pop up window to appear
+            popUpWindow.transition().style("opacity", 0.9); //To establish how the pop up window is going to show up
+            popUpWindow.html(`<p><strong>Music session duration:</strong>${value.musicSession} minutes</p>`) //Content of the pop up window
+                .style("left", (event.pageX) + "px") //Horizontal position relative to the cursor
+                .style("top", (event.pageY - 20) + "px"); //Vertical position relative to the cursor
+
+        })
+        .on("mouseout", function () { //To make the pop up window to disappear
+            popUpWindow.transition()//To establish how the pop up window is going to disappear
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*French Circle Petals */
     svg.selectAll("circle.french")
@@ -311,6 +328,18 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*Reading Circle Petals */
     svg.selectAll("circle.read")
         .data(isFreeDay)
@@ -329,6 +358,18 @@ function drawVisualization(data) {
             }
             return "none";
         })
+
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*Sleeping Circle Petals */
     svg.selectAll("circle.sleep")
@@ -349,6 +390,18 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*Center Circle of the Flower */
     svg.selectAll("circle.center")
         .data(isFreeDay)
@@ -365,6 +418,18 @@ function drawVisualization(data) {
         .attr("fill", "yellow")
         .attr("opacity", 1)
         .attr("stroke", "black")
+
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Habits total duration:</strong> ${value.musicSession + value.frenchSession + value.readingSession + value.sleepingSession} minutes.   <strong>Energy Level (1 (lowest) - 5 (highest)):</strong> ${value.energyLevel} </p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*************************************/
     /* PETALS FOR WEEKEND DAYS (SQUARES) */
@@ -393,6 +458,18 @@ function drawVisualization(data) {
             }
             return "none";
         })
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Music session duration:</strong>${value.musicSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*French Square Petals */
 
@@ -419,6 +496,18 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*Reading Square Petals */
     svg.selectAll("rect.read")
         .data(isWeekend)
@@ -443,6 +532,18 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*Sleeping Square Petals */
     svg.selectAll("rect.sleep")
         .data(isWeekend)
@@ -466,6 +567,17 @@ function drawVisualization(data) {
             }
             return "none";
         })
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*Center Square of the Flower */
     svg.selectAll("rect.center")
@@ -485,7 +597,19 @@ function drawVisualization(data) {
             return yScale(value.studyingSession) - this.height.baseVal.value / 2
         })
         .attr("stroke", "black")
-        .attr("fill", "yellow");
+        .attr("fill", "yellow")
+
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Habits total duration:</strong> ${value.musicSession + value.frenchSession + value.readingSession + value.sleepingSession} minutes.   <strong>Energy Level (1 (lowest) - 5 (highest)):</strong> ${value.energyLevel} </p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /********************************************/
     /* PETALS FOR DAYS WITH CLASSES (TRIANGLES) */
@@ -541,6 +665,19 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Music session duration:</strong>${value.musicSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*French Triangle Petals */
     svg.selectAll("polyline.french")
         .data(isClassDay)
@@ -557,6 +694,17 @@ function drawVisualization(data) {
             }
             return "none";
         })
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*Reading Triangle Petals */
     svg.selectAll("polyline.read")
@@ -575,6 +723,18 @@ function drawVisualization(data) {
             return "none";
         })
 
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
     /*Sleeping Triangle Petals */
     svg.selectAll("polyline.sleep")
         .data(isClassDay)
@@ -591,6 +751,17 @@ function drawVisualization(data) {
             }
             return "none";
         })
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
     /*Center Triangle of the flower */
     svg.selectAll("polyline.center")
@@ -603,7 +774,18 @@ function drawVisualization(data) {
             return closedPolygon(x - 10, y + 7, x, y - 12, x + 10, y + 7);
         })
         .attr('stroke', 'black')
-        .attr('fill', 'yellow');
+        .attr('fill', 'yellow')
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
+            popUpWindow.html(`<p><strong>Habits total duration:</strong> ${value.musicSession + value.frenchSession + value.readingSession + value.sleepingSession} minutes.   <strong>Energy Level (1 (lowest) - 5 (highest)):</strong> ${value.energyLevel} </p>`)
+                .style("left", (event.pageX) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function () {
+            popUpWindow.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
 
 
 

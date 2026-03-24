@@ -273,9 +273,9 @@ function drawVisualization(data) {
     /* PETALS FOR FREE DAYS (CIRCLES) */
     /**********************************/
 
-    let popUpWindow = d3.select("body").append("div") // a div to contain tooltip content
-        .attr("class", "popUpWindow") // apply css class
-        .style("opacity", 0);
+    let popUpWindow = d3.select("body").append("div") // Here I'm assigning a div to contain the pop up window with the additional information
+        .attr("class", "popUpWindow")
+        .style("opacity", 0); //To put the div in an invisible state
 
     /*Music Circle Petals */
 
@@ -296,17 +296,17 @@ function drawVisualization(data) {
             }
             return "none";
         })
-        .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1); //make tooltip appear by fading up to 90% opacity
-            popUpWindow.html(`<p class="popUpWindow"><strong>Music session duration:</strong>${value.musicSession} minutes</p>`) // insert content in tooltip
-                .style("left", (event.pageX) + "px") // adjust the tooltip horizontal position to match the mouse pointer
-                .style("top", (event.pageY - 20) + "px");
-            // adjust the tooltip horizontal position to match the mouse pointer
+        .on("mouseover", function (event, value) { //To make the pop up window to appear
+            popUpWindow.transition().style("opacity", 0.9); //To establish how the pop up window is going to show up
+            popUpWindow.html(`<p class="popUpWindow"><strong>Music session duration:</strong>${value.musicSession} minutes</p>`) //Content of the pop up window
+                .style("left", (event.pageX) + "px") //Horizontal position relative to the cursor
+                .style("top", (event.pageY - 20) + "px"); //Vertical position relative to the cursor
+
         })
-        .on("mouseout", function () {
-            popUpWindow.transition()
-                .duration(500) // control speed of fadeout
-                .style("opacity", 0); //hide the tooltip by reducing opacity to 0%
+        .on("mouseout", function () { //To make the pop up window to disappear
+            popUpWindow.transition()//To establish how the pop up window is going to disappear
+                .duration(500)
+                .style("opacity", 0);
         });
 
     /*French Circle Petals */
@@ -329,7 +329,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -360,7 +360,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -391,7 +391,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -420,7 +420,7 @@ function drawVisualization(data) {
         .attr("stroke", "black")
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Habits total duration:</strong> ${value.musicSession + value.frenchSession + value.readingSession + value.sleepingSession} minutes.   <strong>Energy Level (1 (lowest) - 5 (highest)):</strong> ${value.energyLevel} </p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -459,7 +459,7 @@ function drawVisualization(data) {
             return "none";
         })
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Music session duration:</strong>${value.musicSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -497,7 +497,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -533,7 +533,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -567,8 +567,8 @@ function drawVisualization(data) {
             }
             return "none";
         })
-         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -600,7 +600,7 @@ function drawVisualization(data) {
         .attr("fill", "yellow")
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Habits total duration:</strong> ${value.musicSession + value.frenchSession + value.readingSession + value.sleepingSession} minutes.   <strong>Energy Level (1 (lowest) - 5 (highest)):</strong> ${value.energyLevel} </p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -666,7 +666,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Music session duration:</strong>${value.musicSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -695,7 +695,7 @@ function drawVisualization(data) {
             return "none";
         })
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>French session duration:</strong>${value.frenchSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -724,7 +724,7 @@ function drawVisualization(data) {
         })
 
         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Reading session duration:</strong>${value.readingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -751,8 +751,8 @@ function drawVisualization(data) {
             }
             return "none";
         })
-         .on("mouseover", function (event, value) {
-            popUpWindow.transition().style("opacity", 1);
+        .on("mouseover", function (event, value) {
+            popUpWindow.transition().style("opacity", 0.9);
             popUpWindow.html(`<p class="popUpWindow"><strong>Sleeping session duration:</strong>${value.sleepingSession} minutes</p>`)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 20) + "px");
@@ -902,9 +902,6 @@ function drawVisualization(data) {
     }
 
     key.attr("transform", `translate(${keyLeft},${keyTop})`) //To position the key
-
-
-
 
 }
 

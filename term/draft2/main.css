@@ -63,3 +63,23 @@ p, li{
     font-size: 1.3rem ;
 
 }
+
+.popUpWindow{
+    position: absolute;
+    text-align: left;
+    padding: 2px;
+    font-family: "Helvetica", sans-serif;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);;
+    border-radius: 3px;
+    pointer-events: none;
+    width: 270px;             
+    min-height: 20px;
+}
+
+.popUpWindow p {
+    font-size: 14px;    
+    margin: 0;          
+    font-family: "Helvetica";
+    color: rgb(0, 0, 0);
+}
