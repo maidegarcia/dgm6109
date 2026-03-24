@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Term Project Draft 2</title>
+
+    <script src="d3.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <div id="canvas" class="canvas"></div>
+    <section>
+        <div class="explanation">
+            <h1>How my time studying for University affects my daily habits</h1>
+            <h2>Hypothesis</h2>
+            <p>As the time I spend studying for University increases,the number of habits I do daily decreases.
+            </p>
+            </p>
+            <h2>Overview</h2>
+            <p>In the beginnig, for this project I wanted to evaluate if the time I dedicated to my studies had any
+                influence on the
+                time I dedicated to my daily habits. As the time went by and the project evolved, I decided to slightly
+                modify my
+                question mainly because of the visualization that I wanted to do. This new question was basically the
+                same but instead
+                comparing times, I'm only evaluating if the increase of my worload forces me to not make my daily
+                habits. To achieve this, I decided to collect different types of data on a daily basis that would
+                help me
+                deny or verify my hypothesis. These are the types of data that I initially collected:
+            </p>
+            <ul>
+                <li><strong>Date:</strong>I collected this data to keep a record of what happened everyday. If my theory
+                    ended up
+                    being right I would have seen a clear lack of my daily habits as the end of the quarter approached.
+                </li>
+                <li><strong>Time of day:</strong>This helped me to keep a better track of every data, because sometimes
+                    in a day
+                    I would have multiple sessions of study or of any habit.</li>
+                <li><strong>Studying duration:</strong>I collected this data in minutes to keep track of the amount of
+                    time that I
+                    dedicated to my studies</li>
+                <li><strong>Studying music duration:</strong>I collected this data in minutes to keep track of the
+                    amount of time that I dedicated to studying music, so that later I could see which days I did this
+                    habit and which days I
+                    did not. Also I thought it would be interesting to have this information to analyze how the time I
+                    dedicated to this habit
+                    was affected by my workload.</li>
+                <li><strong>Studying french duration:</strong>I collected this data in minutes to keep track of the
+                    amount of time that I dedicated to studying french, so that later I could see which days I did this
+                    habit and which days I
+                    did not. Also I thought it would be interesting to have this information to analyze how the time I
+                    dedicated to this habit
+                    was affected by my workload.</li>
+                <li><strong>Reading duration:</strong>I collected this data in minutes to keep track of the
+                    amount of time that I dedicated to reading, so that later I could see which days I did this habit
+                    and which days I
+                    did not. Also I thought it would be interesting to have this information to analyze how the time I
+                    dedicated to this habit
+                    was affected by my workload.</li>
+                <li><strong>Sleeping duration:</strong>I collected this data in minutes to keep track of the
+                    amount of time that I dedicated to sleeping, so that later I could see which days I did this habit
+                    and which days I
+                    did not. Also I thought it would be interesting to have this information to analyze how the time I
+                    dedicated to this habit
+                    was affected by my workload.</li>
+                <li><strong>Energy levels:</strong>I collected this data using a scale from 1 to 5, with 1 being low
+                    energy and 5 high
+                    energy, because I thought there would also be a correlation between my energy levels and my daily
+                    habits</li>
+
+            </ul>
+            <p>
+                After doing some experimenting with different visualization I noticed that I also needed to include
+                take in my data the days in which I had classes. Then this evolved to consider the different types
+                of day that I could have, my free days during the week days, the days in which I had class and the
+                weekend.
+            </p>
+            <p>
+                I consider that this data gave me enough information for my visualization. There is only one more
+                piece of data that would have helped me to better understand my day to day and that is the amount of
+                I spend in my cellphone, because that is also another variable that can affect my daily habits.
+                Nevertheless,
+                this visualization gave me a good understanding of what I wanted to evaluate
+            </p>
+
+            <h2>Observations</h2>
+            <ul>
+                <li><strong>Correlation between stems and petals:</strong>The visualization shows thta study duration
+                    (stems) does not determine the number of habits performed daily. For example, on day like 02/04 and
+                    02/25, I reached over 500 minutes of study while maintaining almost all habits. On the other hand,
+                    there are several day with minimal or non existent study time, where the flower is not full,
+                    contrary to what I was expecting.</li>
+                <li><strong>Behavior by day type:</strong>
+                    <ul>
+                        <li><strong>Class Days(Triangles):</strong>These days show a moderate amount of study time
+                            (usually between 50-100 minutes) and almost all show at least two habits. Only
+                            in 4 days out of 13 I managed to do 3 habits and just one day I was able to study music</li>
+                        <li><strong>Free Days(Circles):</strong>These days show to be my most productive studying
+                            sessions, specially some of the ones before days I have class. It is interesting to see that
+                            the majority of those days have a complete or almost complete (3 petals) flower, 13 out of
+                            18</li>
+                        <li><strong>Weekends(Squares):</strong>These days show a high variability. There are weekends
+                            with zero study time where habits also disappear, and weekends with high study time where
+                            habits are very consistent.</li>
+                    </ul>
+                </li>
+                <li><strong>Habit persistence:</strong>The "Sleeping" and "French" habits appear to be the most
+                    persistent across all types of days, while "Music" and "Reading" are more easily affected by
+                    my schedule</li>
+
+            </ul>
+            <h2>Conclusion</h2>
+            <p>
+                After analyzing the visualization, I disprove my initial hypothesis. The data shows no correlation
+                between the time I study and my habits, instead they suggest that my daily habits are influenced by
+                other factors that are not captured in this visualization, like energy levels, motivation or important
+                academic deadlines; also they show that there could be an issue with time management and a lack of a
+                defined daily structure
+            </p>
+
+            <p>The days with fewer petals and low study time could point out to burnout or recovery periods where
+                neither, habits or study were a priority. To better understand what is affecting my habits, I would need
+                to include in my visualization other factors like energy levels, motivation, deadlines or if I had an
+                important event that day, as the amount of time spent studying is not the main constraint for my
+                personal routine</p>
+        </div>
+    </section>
+
+</body>
+<script src="main.js"></script>
+
+</html>
