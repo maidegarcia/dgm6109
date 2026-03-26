@@ -59,8 +59,9 @@ h1 {
     text-align: center;
 }
 
-p, li{
-    font-size: 1.3rem ;
+p,
+li {
+    font-size: 1.3rem;
 
 }
 
@@ -68,12 +69,35 @@ p, li{
     position: absolute;
     text-align: left;
     padding: 2px;
-    font-size: 14px;
     font-family: "Helvetica", sans-serif;
-    background: white;
-    border: 9px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    ;
     border-radius: 3px;
     pointer-events: none;
-    width: 270px;             
-    min-height: 50px;
+    width: 270px;
+    min-height: 20px;
+}
+
+.popUpWindow p {
+    font-size: 14px;
+    margin: 0;
+    font-family: "Helvetica";
+    color: rgb(0, 0, 0);
+}
+
+.report {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 124, 27);
+    padding: 0.75rem 3.5rem;
+    border-radius: 3rem;
+    font-weight: bold;
+}
+
+.report:hover, .report:focus{
+    background-color: rgb(55, 87, 50);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
 }

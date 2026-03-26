@@ -296,15 +296,15 @@ function drawVisualization(data) {
             }
             return "none";
         })
-        .on("mouseover", function (event, value) { //To make the pop up window to appear
-            popUpWindow.transition().style("opacity", 0.9); //To establish how the pop up window is going to show up
-            popUpWindow.html(`<p><strong>Music session duration:</strong>${value.musicSession} minutes</p>`) //Content of the pop up window
+        .on("mouseover", function (event, value) { //To make the pop-up window to appear
+            popUpWindow.transition().style("opacity", 0.9); //To establish how the pop-up window is going to show up
+            popUpWindow.html(`<p><strong>Music session duration:</strong>${value.musicSession} minutes</p>`) //Content of the pop-up window
                 .style("left", (event.pageX) + "px") //Horizontal position relative to the cursor
                 .style("top", (event.pageY - 20) + "px"); //Vertical position relative to the cursor
 
         })
-        .on("mouseout", function () { //To make the pop up window to disappear
-            popUpWindow.transition()//To establish how the pop up window is going to disappear
+        .on("mouseout", function () { //To make the pop-up window to disappear
+            popUpWindow.transition()//To establish how the pop-up window is going to disappear
                 .duration(500)
                 .style("opacity", 0);
         });
