@@ -27,7 +27,7 @@
     margin-bottom: 1.5rem;
 }
 
-/*SMARTPHONE*/
+/*MOBILE*/
 @media(max-width:48rem) {/*768px*/
 
     .services{

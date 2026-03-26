@@ -4,14 +4,14 @@
     text-shadow: 0.1rem 0.1rem 0.1rem rgb(0, 0, 0);/*to give the text a shadow*/
 }
 
-.header-image{
-    position:relative;
+.header-image {
+    position: relative;
 }
 
-.header{
- background-image: url('../img/header.jpg');
-    background-size: cover;       /* Cubre todo el espacio sin estirarse */
-    min-height: 600px;            /* Altura para Desktop */
+.header {
+    background-image: url('../img/header.jpg');
+    background-size: cover;/*To make it fill all the space*/
+    min-height: 600px;
     width: 100%;
     position: relative;
 }
@@ -58,17 +58,17 @@
 }
 
 
-/*SMARTPHONE*/
+/*MOBILE*/
 @media(max-width:48rem) {/*768px*/
 
     .text-ontop {
         position: absolute;
-        text-align: center; 
+        text-align: center;
         padding: 4rem;
     }
 
-    .latest-work{
-        margin:0.5rem;
+    .latest-work {
+        margin: 0.5rem;
     }
 
     .latest-work-content {
@@ -84,18 +84,18 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
-      
+
     }
 
 
-        .content-dragons iframe,
-.content-emma iframe,
-.content-afloat iframe {
-    display: block;       /* El video deja de ser 'inline' para comportarse como una caja */
-    justify-self: center;
-    /* Para que no se salga en celulares */
-}
-    
+    .content-dragons iframe,
+    .content-emma iframe,
+    .content-afloat iframe {
+        display: block; 
+        justify-self: center;
+       
+    }
+
 
 }
 
@@ -104,7 +104,7 @@
     .text-ontop {
         position: absolute; /* This allows the text to move freely within the image */
         top: 30%; /* To position the text vertically*/
-        left: 77%; /* To position the text horizontally */
+        left: 77%;/* To position the text horizontally */
         transform: translate(-50%, -50%);
     }
 
@@ -122,8 +122,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        
-    
+
+
     }
 
 }

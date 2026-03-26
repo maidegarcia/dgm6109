@@ -43,8 +43,7 @@
     padding: 0.5rem;
     border-radius: 1rem;
     border: 0.2rem solid rgb(114, 115, 119);
-    resize: vertical;
-    /* This is to allow the space to scroll down when the text exceeds the established */
+    resize: vertical; /* This is to allow the space to scroll down when the text exceeds the established */
     margin-bottom: 1.5rem;
 }
 
@@ -65,9 +64,8 @@
     transition-timing-function: ease-out;
 }
 
-/*Mobile*/
-@media(max-width:48rem) {
-    /*768px*/
+/*MOBILE*/
+@media(max-width:48rem) {/*768px*/
 
     .contact-form {
 
@@ -84,8 +82,7 @@
 }
 
 /*DESKTOP*/
-@media(min-width:64rem) {
-    /*1024px*/
+@media(min-width:64rem) {/*1024px*/
 
     .contact-elements {
         display: grid;

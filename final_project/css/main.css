@@ -88,9 +88,9 @@ iframe{
     margin: 0rem;
     margin-bottom: 0.5rem;
     max-width: 100%;
-    width: 100%;            /* Ocupa todo el ancho disponible en móvil */
-    height: auto;           /* Suelta la altura fija */
-    aspect-ratio: 16 / 9;   /* Mantiene la forma de cine/TV automáticamente */
+    width: 100%;            /* To fill all the space available*/
+    height: auto;           /* To make it resize*/
+    aspect-ratio: 16 / 9;   /* To mantain its proportions */
     object-fit: cover;
 
 }

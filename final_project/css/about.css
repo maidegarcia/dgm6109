@@ -45,8 +45,8 @@ section h3 {
     align-items: center;
 }
 
-/*SMARTPHONE*/
-@media(max-width:48rem) {/*1024px*/
+/*MOBILE*/
+@media(max-width:48rem) {/*768px*/
 
     .about{
         margin:0.5rem;

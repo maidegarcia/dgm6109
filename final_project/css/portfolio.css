@@ -24,7 +24,7 @@
         0rem 0rem 0.625rem rgba(0, 0, 0, 0.3);
 }
 
-/*SMARTPHONE*/
+/*MOBILE*/
 @media(max-width: 48rem) {
 
     .demo-reel,
@@ -55,9 +55,7 @@
     .content-wedding iframe,
     .content-afloat iframe {
         display: block;
-        /* El video deja de ser 'inline' para comportarse como una caja */
         justify-self: center;
-        /* Para que no se salga en celulares */
     }
 }
 
